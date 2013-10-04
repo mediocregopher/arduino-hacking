@@ -1,0 +1,66 @@
+
+tmp/tmp/main.o:     file format elf32-avr
+
+
+Disassembly of section .text.setup:
+
+00000000 <setup>:
+   0:	61 e0       	ldi	r22, 0x01	; 1
+   2:	8d e0       	ldi	r24, 0x0D	; 13
+   4:	0e 94 00 00 	call	0	; 0x0 <setup>
+   8:	40 e8       	ldi	r20, 0x80	; 128
+   a:	55 e2       	ldi	r21, 0x25	; 37
+   c:	60 e0       	ldi	r22, 0x00	; 0
+   e:	70 e0       	ldi	r23, 0x00	; 0
+  10:	80 e0       	ldi	r24, 0x00	; 0
+  12:	90 e0       	ldi	r25, 0x00	; 0
+  14:	0e 94 00 00 	call	0	; 0x0 <setup>
+  18:	08 95       	ret
+
+Disassembly of section .text.loop:
+
+0000001a <loop>:
+  1a:	cf 93       	push	r28
+  1c:	df 93       	push	r29
+  1e:	8e e0       	ldi	r24, 0x0E	; 14
+  20:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  24:	ec 01       	movw	r28, r24
+  26:	4a e0       	ldi	r20, 0x0A	; 10
+  28:	50 e0       	ldi	r21, 0x00	; 0
+  2a:	bc 01       	movw	r22, r24
+  2c:	80 e0       	ldi	r24, 0x00	; 0
+  2e:	90 e0       	ldi	r25, 0x00	; 0
+  30:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  34:	6f 97       	sbiw	r28, 0x1f	; 31
+  36:	04 f0       	brlt	.+0      	; 0x38 <loop+0x1e>
+  38:	60 e0       	ldi	r22, 0x00	; 0
+  3a:	00 c0       	rjmp	.+0      	; 0x3c <loop+0x22>
+  3c:	61 e0       	ldi	r22, 0x01	; 1
+  3e:	8d e0       	ldi	r24, 0x0D	; 13
+  40:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  44:	6a ef       	ldi	r22, 0xFA	; 250
+  46:	70 e0       	ldi	r23, 0x00	; 0
+  48:	80 e0       	ldi	r24, 0x00	; 0
+  4a:	90 e0       	ldi	r25, 0x00	; 0
+  4c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  50:	df 91       	pop	r29
+  52:	cf 91       	pop	r28
+  54:	08 95       	ret
+
+Disassembly of section .text.startup.main:
+
+00000070 <main>:
+  70:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  74:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  78:	c0 e0       	ldi	r28, 0x00	; 0
+  7a:	d0 e0       	ldi	r29, 0x00	; 0
+  7c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  80:	20 97       	sbiw	r28, 0x00	; 0
+  82:	01 f0       	breq	.+0      	; 0x84 <main+0x14>
+  84:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  88:	00 c0       	rjmp	.+0      	; 0x8a <main+0x1a>
+
+Disassembly of section .text.__cxa_pure_virtual:
+
+000000fa <__cxa_pure_virtual>:
+  fa:	00 c0       	rjmp	.+0      	; 0xfc <__SREG__+0xbd>

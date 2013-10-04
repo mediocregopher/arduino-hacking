@@ -1,0 +1,633 @@
+
+tmp//usr/share/arduino/hardware/arduino/cores/arduino/Stream.o:     file format elf32-avr
+
+
+Disassembly of section .text._ZN6Stream9timedReadEv:
+
+00000000 <_ZN6Stream9timedReadEv>:
+   0:	0f 93       	push	r16
+   2:	1f 93       	push	r17
+   4:	cf 93       	push	r28
+   6:	df 93       	push	r29
+   8:	ec 01       	movw	r28, r24
+   a:	0e 94 00 00 	call	0	; 0x0 <_ZN6Stream9timedReadEv>
+   e:	68 87       	std	Y+8, r22	; 0x08
+  10:	79 87       	std	Y+9, r23	; 0x09
+  12:	8a 87       	std	Y+10, r24	; 0x0a
+  14:	9b 87       	std	Y+11, r25	; 0x0b
+  16:	e8 81       	ld	r30, Y
+  18:	f9 81       	ldd	r31, Y+1	; 0x01
+  1a:	06 80       	ldd	r0, Z+6	; 0x06
+  1c:	f7 81       	ldd	r31, Z+7	; 0x07
+  1e:	e0 2d       	mov	r30, r0
+  20:	ce 01       	movw	r24, r28
+  22:	09 95       	icall
+  24:	9c 01       	movw	r18, r24
+  26:	97 ff       	sbrs	r25, 7
+  28:	00 c0       	rjmp	.+0      	; 0x2a <_ZN6Stream9timedReadEv+0x2a>
+  2a:	0e 94 00 00 	call	0	; 0x0 <_ZN6Stream9timedReadEv>
+  2e:	08 85       	ldd	r16, Y+8	; 0x08
+  30:	19 85       	ldd	r17, Y+9	; 0x09
+  32:	2a 85       	ldd	r18, Y+10	; 0x0a
+  34:	3b 85       	ldd	r19, Y+11	; 0x0b
+  36:	60 1b       	sub	r22, r16
+  38:	71 0b       	sbc	r23, r17
+  3a:	82 0b       	sbc	r24, r18
+  3c:	93 0b       	sbc	r25, r19
+  3e:	0c 81       	ldd	r16, Y+4	; 0x04
+  40:	1d 81       	ldd	r17, Y+5	; 0x05
+  42:	2e 81       	ldd	r18, Y+6	; 0x06
+  44:	3f 81       	ldd	r19, Y+7	; 0x07
+  46:	60 17       	cp	r22, r16
+  48:	71 07       	cpc	r23, r17
+  4a:	82 07       	cpc	r24, r18
+  4c:	93 07       	cpc	r25, r19
+  4e:	00 f0       	brcs	.+0      	; 0x50 <_ZN6Stream9timedReadEv+0x50>
+  50:	2f ef       	ldi	r18, 0xFF	; 255
+  52:	3f ef       	ldi	r19, 0xFF	; 255
+  54:	c9 01       	movw	r24, r18
+  56:	df 91       	pop	r29
+  58:	cf 91       	pop	r28
+  5a:	1f 91       	pop	r17
+  5c:	0f 91       	pop	r16
+  5e:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream9timedPeekEv:
+
+00000060 <_ZN6Stream9timedPeekEv>:
+  60:	0f 93       	push	r16
+  62:	1f 93       	push	r17
+  64:	cf 93       	push	r28
+  66:	df 93       	push	r29
+  68:	ec 01       	movw	r28, r24
+  6a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  6e:	68 87       	std	Y+8, r22	; 0x08
+  70:	79 87       	std	Y+9, r23	; 0x09
+  72:	8a 87       	std	Y+10, r24	; 0x0a
+  74:	9b 87       	std	Y+11, r25	; 0x0b
+  76:	e8 81       	ld	r30, Y
+  78:	f9 81       	ldd	r31, Y+1	; 0x01
+  7a:	00 84       	ldd	r0, Z+8	; 0x08
+  7c:	f1 85       	ldd	r31, Z+9	; 0x09
+  7e:	e0 2d       	mov	r30, r0
+  80:	ce 01       	movw	r24, r28
+  82:	09 95       	icall
+  84:	9c 01       	movw	r18, r24
+  86:	97 ff       	sbrs	r25, 7
+  88:	00 c0       	rjmp	.+0      	; 0x8a <_ZN6Stream9timedPeekEv+0x2a>
+  8a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  8e:	08 85       	ldd	r16, Y+8	; 0x08
+  90:	19 85       	ldd	r17, Y+9	; 0x09
+  92:	2a 85       	ldd	r18, Y+10	; 0x0a
+  94:	3b 85       	ldd	r19, Y+11	; 0x0b
+  96:	60 1b       	sub	r22, r16
+  98:	71 0b       	sbc	r23, r17
+  9a:	82 0b       	sbc	r24, r18
+  9c:	93 0b       	sbc	r25, r19
+  9e:	0c 81       	ldd	r16, Y+4	; 0x04
+  a0:	1d 81       	ldd	r17, Y+5	; 0x05
+  a2:	2e 81       	ldd	r18, Y+6	; 0x06
+  a4:	3f 81       	ldd	r19, Y+7	; 0x07
+  a6:	60 17       	cp	r22, r16
+  a8:	71 07       	cpc	r23, r17
+  aa:	82 07       	cpc	r24, r18
+  ac:	93 07       	cpc	r25, r19
+  ae:	00 f0       	brcs	.+0      	; 0xb0 <_ZN6Stream9timedPeekEv+0x50>
+  b0:	2f ef       	ldi	r18, 0xFF	; 255
+  b2:	3f ef       	ldi	r19, 0xFF	; 255
+  b4:	c9 01       	movw	r24, r18
+  b6:	df 91       	pop	r29
+  b8:	cf 91       	pop	r28
+  ba:	1f 91       	pop	r17
+  bc:	0f 91       	pop	r16
+  be:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream13peekNextDigitEv:
+
+00000120 <_ZN6Stream13peekNextDigitEv>:
+ 120:	cf 93       	push	r28
+ 122:	df 93       	push	r29
+ 124:	ec 01       	movw	r28, r24
+ 126:	ce 01       	movw	r24, r28
+ 128:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 12c:	9c 01       	movw	r18, r24
+ 12e:	97 fd       	sbrc	r25, 7
+ 130:	00 c0       	rjmp	.+0      	; 0x132 <_ZN6Stream13peekNextDigitEv+0x12>
+ 132:	8d 32       	cpi	r24, 0x2D	; 45
+ 134:	91 05       	cpc	r25, r1
+ 136:	01 f0       	breq	.+0      	; 0x138 <_ZN6Stream13peekNextDigitEv+0x18>
+ 138:	c0 97       	sbiw	r24, 0x30	; 48
+ 13a:	0a 97       	sbiw	r24, 0x0a	; 10
+ 13c:	00 f0       	brcs	.+0      	; 0x13e <_ZN6Stream13peekNextDigitEv+0x1e>
+ 13e:	e8 81       	ld	r30, Y
+ 140:	f9 81       	ldd	r31, Y+1	; 0x01
+ 142:	06 80       	ldd	r0, Z+6	; 0x06
+ 144:	f7 81       	ldd	r31, Z+7	; 0x07
+ 146:	e0 2d       	mov	r30, r0
+ 148:	ce 01       	movw	r24, r28
+ 14a:	09 95       	icall
+ 14c:	00 c0       	rjmp	.+0      	; 0x14e <_ZN6Stream13peekNextDigitEv+0x2e>
+ 14e:	c9 01       	movw	r24, r18
+ 150:	df 91       	pop	r29
+ 152:	cf 91       	pop	r28
+ 154:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream10setTimeoutEm:
+
+00000276 <_ZN6Stream10setTimeoutEm>:
+ 276:	fc 01       	movw	r30, r24
+ 278:	44 83       	std	Z+4, r20	; 0x04
+ 27a:	55 83       	std	Z+5, r21	; 0x05
+ 27c:	66 83       	std	Z+6, r22	; 0x06
+ 27e:	77 83       	std	Z+7, r23	; 0x07
+ 280:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream9findUntilEPcjS0_j:
+
+000004f8 <_ZN6Stream9findUntilEPcjS0_j>:
+ 4f8:	a0 e0       	ldi	r26, 0x00	; 0
+ 4fa:	b0 e0       	ldi	r27, 0x00	; 0
+ 4fc:	e0 e0       	ldi	r30, 0x00	; 0
+ 4fe:	f0 e0       	ldi	r31, 0x00	; 0
+ 500:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+ 504:	5c 01       	movw	r10, r24
+ 506:	6b 01       	movw	r12, r22
+ 508:	4a 01       	movw	r8, r20
+ 50a:	39 01       	movw	r6, r18
+ 50c:	fb 01       	movw	r30, r22
+ 50e:	80 81       	ld	r24, Z
+ 510:	88 23       	and	r24, r24
+ 512:	01 f0       	breq	.+0      	; 0x514 <_ZN6Stream9findUntilEPcjS0_j+0x1c>
+ 514:	e1 2c       	mov	r14, r1
+ 516:	f1 2c       	mov	r15, r1
+ 518:	c0 e0       	ldi	r28, 0x00	; 0
+ 51a:	d0 e0       	ldi	r29, 0x00	; 0
+ 51c:	00 c0       	rjmp	.+0      	; 0x51e <_ZN6Stream9findUntilEPcjS0_j+0x26>
+ 51e:	f6 01       	movw	r30, r12
+ 520:	ec 0f       	add	r30, r28
+ 522:	fd 1f       	adc	r31, r29
+ 524:	20 81       	ld	r18, Z
+ 526:	30 e0       	ldi	r19, 0x00	; 0
+ 528:	82 17       	cp	r24, r18
+ 52a:	93 07       	cpc	r25, r19
+ 52c:	01 f0       	breq	.+0      	; 0x52e <_ZN6Stream9findUntilEPcjS0_j+0x36>
+ 52e:	c0 e0       	ldi	r28, 0x00	; 0
+ 530:	d0 e0       	ldi	r29, 0x00	; 0
+ 532:	f6 01       	movw	r30, r12
+ 534:	ec 0f       	add	r30, r28
+ 536:	fd 1f       	adc	r31, r29
+ 538:	20 81       	ld	r18, Z
+ 53a:	30 e0       	ldi	r19, 0x00	; 0
+ 53c:	82 17       	cp	r24, r18
+ 53e:	93 07       	cpc	r25, r19
+ 540:	01 f4       	brne	.+0      	; 0x542 <_ZN6Stream9findUntilEPcjS0_j+0x4a>
+ 542:	21 96       	adiw	r28, 0x01	; 1
+ 544:	c8 15       	cp	r28, r8
+ 546:	d9 05       	cpc	r29, r9
+ 548:	00 f4       	brcc	.+0      	; 0x54a <_ZN6Stream9findUntilEPcjS0_j+0x52>
+ 54a:	01 15       	cp	r16, r1
+ 54c:	11 05       	cpc	r17, r1
+ 54e:	01 f0       	breq	.+0      	; 0x550 <_ZN6Stream9findUntilEPcjS0_j+0x58>
+ 550:	f3 01       	movw	r30, r6
+ 552:	ee 0d       	add	r30, r14
+ 554:	ff 1d       	adc	r31, r15
+ 556:	20 81       	ld	r18, Z
+ 558:	30 e0       	ldi	r19, 0x00	; 0
+ 55a:	82 17       	cp	r24, r18
+ 55c:	93 07       	cpc	r25, r19
+ 55e:	01 f4       	brne	.+0      	; 0x560 <_ZN6Stream9findUntilEPcjS0_j+0x68>
+ 560:	ff ef       	ldi	r31, 0xFF	; 255
+ 562:	ef 1a       	sub	r14, r31
+ 564:	ff 0a       	sbc	r15, r31
+ 566:	e0 16       	cp	r14, r16
+ 568:	f1 06       	cpc	r15, r17
+ 56a:	00 f0       	brcs	.+0      	; 0x56c <_ZN6Stream9findUntilEPcjS0_j+0x74>
+ 56c:	00 c0       	rjmp	.+0      	; 0x56e <_ZN6Stream9findUntilEPcjS0_j+0x76>
+ 56e:	e1 2c       	mov	r14, r1
+ 570:	f1 2c       	mov	r15, r1
+ 572:	c5 01       	movw	r24, r10
+ 574:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 578:	18 16       	cp	r1, r24
+ 57a:	19 06       	cpc	r1, r25
+ 57c:	04 f0       	brlt	.+0      	; 0x57e <_ZN6Stream9findUntilEPcjS0_j+0x86>
+ 57e:	80 e0       	ldi	r24, 0x00	; 0
+ 580:	00 c0       	rjmp	.+0      	; 0x582 <_ZN6Stream9findUntilEPcjS0_j+0x8a>
+ 582:	81 e0       	ldi	r24, 0x01	; 1
+ 584:	cd b7       	in	r28, 0x3d	; 61
+ 586:	de b7       	in	r29, 0x3e	; 62
+ 588:	ee e0       	ldi	r30, 0x0E	; 14
+ 58a:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6Stream9findUntilEPcS0_:
+
+00000a86 <_ZN6Stream9findUntilEPcS0_>:
+ a86:	0f 93       	push	r16
+ a88:	1f 93       	push	r17
+ a8a:	9a 01       	movw	r18, r20
+ a8c:	da 01       	movw	r26, r20
+ a8e:	0d 90       	ld	r0, X+
+ a90:	00 20       	and	r0, r0
+ a92:	01 f4       	brne	.+0      	; 0xa94 <_ZN6Stream9findUntilEPcS0_+0xe>
+ a94:	8d 01       	movw	r16, r26
+ a96:	01 50       	subi	r16, 0x01	; 1
+ a98:	11 09       	sbc	r17, r1
+ a9a:	04 1b       	sub	r16, r20
+ a9c:	15 0b       	sbc	r17, r21
+ a9e:	fb 01       	movw	r30, r22
+ aa0:	01 90       	ld	r0, Z+
+ aa2:	00 20       	and	r0, r0
+ aa4:	01 f4       	brne	.+0      	; 0xaa6 <_ZN6Stream9findUntilEPcS0_+0x20>
+ aa6:	af 01       	movw	r20, r30
+ aa8:	41 50       	subi	r20, 0x01	; 1
+ aaa:	51 09       	sbc	r21, r1
+ aac:	46 1b       	sub	r20, r22
+ aae:	57 0b       	sbc	r21, r23
+ ab0:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ ab4:	1f 91       	pop	r17
+ ab6:	0f 91       	pop	r16
+ ab8:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream4findEPc:
+
+00001540 <_ZN6Stream4findEPc>:
+    1540:	40 e0       	ldi	r20, 0x00	; 0
+    1542:	50 e0       	ldi	r21, 0x00	; 0
+    1544:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    1548:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream4findEPcj:
+
+00002a8a <_ZN6Stream4findEPcj>:
+    2a8a:	0f 93       	push	r16
+    2a8c:	1f 93       	push	r17
+    2a8e:	00 e0       	ldi	r16, 0x00	; 0
+    2a90:	10 e0       	ldi	r17, 0x00	; 0
+    2a92:	20 e0       	ldi	r18, 0x00	; 0
+    2a94:	30 e0       	ldi	r19, 0x00	; 0
+    2a96:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    2a9a:	1f 91       	pop	r17
+    2a9c:	0f 91       	pop	r16
+    2a9e:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream8parseIntEc:
+
+0000552a <_ZN6Stream8parseIntEc>:
+    552a:	cf 92       	push	r12
+    552c:	df 92       	push	r13
+    552e:	ff 92       	push	r15
+    5530:	0f 93       	push	r16
+    5532:	1f 93       	push	r17
+    5534:	cf 93       	push	r28
+    5536:	df 93       	push	r29
+    5538:	00 d0       	rcall	.+0      	; 0x553a <_ZN6Stream8parseIntEc+0x10>
+    553a:	00 d0       	rcall	.+0      	; 0x553c <_ZN6Stream8parseIntEc+0x12>
+    553c:	cd b7       	in	r28, 0x3d	; 61
+    553e:	de b7       	in	r29, 0x3e	; 62
+    5540:	6c 01       	movw	r12, r24
+    5542:	06 2f       	mov	r16, r22
+    5544:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    5548:	fc 01       	movw	r30, r24
+    554a:	20 e0       	ldi	r18, 0x00	; 0
+    554c:	30 e0       	ldi	r19, 0x00	; 0
+    554e:	a9 01       	movw	r20, r18
+    5550:	97 fd       	sbrc	r25, 7
+    5552:	00 c0       	rjmp	.+0      	; 0x5554 <_ZN6Stream8parseIntEc+0x2a>
+    5554:	f1 2c       	mov	r15, r1
+    5556:	10 e0       	ldi	r17, 0x00	; 0
+    5558:	e0 17       	cp	r30, r16
+    555a:	f1 07       	cpc	r31, r17
+    555c:	01 f0       	breq	.+0      	; 0x555e <_ZN6Stream8parseIntEc+0x34>
+    555e:	ed 32       	cpi	r30, 0x2D	; 45
+    5560:	f1 05       	cpc	r31, r1
+    5562:	01 f0       	breq	.+0      	; 0x5564 <_ZN6Stream8parseIntEc+0x3a>
+    5564:	cf 01       	movw	r24, r30
+    5566:	c0 97       	sbiw	r24, 0x30	; 48
+    5568:	0a 97       	sbiw	r24, 0x0a	; 10
+    556a:	00 f4       	brcc	.+0      	; 0x556c <_ZN6Stream8parseIntEc+0x42>
+    556c:	aa e0       	ldi	r26, 0x0A	; 10
+    556e:	b0 e0       	ldi	r27, 0x00	; 0
+    5570:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    5574:	9b 01       	movw	r18, r22
+    5576:	ac 01       	movw	r20, r24
+    5578:	cf 01       	movw	r24, r30
+    557a:	aa 27       	eor	r26, r26
+    557c:	97 fd       	sbrc	r25, 7
+    557e:	a0 95       	com	r26
+    5580:	ba 2f       	mov	r27, r26
+    5582:	28 0f       	add	r18, r24
+    5584:	39 1f       	adc	r19, r25
+    5586:	4a 1f       	adc	r20, r26
+    5588:	5b 1f       	adc	r21, r27
+    558a:	20 53       	subi	r18, 0x30	; 48
+    558c:	31 09       	sbc	r19, r1
+    558e:	41 09       	sbc	r20, r1
+    5590:	51 09       	sbc	r21, r1
+    5592:	00 c0       	rjmp	.+0      	; 0x5594 <_ZN6Stream8parseIntEc+0x6a>
+    5594:	ff 24       	eor	r15, r15
+    5596:	f3 94       	inc	r15
+    5598:	d6 01       	movw	r26, r12
+    559a:	ed 91       	ld	r30, X+
+    559c:	fc 91       	ld	r31, X
+    559e:	06 80       	ldd	r0, Z+6	; 0x06
+    55a0:	f7 81       	ldd	r31, Z+7	; 0x07
+    55a2:	e0 2d       	mov	r30, r0
+    55a4:	c6 01       	movw	r24, r12
+    55a6:	29 83       	std	Y+1, r18	; 0x01
+    55a8:	3a 83       	std	Y+2, r19	; 0x02
+    55aa:	4b 83       	std	Y+3, r20	; 0x03
+    55ac:	5c 83       	std	Y+4, r21	; 0x04
+    55ae:	09 95       	icall
+    55b0:	c6 01       	movw	r24, r12
+    55b2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    55b6:	fc 01       	movw	r30, r24
+    55b8:	c0 97       	sbiw	r24, 0x30	; 48
+    55ba:	29 81       	ldd	r18, Y+1	; 0x01
+    55bc:	3a 81       	ldd	r19, Y+2	; 0x02
+    55be:	4b 81       	ldd	r20, Y+3	; 0x03
+    55c0:	5c 81       	ldd	r21, Y+4	; 0x04
+    55c2:	0a 97       	sbiw	r24, 0x0a	; 10
+    55c4:	00 f0       	brcs	.+0      	; 0x55c6 <_ZN6Stream8parseIntEc+0x9c>
+    55c6:	e0 17       	cp	r30, r16
+    55c8:	f1 07       	cpc	r31, r17
+    55ca:	01 f0       	breq	.+0      	; 0x55cc <_ZN6Stream8parseIntEc+0xa2>
+    55cc:	ff 20       	and	r15, r15
+    55ce:	01 f0       	breq	.+0      	; 0x55d0 <_ZN6Stream8parseIntEc+0xa6>
+    55d0:	50 95       	com	r21
+    55d2:	40 95       	com	r20
+    55d4:	30 95       	com	r19
+    55d6:	21 95       	neg	r18
+    55d8:	3f 4f       	sbci	r19, 0xFF	; 255
+    55da:	4f 4f       	sbci	r20, 0xFF	; 255
+    55dc:	5f 4f       	sbci	r21, 0xFF	; 255
+    55de:	b9 01       	movw	r22, r18
+    55e0:	ca 01       	movw	r24, r20
+    55e2:	0f 90       	pop	r0
+    55e4:	0f 90       	pop	r0
+    55e6:	0f 90       	pop	r0
+    55e8:	0f 90       	pop	r0
+    55ea:	df 91       	pop	r29
+    55ec:	cf 91       	pop	r28
+    55ee:	1f 91       	pop	r17
+    55f0:	0f 91       	pop	r16
+    55f2:	ff 90       	pop	r15
+    55f4:	df 90       	pop	r13
+    55f6:	cf 90       	pop	r12
+    55f8:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream8parseIntEv:
+
+0000ab24 <_ZN6Stream8parseIntEv>:
+    ab24:	61 e0       	ldi	r22, 0x01	; 1
+    ab26:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    ab2a:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream10parseFloatEc:
+
+00015650 <_ZN6Stream10parseFloatEc>:
+   15650:	a0 e0       	ldi	r26, 0x00	; 0
+   15652:	b0 e0       	ldi	r27, 0x00	; 0
+   15654:	e0 e0       	ldi	r30, 0x00	; 0
+   15656:	f0 e0       	ldi	r31, 0x00	; 0
+   15658:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+   1565c:	ec 01       	movw	r28, r24
+   1565e:	86 2e       	mov	r8, r22
+   15660:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   15664:	e8 2f       	mov	r30, r24
+   15666:	a1 2c       	mov	r10, r1
+   15668:	b1 2c       	mov	r11, r1
+   1566a:	00 e8       	ldi	r16, 0x80	; 128
+   1566c:	1f e3       	ldi	r17, 0x3F	; 63
+   1566e:	c1 2c       	mov	r12, r1
+   15670:	d1 2c       	mov	r13, r1
+   15672:	76 01       	movw	r14, r12
+   15674:	71 2c       	mov	r7, r1
+   15676:	91 2c       	mov	r9, r1
+   15678:	e8 15       	cp	r30, r8
+   1567a:	01 f0       	breq	.+0      	; 0x1567c <_ZN6Stream10parseFloatEc+0x2c>
+   1567c:	ed 32       	cpi	r30, 0x2D	; 45
+   1567e:	01 f0       	breq	.+0      	; 0x15680 <_ZN6Stream10parseFloatEc+0x30>
+   15680:	ee 32       	cpi	r30, 0x2E	; 46
+   15682:	01 f0       	breq	.+0      	; 0x15684 <_ZN6Stream10parseFloatEc+0x34>
+   15684:	8e 2f       	mov	r24, r30
+   15686:	80 53       	subi	r24, 0x30	; 48
+   15688:	8a 30       	cpi	r24, 0x0A	; 10
+   1568a:	00 f4       	brcc	.+0      	; 0x1568c <_ZN6Stream10parseFloatEc+0x3c>
+   1568c:	aa e0       	ldi	r26, 0x0A	; 10
+   1568e:	b0 e0       	ldi	r27, 0x00	; 0
+   15690:	a7 01       	movw	r20, r14
+   15692:	96 01       	movw	r18, r12
+   15694:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   15698:	6b 01       	movw	r12, r22
+   1569a:	7c 01       	movw	r14, r24
+   1569c:	ce 0e       	add	r12, r30
+   1569e:	d1 1c       	adc	r13, r1
+   156a0:	e1 1c       	adc	r14, r1
+   156a2:	f1 1c       	adc	r15, r1
+   156a4:	80 e3       	ldi	r24, 0x30	; 48
+   156a6:	c8 1a       	sub	r12, r24
+   156a8:	d1 08       	sbc	r13, r1
+   156aa:	e1 08       	sbc	r14, r1
+   156ac:	f1 08       	sbc	r15, r1
+   156ae:	77 20       	and	r7, r7
+   156b0:	01 f0       	breq	.+0      	; 0x156b2 <_ZN6Stream10parseFloatEc+0x62>
+   156b2:	2d ec       	ldi	r18, 0xCD	; 205
+   156b4:	3c ec       	ldi	r19, 0xCC	; 204
+   156b6:	4c ec       	ldi	r20, 0xCC	; 204
+   156b8:	5d e3       	ldi	r21, 0x3D	; 61
+   156ba:	6a 2d       	mov	r22, r10
+   156bc:	7b 2d       	mov	r23, r11
+   156be:	80 2f       	mov	r24, r16
+   156c0:	91 2f       	mov	r25, r17
+   156c2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   156c6:	5b 01       	movw	r10, r22
+   156c8:	8c 01       	movw	r16, r24
+   156ca:	00 c0       	rjmp	.+0      	; 0x156cc <_ZN6Stream10parseFloatEc+0x7c>
+   156cc:	99 24       	eor	r9, r9
+   156ce:	93 94       	inc	r9
+   156d0:	00 c0       	rjmp	.+0      	; 0x156d2 <_ZN6Stream10parseFloatEc+0x82>
+   156d2:	77 24       	eor	r7, r7
+   156d4:	73 94       	inc	r7
+   156d6:	e8 81       	ld	r30, Y
+   156d8:	f9 81       	ldd	r31, Y+1	; 0x01
+   156da:	06 80       	ldd	r0, Z+6	; 0x06
+   156dc:	f7 81       	ldd	r31, Z+7	; 0x07
+   156de:	e0 2d       	mov	r30, r0
+   156e0:	ce 01       	movw	r24, r28
+   156e2:	09 95       	icall
+   156e4:	ce 01       	movw	r24, r28
+   156e6:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   156ea:	e8 2f       	mov	r30, r24
+   156ec:	98 2f       	mov	r25, r24
+   156ee:	90 53       	subi	r25, 0x30	; 48
+   156f0:	9a 30       	cpi	r25, 0x0A	; 10
+   156f2:	00 f0       	brcs	.+0      	; 0x156f4 <_ZN6Stream10parseFloatEc+0xa4>
+   156f4:	8e 32       	cpi	r24, 0x2E	; 46
+   156f6:	01 f4       	brne	.+0      	; 0x156f8 <_ZN6Stream10parseFloatEc+0xa8>
+   156f8:	00 c0       	rjmp	.+0      	; 0x156fa <_ZN6Stream10parseFloatEc+0xaa>
+   156fa:	88 15       	cp	r24, r8
+   156fc:	01 f4       	brne	.+0      	; 0x156fe <_ZN6Stream10parseFloatEc+0xae>
+   156fe:	00 c0       	rjmp	.+0      	; 0x15700 <_ZN6Stream10parseFloatEc+0xb0>
+   15700:	99 20       	and	r9, r9
+   15702:	01 f0       	breq	.+0      	; 0x15704 <_ZN6Stream10parseFloatEc+0xb4>
+   15704:	f0 94       	com	r15
+   15706:	e0 94       	com	r14
+   15708:	d0 94       	com	r13
+   1570a:	c0 94       	com	r12
+   1570c:	c1 1c       	adc	r12, r1
+   1570e:	d1 1c       	adc	r13, r1
+   15710:	e1 1c       	adc	r14, r1
+   15712:	f1 1c       	adc	r15, r1
+   15714:	c7 01       	movw	r24, r14
+   15716:	b6 01       	movw	r22, r12
+   15718:	77 20       	and	r7, r7
+   1571a:	01 f0       	breq	.+0      	; 0x1571c <_ZN6Stream10parseFloatEc+0xcc>
+   1571c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   15720:	2a 2d       	mov	r18, r10
+   15722:	3b 2d       	mov	r19, r11
+   15724:	40 2f       	mov	r20, r16
+   15726:	51 2f       	mov	r21, r17
+   15728:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   1572c:	00 c0       	rjmp	.+0      	; 0x1572e <_ZN6Stream10parseFloatEc+0xde>
+   1572e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   15732:	cd b7       	in	r28, 0x3d	; 61
+   15734:	de b7       	in	r29, 0x3e	; 62
+   15736:	ed e0       	ldi	r30, 0x0D	; 13
+   15738:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6Stream10parseFloatEv:
+
+0002ad8c <_ZN6Stream10parseFloatEv>:
+   2ad8c:	61 e0       	ldi	r22, 0x01	; 1
+   2ad8e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   2ad92:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream9readBytesEPcj:
+
+00055b20 <_ZN6Stream9readBytesEPcj>:
+   55b20:	a0 e0       	ldi	r26, 0x00	; 0
+   55b22:	b0 e0       	ldi	r27, 0x00	; 0
+   55b24:	e0 e0       	ldi	r30, 0x00	; 0
+   55b26:	f0 e0       	ldi	r31, 0x00	; 0
+   55b28:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+   55b2c:	7c 01       	movw	r14, r24
+   55b2e:	8b 01       	movw	r16, r22
+   55b30:	6a 01       	movw	r12, r20
+   55b32:	c0 e0       	ldi	r28, 0x00	; 0
+   55b34:	d0 e0       	ldi	r29, 0x00	; 0
+   55b36:	00 c0       	rjmp	.+0      	; 0x55b38 <_ZN6Stream9readBytesEPcj+0x18>
+   55b38:	c7 01       	movw	r24, r14
+   55b3a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   55b3e:	97 fd       	sbrc	r25, 7
+   55b40:	00 c0       	rjmp	.+0      	; 0x55b42 <_ZN6Stream9readBytesEPcj+0x22>
+   55b42:	f8 01       	movw	r30, r16
+   55b44:	81 93       	st	Z+, r24
+   55b46:	8f 01       	movw	r16, r30
+   55b48:	21 96       	adiw	r28, 0x01	; 1
+   55b4a:	cc 15       	cp	r28, r12
+   55b4c:	dd 05       	cpc	r29, r13
+   55b4e:	01 f4       	brne	.+0      	; 0x55b50 <_ZN6Stream9readBytesEPcj+0x30>
+   55b50:	ce 01       	movw	r24, r28
+   55b52:	cd b7       	in	r28, 0x3d	; 61
+   55b54:	de b7       	in	r29, 0x3e	; 62
+   55b56:	e8 e0       	ldi	r30, 0x08	; 8
+   55b58:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6Stream14readBytesUntilEcPcj:
+
+000ab67c <_ZN6Stream14readBytesUntilEcPcj>:
+   ab67c:	a0 e0       	ldi	r26, 0x00	; 0
+   ab67e:	b0 e0       	ldi	r27, 0x00	; 0
+   ab680:	e0 e0       	ldi	r30, 0x00	; 0
+   ab682:	f0 e0       	ldi	r31, 0x00	; 0
+   ab684:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+   ab688:	6c 01       	movw	r12, r24
+   ab68a:	8a 01       	movw	r16, r20
+   ab68c:	79 01       	movw	r14, r18
+   ab68e:	c0 e0       	ldi	r28, 0x00	; 0
+   ab690:	d0 e0       	ldi	r29, 0x00	; 0
+   ab692:	21 15       	cp	r18, r1
+   ab694:	31 05       	cpc	r19, r1
+   ab696:	01 f0       	breq	.+0      	; 0xab698 <_ZN6Stream14readBytesUntilEcPcj+0x1c>
+   ab698:	a6 2e       	mov	r10, r22
+   ab69a:	b1 2c       	mov	r11, r1
+   ab69c:	c6 01       	movw	r24, r12
+   ab69e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   ab6a2:	97 fd       	sbrc	r25, 7
+   ab6a4:	00 c0       	rjmp	.+0      	; 0xab6a6 <_ZN6Stream14readBytesUntilEcPcj+0x2a>
+   ab6a6:	8a 15       	cp	r24, r10
+   ab6a8:	9b 05       	cpc	r25, r11
+   ab6aa:	01 f0       	breq	.+0      	; 0xab6ac <_ZN6Stream14readBytesUntilEcPcj+0x30>
+   ab6ac:	f8 01       	movw	r30, r16
+   ab6ae:	81 93       	st	Z+, r24
+   ab6b0:	8f 01       	movw	r16, r30
+   ab6b2:	21 96       	adiw	r28, 0x01	; 1
+   ab6b4:	ce 15       	cp	r28, r14
+   ab6b6:	df 05       	cpc	r29, r15
+   ab6b8:	01 f4       	brne	.+0      	; 0xab6ba <_ZN6Stream14readBytesUntilEcPcj+0x3e>
+   ab6ba:	ce 01       	movw	r24, r28
+   ab6bc:	cd b7       	in	r28, 0x3d	; 61
+   ab6be:	de b7       	in	r29, 0x3e	; 62
+   ab6c0:	ea e0       	ldi	r30, 0x0A	; 10
+   ab6c2:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6Stream10readStringEv:
+
+002ada85 <_ZN6Stream10readStringEv>:
+  2ada85:	0f 93       	push	r16
+  2ada87:	1f 93       	push	r17
+  2ada89:	cf 93       	push	r28
+  2ada8b:	df 93       	push	r29
+  2ada8d:	ec 01       	movw	r28, r24
+  2ada8f:	8b 01       	movw	r16, r22
+  2ada91:	60 e0       	ldi	r22, 0x00	; 0
+  2ada93:	70 e0       	ldi	r23, 0x00	; 0
+  2ada95:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  2ada99:	00 c0       	rjmp	.+0      	; 0x2ada9b <_ZN6Stream10readStringEv+0x16>
+  2ada9b:	68 2f       	mov	r22, r24
+  2ada9d:	ce 01       	movw	r24, r28
+  2ada9f:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  2adaa3:	c8 01       	movw	r24, r16
+  2adaa5:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  2adaa9:	97 ff       	sbrs	r25, 7
+  2adaab:	00 c0       	rjmp	.+0      	; 0x2adaad <_ZN6Stream10readStringEv+0x28>
+  2adaad:	ce 01       	movw	r24, r28
+  2adaaf:	df 91       	pop	r29
+  2adab1:	cf 91       	pop	r28
+  2adab3:	1f 91       	pop	r17
+  2adab5:	0f 91       	pop	r16
+  2adab7:	08 95       	ret
+
+Disassembly of section .text._ZN6Stream15readStringUntilEc:
+
+0055b53e <_ZN6Stream15readStringUntilEc>:
+  55b53e:	ef 92       	push	r14
+  55b540:	ff 92       	push	r15
+  55b542:	0f 93       	push	r16
+  55b544:	1f 93       	push	r17
+  55b546:	cf 93       	push	r28
+  55b548:	df 93       	push	r29
+  55b54a:	ec 01       	movw	r28, r24
+  55b54c:	8b 01       	movw	r16, r22
+  55b54e:	e4 2e       	mov	r14, r20
+  55b550:	60 e0       	ldi	r22, 0x00	; 0
+  55b552:	70 e0       	ldi	r23, 0x00	; 0
+  55b554:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  55b558:	c8 01       	movw	r24, r16
+  55b55a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  55b55e:	f1 2c       	mov	r15, r1
+  55b560:	97 fd       	sbrc	r25, 7
+  55b562:	00 c0       	rjmp	.+0      	; 0x55b564 <_ZN6Stream15readStringUntilEc+0x26>
+  55b564:	8e 15       	cp	r24, r14
+  55b566:	9f 05       	cpc	r25, r15
+  55b568:	01 f0       	breq	.+0      	; 0x55b56a <_ZN6Stream15readStringUntilEc+0x2c>
+  55b56a:	68 2f       	mov	r22, r24
+  55b56c:	ce 01       	movw	r24, r28
+  55b56e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  55b572:	c8 01       	movw	r24, r16
+  55b574:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  55b578:	00 c0       	rjmp	.+0      	; 0x55b57a <_ZN6Stream15readStringUntilEc+0x3c>
+  55b57a:	ce 01       	movw	r24, r28
+  55b57c:	cd b7       	in	r28, 0x3d	; 61
+  55b57e:	de b7       	in	r29, 0x3e	; 62
+  55b580:	e6 e0       	ldi	r30, 0x06	; 6
+  55b582:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>

@@ -1,0 +1,200 @@
+
+tmp//usr/share/arduino/hardware/arduino/cores/arduino/wiring_digital.o:     file format elf32-avr
+
+
+Disassembly of section .text.turnOffPWM:
+
+00000000 <turnOffPWM>:
+   0:	83 30       	cpi	r24, 0x03	; 3
+   2:	01 f0       	breq	.+0      	; 0x4 <turnOffPWM+0x4>
+   4:	00 f4       	brcc	.+0      	; 0x6 <turnOffPWM+0x6>
+   6:	81 30       	cpi	r24, 0x01	; 1
+   8:	01 f0       	breq	.+0      	; 0xa <turnOffPWM+0xa>
+   a:	82 30       	cpi	r24, 0x02	; 2
+   c:	01 f4       	brne	.+0      	; 0xe <turnOffPWM+0xe>
+   e:	00 c0       	rjmp	.+0      	; 0x10 <turnOffPWM+0x10>
+  10:	86 30       	cpi	r24, 0x06	; 6
+  12:	01 f0       	breq	.+0      	; 0x14 <turnOffPWM+0x14>
+  14:	87 30       	cpi	r24, 0x07	; 7
+  16:	01 f0       	breq	.+0      	; 0x18 <turnOffPWM+0x18>
+  18:	84 30       	cpi	r24, 0x04	; 4
+  1a:	01 f4       	brne	.+0      	; 0x1c <turnOffPWM+0x1c>
+  1c:	00 c0       	rjmp	.+0      	; 0x1e <turnOffPWM+0x1e>
+  1e:	80 91 80 00 	lds	r24, 0x0080
+  22:	8f 77       	andi	r24, 0x7F	; 127
+  24:	00 c0       	rjmp	.+0      	; 0x26 <turnOffPWM+0x26>
+  26:	80 91 80 00 	lds	r24, 0x0080
+  2a:	8f 7d       	andi	r24, 0xDF	; 223
+  2c:	80 93 80 00 	sts	0x0080, r24
+  30:	08 95       	ret
+  32:	84 b5       	in	r24, 0x24	; 36
+  34:	8f 77       	andi	r24, 0x7F	; 127
+  36:	00 c0       	rjmp	.+0      	; 0x38 <turnOffPWM+0x38>
+  38:	84 b5       	in	r24, 0x24	; 36
+  3a:	8f 7d       	andi	r24, 0xDF	; 223
+  3c:	84 bd       	out	0x24, r24	; 36
+  3e:	08 95       	ret
+  40:	80 91 b0 00 	lds	r24, 0x00B0
+  44:	8f 77       	andi	r24, 0x7F	; 127
+  46:	00 c0       	rjmp	.+0      	; 0x48 <turnOffPWM+0x48>
+  48:	80 91 b0 00 	lds	r24, 0x00B0
+  4c:	8f 7d       	andi	r24, 0xDF	; 223
+  4e:	80 93 b0 00 	sts	0x00B0, r24
+  52:	08 95       	ret
+
+Disassembly of section .text.pinMode:
+
+00000054 <pinMode>:
+  54:	cf 93       	push	r28
+  56:	df 93       	push	r29
+  58:	90 e0       	ldi	r25, 0x00	; 0
+  5a:	fc 01       	movw	r30, r24
+  5c:	e0 50       	subi	r30, 0x00	; 0
+  5e:	f0 40       	sbci	r31, 0x00	; 0
+  60:	44 91       	lpm	r20, Z
+  62:	fc 01       	movw	r30, r24
+  64:	e0 50       	subi	r30, 0x00	; 0
+  66:	f0 40       	sbci	r31, 0x00	; 0
+  68:	84 91       	lpm	r24, Z
+  6a:	88 23       	and	r24, r24
+  6c:	01 f0       	breq	.+0      	; 0x6e <pinMode+0x1a>
+  6e:	90 e0       	ldi	r25, 0x00	; 0
+  70:	88 0f       	add	r24, r24
+  72:	99 1f       	adc	r25, r25
+  74:	fc 01       	movw	r30, r24
+  76:	e0 50       	subi	r30, 0x00	; 0
+  78:	f0 40       	sbci	r31, 0x00	; 0
+  7a:	25 91       	lpm	r18, Z+
+  7c:	34 91       	lpm	r19, Z
+  7e:	d9 01       	movw	r26, r18
+  80:	80 50       	subi	r24, 0x00	; 0
+  82:	90 40       	sbci	r25, 0x00	; 0
+  84:	fc 01       	movw	r30, r24
+  86:	85 91       	lpm	r24, Z+
+  88:	94 91       	lpm	r25, Z
+  8a:	c8 2f       	mov	r28, r24
+  8c:	d9 2f       	mov	r29, r25
+  8e:	9f b7       	in	r25, 0x3f	; 63
+  90:	f8 94       	cli
+  92:	8c 91       	ld	r24, X
+  94:	61 11       	cpse	r22, r1
+  96:	00 c0       	rjmp	.+0      	; 0x98 <pinMode+0x44>
+  98:	40 95       	com	r20
+  9a:	84 23       	and	r24, r20
+  9c:	8c 93       	st	X, r24
+  9e:	88 81       	ld	r24, Y
+  a0:	84 23       	and	r24, r20
+  a2:	00 c0       	rjmp	.+0      	; 0xa4 <pinMode+0x50>
+  a4:	62 30       	cpi	r22, 0x02	; 2
+  a6:	01 f4       	brne	.+0      	; 0xa8 <pinMode+0x54>
+  a8:	24 2f       	mov	r18, r20
+  aa:	20 95       	com	r18
+  ac:	82 23       	and	r24, r18
+  ae:	8c 93       	st	X, r24
+  b0:	88 81       	ld	r24, Y
+  b2:	84 2b       	or	r24, r20
+  b4:	88 83       	st	Y, r24
+  b6:	00 c0       	rjmp	.+0      	; 0xb8 <pinMode+0x64>
+  b8:	84 2b       	or	r24, r20
+  ba:	8c 93       	st	X, r24
+  bc:	9f bf       	out	0x3f, r25	; 63
+  be:	df 91       	pop	r29
+  c0:	cf 91       	pop	r28
+  c2:	08 95       	ret
+
+Disassembly of section .text.digitalWrite:
+
+00000118 <digitalWrite>:
+ 118:	a1 e0       	ldi	r26, 0x01	; 1
+ 11a:	b0 e0       	ldi	r27, 0x00	; 0
+ 11c:	e0 e0       	ldi	r30, 0x00	; 0
+ 11e:	f0 e0       	ldi	r31, 0x00	; 0
+ 120:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+ 124:	28 2f       	mov	r18, r24
+ 126:	30 e0       	ldi	r19, 0x00	; 0
+ 128:	f9 01       	movw	r30, r18
+ 12a:	e0 50       	subi	r30, 0x00	; 0
+ 12c:	f0 40       	sbci	r31, 0x00	; 0
+ 12e:	84 91       	lpm	r24, Z
+ 130:	f9 01       	movw	r30, r18
+ 132:	e0 50       	subi	r30, 0x00	; 0
+ 134:	f0 40       	sbci	r31, 0x00	; 0
+ 136:	14 91       	lpm	r17, Z
+ 138:	f9 01       	movw	r30, r18
+ 13a:	e0 50       	subi	r30, 0x00	; 0
+ 13c:	f0 40       	sbci	r31, 0x00	; 0
+ 13e:	04 91       	lpm	r16, Z
+ 140:	00 23       	and	r16, r16
+ 142:	01 f0       	breq	.+0      	; 0x144 <digitalWrite+0x2c>
+ 144:	88 23       	and	r24, r24
+ 146:	01 f0       	breq	.+0      	; 0x148 <digitalWrite+0x30>
+ 148:	69 83       	std	Y+1, r22	; 0x01
+ 14a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 14e:	69 81       	ldd	r22, Y+1	; 0x01
+ 150:	e0 2f       	mov	r30, r16
+ 152:	f0 e0       	ldi	r31, 0x00	; 0
+ 154:	ee 0f       	add	r30, r30
+ 156:	ff 1f       	adc	r31, r31
+ 158:	e0 50       	subi	r30, 0x00	; 0
+ 15a:	f0 40       	sbci	r31, 0x00	; 0
+ 15c:	85 91       	lpm	r24, Z+
+ 15e:	94 91       	lpm	r25, Z
+ 160:	dc 01       	movw	r26, r24
+ 162:	9f b7       	in	r25, 0x3f	; 63
+ 164:	f8 94       	cli
+ 166:	8c 91       	ld	r24, X
+ 168:	61 11       	cpse	r22, r1
+ 16a:	00 c0       	rjmp	.+0      	; 0x16c <digitalWrite+0x54>
+ 16c:	10 95       	com	r17
+ 16e:	81 23       	and	r24, r17
+ 170:	00 c0       	rjmp	.+0      	; 0x172 <digitalWrite+0x5a>
+ 172:	81 2b       	or	r24, r17
+ 174:	8c 93       	st	X, r24
+ 176:	9f bf       	out	0x3f, r25	; 63
+ 178:	21 96       	adiw	r28, 0x01	; 1
+ 17a:	e4 e0       	ldi	r30, 0x04	; 4
+ 17c:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text.digitalRead:
+
+00000298 <digitalRead>:
+ 298:	cf 93       	push	r28
+ 29a:	df 93       	push	r29
+ 29c:	28 2f       	mov	r18, r24
+ 29e:	30 e0       	ldi	r19, 0x00	; 0
+ 2a0:	f9 01       	movw	r30, r18
+ 2a2:	e0 50       	subi	r30, 0x00	; 0
+ 2a4:	f0 40       	sbci	r31, 0x00	; 0
+ 2a6:	84 91       	lpm	r24, Z
+ 2a8:	f9 01       	movw	r30, r18
+ 2aa:	e0 50       	subi	r30, 0x00	; 0
+ 2ac:	f0 40       	sbci	r31, 0x00	; 0
+ 2ae:	d4 91       	lpm	r29, Z
+ 2b0:	f9 01       	movw	r30, r18
+ 2b2:	e0 50       	subi	r30, 0x00	; 0
+ 2b4:	f0 40       	sbci	r31, 0x00	; 0
+ 2b6:	c4 91       	lpm	r28, Z
+ 2b8:	cc 23       	and	r28, r28
+ 2ba:	01 f0       	breq	.+0      	; 0x2bc <digitalRead+0x24>
+ 2bc:	81 11       	cpse	r24, r1
+ 2be:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 2c2:	ec 2f       	mov	r30, r28
+ 2c4:	f0 e0       	ldi	r31, 0x00	; 0
+ 2c6:	ee 0f       	add	r30, r30
+ 2c8:	ff 1f       	adc	r31, r31
+ 2ca:	e0 50       	subi	r30, 0x00	; 0
+ 2cc:	f0 40       	sbci	r31, 0x00	; 0
+ 2ce:	85 91       	lpm	r24, Z+
+ 2d0:	94 91       	lpm	r25, Z
+ 2d2:	dc 01       	movw	r26, r24
+ 2d4:	8c 91       	ld	r24, X
+ 2d6:	8d 23       	and	r24, r29
+ 2d8:	21 e0       	ldi	r18, 0x01	; 1
+ 2da:	30 e0       	ldi	r19, 0x00	; 0
+ 2dc:	01 f4       	brne	.+0      	; 0x2de <digitalRead+0x46>
+ 2de:	20 e0       	ldi	r18, 0x00	; 0
+ 2e0:	30 e0       	ldi	r19, 0x00	; 0
+ 2e2:	c9 01       	movw	r24, r18
+ 2e4:	df 91       	pop	r29
+ 2e6:	cf 91       	pop	r28
+ 2e8:	08 95       	ret

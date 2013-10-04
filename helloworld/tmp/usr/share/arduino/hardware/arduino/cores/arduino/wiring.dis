@@ -1,0 +1,239 @@
+
+tmp//usr/share/arduino/hardware/arduino/cores/arduino/wiring.o:     file format elf32-avr
+
+
+Disassembly of section .text.__vector_16:
+
+00000000 <__vector_16>:
+   0:	1f 92       	push	r1
+   2:	0f 92       	push	r0
+   4:	0f b6       	in	r0, 0x3f	; 63
+   6:	0f 92       	push	r0
+   8:	11 24       	eor	r1, r1
+   a:	2f 93       	push	r18
+   c:	3f 93       	push	r19
+   e:	8f 93       	push	r24
+  10:	9f 93       	push	r25
+  12:	af 93       	push	r26
+  14:	bf 93       	push	r27
+  16:	80 91 00 00 	lds	r24, 0x0000
+  1a:	90 91 00 00 	lds	r25, 0x0000
+  1e:	a0 91 00 00 	lds	r26, 0x0000
+  22:	b0 91 00 00 	lds	r27, 0x0000
+  26:	30 91 00 00 	lds	r19, 0x0000
+  2a:	23 2f       	mov	r18, r19
+  2c:	2d 5f       	subi	r18, 0xFD	; 253
+  2e:	2d 37       	cpi	r18, 0x7D	; 125
+  30:	00 f4       	brcc	.+0      	; 0x32 <__vector_16+0x32>
+  32:	01 96       	adiw	r24, 0x01	; 1
+  34:	a1 1d       	adc	r26, r1
+  36:	b1 1d       	adc	r27, r1
+  38:	00 c0       	rjmp	.+0      	; 0x3a <__vector_16+0x3a>
+  3a:	23 2f       	mov	r18, r19
+  3c:	2a 57       	subi	r18, 0x7A	; 122
+  3e:	02 96       	adiw	r24, 0x02	; 2
+  40:	a1 1d       	adc	r26, r1
+  42:	b1 1d       	adc	r27, r1
+  44:	20 93 00 00 	sts	0x0000, r18
+  48:	80 93 00 00 	sts	0x0000, r24
+  4c:	90 93 00 00 	sts	0x0000, r25
+  50:	a0 93 00 00 	sts	0x0000, r26
+  54:	b0 93 00 00 	sts	0x0000, r27
+  58:	80 91 00 00 	lds	r24, 0x0000
+  5c:	90 91 00 00 	lds	r25, 0x0000
+  60:	a0 91 00 00 	lds	r26, 0x0000
+  64:	b0 91 00 00 	lds	r27, 0x0000
+  68:	01 96       	adiw	r24, 0x01	; 1
+  6a:	a1 1d       	adc	r26, r1
+  6c:	b1 1d       	adc	r27, r1
+  6e:	80 93 00 00 	sts	0x0000, r24
+  72:	90 93 00 00 	sts	0x0000, r25
+  76:	a0 93 00 00 	sts	0x0000, r26
+  7a:	b0 93 00 00 	sts	0x0000, r27
+  7e:	bf 91       	pop	r27
+  80:	af 91       	pop	r26
+  82:	9f 91       	pop	r25
+  84:	8f 91       	pop	r24
+  86:	3f 91       	pop	r19
+  88:	2f 91       	pop	r18
+  8a:	0f 90       	pop	r0
+  8c:	0f be       	out	0x3f, r0	; 63
+  8e:	0f 90       	pop	r0
+  90:	1f 90       	pop	r1
+  92:	18 95       	reti
+
+Disassembly of section .text.millis:
+
+00000094 <millis>:
+  94:	0f 93       	push	r16
+  96:	1f 93       	push	r17
+  98:	8f b7       	in	r24, 0x3f	; 63
+  9a:	f8 94       	cli
+  9c:	00 91 00 00 	lds	r16, 0x0000
+  a0:	10 91 00 00 	lds	r17, 0x0000
+  a4:	20 91 00 00 	lds	r18, 0x0000
+  a8:	30 91 00 00 	lds	r19, 0x0000
+  ac:	8f bf       	out	0x3f, r24	; 63
+  ae:	b8 01       	movw	r22, r16
+  b0:	c9 01       	movw	r24, r18
+  b2:	1f 91       	pop	r17
+  b4:	0f 91       	pop	r16
+  b6:	08 95       	ret
+
+Disassembly of section .text.micros:
+
+0000014c <micros>:
+ 14c:	0f 93       	push	r16
+ 14e:	1f 93       	push	r17
+ 150:	9f b7       	in	r25, 0x3f	; 63
+ 152:	f8 94       	cli
+ 154:	00 91 00 00 	lds	r16, 0x0000
+ 158:	10 91 00 00 	lds	r17, 0x0000
+ 15c:	20 91 00 00 	lds	r18, 0x0000
+ 160:	30 91 00 00 	lds	r19, 0x0000
+ 164:	86 b5       	in	r24, 0x26	; 38
+ 166:	a8 9b       	sbis	0x15, 0	; 21
+ 168:	00 c0       	rjmp	.+0      	; 0x16a <micros+0x1e>
+ 16a:	8f 3f       	cpi	r24, 0xFF	; 255
+ 16c:	01 f0       	breq	.+0      	; 0x16e <micros+0x22>
+ 16e:	0f 5f       	subi	r16, 0xFF	; 255
+ 170:	1f 4f       	sbci	r17, 0xFF	; 255
+ 172:	2f 4f       	sbci	r18, 0xFF	; 255
+ 174:	3f 4f       	sbci	r19, 0xFF	; 255
+ 176:	9f bf       	out	0x3f, r25	; 63
+ 178:	32 2f       	mov	r19, r18
+ 17a:	21 2f       	mov	r18, r17
+ 17c:	10 2f       	mov	r17, r16
+ 17e:	00 27       	eor	r16, r16
+ 180:	08 0f       	add	r16, r24
+ 182:	11 1d       	adc	r17, r1
+ 184:	21 1d       	adc	r18, r1
+ 186:	31 1d       	adc	r19, r1
+ 188:	42 e0       	ldi	r20, 0x02	; 2
+ 18a:	00 0f       	add	r16, r16
+ 18c:	11 1f       	adc	r17, r17
+ 18e:	22 1f       	adc	r18, r18
+ 190:	33 1f       	adc	r19, r19
+ 192:	4a 95       	dec	r20
+ 194:	01 f4       	brne	.+0      	; 0x196 <micros+0x4a>
+ 196:	b8 01       	movw	r22, r16
+ 198:	c9 01       	movw	r24, r18
+ 19a:	1f 91       	pop	r17
+ 19c:	0f 91       	pop	r16
+ 19e:	08 95       	ret
+
+Disassembly of section .text.delay:
+
+000002ec <delay>:
+ 2ec:	cf 92       	push	r12
+ 2ee:	df 92       	push	r13
+ 2f0:	ef 92       	push	r14
+ 2f2:	ff 92       	push	r15
+ 2f4:	cf 93       	push	r28
+ 2f6:	df 93       	push	r29
+ 2f8:	6b 01       	movw	r12, r22
+ 2fa:	7c 01       	movw	r14, r24
+ 2fc:	0e 94 00 00 	call	0	; 0x0 <timer0_millis>
+ 300:	eb 01       	movw	r28, r22
+ 302:	00 c0       	rjmp	.+0      	; 0x304 <delay+0x18>
+ 304:	0e 94 00 00 	call	0	; 0x0 <timer0_millis>
+ 308:	6c 1b       	sub	r22, r28
+ 30a:	7d 0b       	sbc	r23, r29
+ 30c:	68 3e       	cpi	r22, 0xE8	; 232
+ 30e:	73 40       	sbci	r23, 0x03	; 3
+ 310:	00 f0       	brcs	.+0      	; 0x312 <delay+0x26>
+ 312:	81 e0       	ldi	r24, 0x01	; 1
+ 314:	c8 1a       	sub	r12, r24
+ 316:	d1 08       	sbc	r13, r1
+ 318:	e1 08       	sbc	r14, r1
+ 31a:	f1 08       	sbc	r15, r1
+ 31c:	c8 51       	subi	r28, 0x18	; 24
+ 31e:	dc 4f       	sbci	r29, 0xFC	; 252
+ 320:	c1 14       	cp	r12, r1
+ 322:	d1 04       	cpc	r13, r1
+ 324:	e1 04       	cpc	r14, r1
+ 326:	f1 04       	cpc	r15, r1
+ 328:	01 f4       	brne	.+0      	; 0x32a <delay+0x3e>
+ 32a:	df 91       	pop	r29
+ 32c:	cf 91       	pop	r28
+ 32e:	ff 90       	pop	r15
+ 330:	ef 90       	pop	r14
+ 332:	df 90       	pop	r13
+ 334:	cf 90       	pop	r12
+ 336:	08 95       	ret
+
+Disassembly of section .text.delayMicroseconds:
+
+00000624 <delayMicroseconds>:
+ 624:	01 97       	sbiw	r24, 0x01	; 1
+ 626:	01 f0       	breq	.+0      	; 0x628 <delayMicroseconds+0x4>
+ 628:	88 0f       	add	r24, r24
+ 62a:	99 1f       	adc	r25, r25
+ 62c:	88 0f       	add	r24, r24
+ 62e:	99 1f       	adc	r25, r25
+ 630:	02 97       	sbiw	r24, 0x02	; 2
+ 632:	01 97       	sbiw	r24, 0x01	; 1
+ 634:	01 f4       	brne	.+0      	; 0x636 <delayMicroseconds+0x12>
+ 636:	08 95       	ret
+
+Disassembly of section .text.init:
+
+00000c5c <init>:
+ c5c:	78 94       	sei
+ c5e:	84 b5       	in	r24, 0x24	; 36
+ c60:	82 60       	ori	r24, 0x02	; 2
+ c62:	84 bd       	out	0x24, r24	; 36
+ c64:	84 b5       	in	r24, 0x24	; 36
+ c66:	81 60       	ori	r24, 0x01	; 1
+ c68:	84 bd       	out	0x24, r24	; 36
+ c6a:	85 b5       	in	r24, 0x25	; 37
+ c6c:	82 60       	ori	r24, 0x02	; 2
+ c6e:	85 bd       	out	0x25, r24	; 37
+ c70:	85 b5       	in	r24, 0x25	; 37
+ c72:	81 60       	ori	r24, 0x01	; 1
+ c74:	85 bd       	out	0x25, r24	; 37
+ c76:	ee e6       	ldi	r30, 0x6E	; 110
+ c78:	f0 e0       	ldi	r31, 0x00	; 0
+ c7a:	80 81       	ld	r24, Z
+ c7c:	81 60       	ori	r24, 0x01	; 1
+ c7e:	80 83       	st	Z, r24
+ c80:	e1 e8       	ldi	r30, 0x81	; 129
+ c82:	f0 e0       	ldi	r31, 0x00	; 0
+ c84:	10 82       	st	Z, r1
+ c86:	80 81       	ld	r24, Z
+ c88:	82 60       	ori	r24, 0x02	; 2
+ c8a:	80 83       	st	Z, r24
+ c8c:	80 81       	ld	r24, Z
+ c8e:	81 60       	ori	r24, 0x01	; 1
+ c90:	80 83       	st	Z, r24
+ c92:	e0 e8       	ldi	r30, 0x80	; 128
+ c94:	f0 e0       	ldi	r31, 0x00	; 0
+ c96:	80 81       	ld	r24, Z
+ c98:	81 60       	ori	r24, 0x01	; 1
+ c9a:	80 83       	st	Z, r24
+ c9c:	e1 eb       	ldi	r30, 0xB1	; 177
+ c9e:	f0 e0       	ldi	r31, 0x00	; 0
+ ca0:	80 81       	ld	r24, Z
+ ca2:	84 60       	ori	r24, 0x04	; 4
+ ca4:	80 83       	st	Z, r24
+ ca6:	e0 eb       	ldi	r30, 0xB0	; 176
+ ca8:	f0 e0       	ldi	r31, 0x00	; 0
+ caa:	80 81       	ld	r24, Z
+ cac:	81 60       	ori	r24, 0x01	; 1
+ cae:	80 83       	st	Z, r24
+ cb0:	ea e7       	ldi	r30, 0x7A	; 122
+ cb2:	f0 e0       	ldi	r31, 0x00	; 0
+ cb4:	80 81       	ld	r24, Z
+ cb6:	84 60       	ori	r24, 0x04	; 4
+ cb8:	80 83       	st	Z, r24
+ cba:	80 81       	ld	r24, Z
+ cbc:	82 60       	ori	r24, 0x02	; 2
+ cbe:	80 83       	st	Z, r24
+ cc0:	80 81       	ld	r24, Z
+ cc2:	81 60       	ori	r24, 0x01	; 1
+ cc4:	80 83       	st	Z, r24
+ cc6:	80 81       	ld	r24, Z
+ cc8:	80 68       	ori	r24, 0x80	; 128
+ cca:	80 83       	st	Z, r24
+ ccc:	10 92 c1 00 	sts	0x00C1, r1
+ cd0:	08 95       	ret

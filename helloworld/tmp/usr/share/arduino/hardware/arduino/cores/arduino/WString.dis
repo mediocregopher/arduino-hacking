@@ -1,0 +1,1945 @@
+
+tmp//usr/share/arduino/hardware/arduino/cores/arduino/WString.o:     file format elf32-avr
+
+
+Disassembly of section .text._ZN6StringD2Ev:
+
+00000000 <_ZN6StringD1Ev>:
+   0:	fc 01       	movw	r30, r24
+   2:	80 81       	ld	r24, Z
+   4:	91 81       	ldd	r25, Z+1	; 0x01
+   6:	0e 94 00 00 	call	0	; 0x0 <_ZN6StringD1Ev>
+   a:	08 95       	ret
+
+Disassembly of section .text._ZN6String10invalidateEv:
+
+0000000c <_ZN6String10invalidateEv>:
+   c:	cf 93       	push	r28
+   e:	df 93       	push	r29
+  10:	ec 01       	movw	r28, r24
+  12:	88 81       	ld	r24, Y
+  14:	99 81       	ldd	r25, Y+1	; 0x01
+  16:	00 97       	sbiw	r24, 0x00	; 0
+  18:	01 f0       	breq	.+0      	; 0x1a <_ZN6String10invalidateEv+0xe>
+  1a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  1e:	19 82       	std	Y+1, r1	; 0x01
+  20:	18 82       	st	Y, r1
+  22:	1d 82       	std	Y+5, r1	; 0x05
+  24:	1c 82       	std	Y+4, r1	; 0x04
+  26:	1b 82       	std	Y+3, r1	; 0x03
+  28:	1a 82       	std	Y+2, r1	; 0x02
+  2a:	df 91       	pop	r29
+  2c:	cf 91       	pop	r28
+  2e:	08 95       	ret
+
+Disassembly of section .text._ZN6String12changeBufferEj:
+
+0000003c <_ZN6String12changeBufferEj>:
+  3c:	0f 93       	push	r16
+  3e:	1f 93       	push	r17
+  40:	cf 93       	push	r28
+  42:	df 93       	push	r29
+  44:	ec 01       	movw	r28, r24
+  46:	8b 01       	movw	r16, r22
+  48:	6f 5f       	subi	r22, 0xFF	; 255
+  4a:	7f 4f       	sbci	r23, 0xFF	; 255
+  4c:	88 81       	ld	r24, Y
+  4e:	99 81       	ldd	r25, Y+1	; 0x01
+  50:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  54:	00 97       	sbiw	r24, 0x00	; 0
+  56:	01 f0       	breq	.+0      	; 0x58 <_ZN6String12changeBufferEj+0x1c>
+  58:	99 83       	std	Y+1, r25	; 0x01
+  5a:	88 83       	st	Y, r24
+  5c:	1b 83       	std	Y+3, r17	; 0x03
+  5e:	0a 83       	std	Y+2, r16	; 0x02
+  60:	81 e0       	ldi	r24, 0x01	; 1
+  62:	00 c0       	rjmp	.+0      	; 0x64 <_ZN6String12changeBufferEj+0x28>
+  64:	80 e0       	ldi	r24, 0x00	; 0
+  66:	df 91       	pop	r29
+  68:	cf 91       	pop	r28
+  6a:	1f 91       	pop	r17
+  6c:	0f 91       	pop	r16
+  6e:	08 95       	ret
+
+Disassembly of section .text._ZN6String7reserveEj:
+
+000000ac <_ZN6String7reserveEj>:
+  ac:	cf 93       	push	r28
+  ae:	df 93       	push	r29
+  b0:	ec 01       	movw	r28, r24
+  b2:	88 81       	ld	r24, Y
+  b4:	99 81       	ldd	r25, Y+1	; 0x01
+  b6:	89 2b       	or	r24, r25
+  b8:	01 f0       	breq	.+0      	; 0xba <_ZN6String7reserveEj+0xe>
+  ba:	8a 81       	ldd	r24, Y+2	; 0x02
+  bc:	9b 81       	ldd	r25, Y+3	; 0x03
+  be:	86 17       	cp	r24, r22
+  c0:	97 07       	cpc	r25, r23
+  c2:	00 f0       	brcs	.+0      	; 0xc4 <_ZN6String7reserveEj+0x18>
+  c4:	00 c0       	rjmp	.+0      	; 0xc6 <_ZN6String7reserveEj+0x1a>
+  c6:	ce 01       	movw	r24, r28
+  c8:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  cc:	88 23       	and	r24, r24
+  ce:	01 f0       	breq	.+0      	; 0xd0 <_ZN6String7reserveEj+0x24>
+  d0:	8c 81       	ldd	r24, Y+4	; 0x04
+  d2:	9d 81       	ldd	r25, Y+5	; 0x05
+  d4:	89 2b       	or	r24, r25
+  d6:	01 f4       	brne	.+0      	; 0xd8 <_ZN6String7reserveEj+0x2c>
+  d8:	e8 81       	ld	r30, Y
+  da:	f9 81       	ldd	r31, Y+1	; 0x01
+  dc:	10 82       	st	Z, r1
+  de:	81 e0       	ldi	r24, 0x01	; 1
+  e0:	00 c0       	rjmp	.+0      	; 0xe2 <_ZN6String7reserveEj+0x36>
+  e2:	80 e0       	ldi	r24, 0x00	; 0
+  e4:	df 91       	pop	r29
+  e6:	cf 91       	pop	r28
+  e8:	08 95       	ret
+
+Disassembly of section .text._ZN6String4copyEPKcj:
+
+00000196 <_ZN6String4copyEPKcj>:
+ 196:	ef 92       	push	r14
+ 198:	ff 92       	push	r15
+ 19a:	0f 93       	push	r16
+ 19c:	1f 93       	push	r17
+ 19e:	cf 93       	push	r28
+ 1a0:	df 93       	push	r29
+ 1a2:	ec 01       	movw	r28, r24
+ 1a4:	7b 01       	movw	r14, r22
+ 1a6:	8a 01       	movw	r16, r20
+ 1a8:	ba 01       	movw	r22, r20
+ 1aa:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 1ae:	81 11       	cpse	r24, r1
+ 1b0:	00 c0       	rjmp	.+0      	; 0x1b2 <_ZN6String4copyEPKcj+0x1c>
+ 1b2:	ce 01       	movw	r24, r28
+ 1b4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 1b8:	00 c0       	rjmp	.+0      	; 0x1ba <_ZN6String4copyEPKcj+0x24>
+ 1ba:	1d 83       	std	Y+5, r17	; 0x05
+ 1bc:	0c 83       	std	Y+4, r16	; 0x04
+ 1be:	b7 01       	movw	r22, r14
+ 1c0:	88 81       	ld	r24, Y
+ 1c2:	99 81       	ldd	r25, Y+1	; 0x01
+ 1c4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 1c8:	ce 01       	movw	r24, r28
+ 1ca:	cd b7       	in	r28, 0x3d	; 61
+ 1cc:	de b7       	in	r29, 0x3e	; 62
+ 1ce:	e6 e0       	ldi	r30, 0x06	; 6
+ 1d0:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6StringC2EPKc:
+
+0000036a <_ZN6StringC1EPKc>:
+ 36a:	dc 01       	movw	r26, r24
+ 36c:	11 96       	adiw	r26, 0x01	; 1
+ 36e:	1c 92       	st	X, r1
+ 370:	1e 92       	st	-X, r1
+ 372:	13 96       	adiw	r26, 0x03	; 3
+ 374:	1c 92       	st	X, r1
+ 376:	1e 92       	st	-X, r1
+ 378:	12 97       	sbiw	r26, 0x02	; 2
+ 37a:	15 96       	adiw	r26, 0x05	; 5
+ 37c:	1c 92       	st	X, r1
+ 37e:	1e 92       	st	-X, r1
+ 380:	14 97       	sbiw	r26, 0x04	; 4
+ 382:	16 96       	adiw	r26, 0x06	; 6
+ 384:	1c 92       	st	X, r1
+ 386:	61 15       	cp	r22, r1
+ 388:	71 05       	cpc	r23, r1
+ 38a:	01 f0       	breq	.+0      	; 0x38c <_ZN6StringC1EPKc+0x22>
+ 38c:	db 01       	movw	r26, r22
+ 38e:	0d 90       	ld	r0, X+
+ 390:	00 20       	and	r0, r0
+ 392:	01 f4       	brne	.+0      	; 0x394 <_ZN6StringC1EPKc+0x2a>
+ 394:	ad 01       	movw	r20, r26
+ 396:	41 50       	subi	r20, 0x01	; 1
+ 398:	51 09       	sbc	r21, r1
+ 39a:	46 1b       	sub	r20, r22
+ 39c:	57 0b       	sbc	r21, r23
+ 39e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 3a2:	08 95       	ret
+
+Disassembly of section .text._ZN6StringaSERKS_:
+
+0000070e <_ZN6StringaSERKS_>:
+ 70e:	cf 93       	push	r28
+ 710:	df 93       	push	r29
+ 712:	ec 01       	movw	r28, r24
+ 714:	fb 01       	movw	r30, r22
+ 716:	86 17       	cp	r24, r22
+ 718:	97 07       	cpc	r25, r23
+ 71a:	01 f0       	breq	.+0      	; 0x71c <_ZN6StringaSERKS_+0xe>
+ 71c:	60 81       	ld	r22, Z
+ 71e:	71 81       	ldd	r23, Z+1	; 0x01
+ 720:	61 15       	cp	r22, r1
+ 722:	71 05       	cpc	r23, r1
+ 724:	01 f0       	breq	.+0      	; 0x726 <_ZN6StringaSERKS_+0x18>
+ 726:	44 81       	ldd	r20, Z+4	; 0x04
+ 728:	55 81       	ldd	r21, Z+5	; 0x05
+ 72a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 72e:	00 c0       	rjmp	.+0      	; 0x730 <_ZN6StringaSERKS_+0x22>
+ 730:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 734:	ce 01       	movw	r24, r28
+ 736:	df 91       	pop	r29
+ 738:	cf 91       	pop	r28
+ 73a:	08 95       	ret
+
+Disassembly of section .text._ZN6StringC2ERKS_:
+
+00000e4a <_ZN6StringC1ERKS_>:
+ e4a:	fc 01       	movw	r30, r24
+ e4c:	11 82       	std	Z+1, r1	; 0x01
+ e4e:	10 82       	st	Z, r1
+ e50:	13 82       	std	Z+3, r1	; 0x03
+ e52:	12 82       	std	Z+2, r1	; 0x02
+ e54:	15 82       	std	Z+5, r1	; 0x05
+ e56:	14 82       	std	Z+4, r1	; 0x04
+ e58:	16 82       	std	Z+6, r1	; 0x06
+ e5a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ e5e:	08 95       	ret
+
+Disassembly of section .text._ZN6StringaSEPKc:
+
+00001caa <_ZN6StringaSEPKc>:
+    1caa:	cf 93       	push	r28
+    1cac:	df 93       	push	r29
+    1cae:	d8 2f       	mov	r29, r24
+    1cb0:	c9 2f       	mov	r28, r25
+    1cb2:	61 15       	cp	r22, r1
+    1cb4:	71 05       	cpc	r23, r1
+    1cb6:	01 f0       	breq	.+0      	; 0x1cb8 <_ZN6StringaSEPKc+0xe>
+    1cb8:	db 01       	movw	r26, r22
+    1cba:	0d 90       	ld	r0, X+
+    1cbc:	00 20       	and	r0, r0
+    1cbe:	01 f4       	brne	.+0      	; 0x1cc0 <_ZN6StringaSEPKc+0x16>
+    1cc0:	ad 01       	movw	r20, r26
+    1cc2:	41 50       	subi	r20, 0x01	; 1
+    1cc4:	51 09       	sbc	r21, r1
+    1cc6:	46 1b       	sub	r20, r22
+    1cc8:	57 0b       	sbc	r21, r23
+    1cca:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    1cce:	00 c0       	rjmp	.+0      	; 0x1cd0 <_ZN6StringaSEPKc+0x26>
+    1cd0:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    1cd4:	8d 2f       	mov	r24, r29
+    1cd6:	9c 2f       	mov	r25, r28
+    1cd8:	df 91       	pop	r29
+    1cda:	cf 91       	pop	r28
+    1cdc:	08 95       	ret
+
+Disassembly of section .text._ZN6StringC2Emh:
+
+00003988 <_ZN6StringC1Emh>:
+    3988:	a1 e2       	ldi	r26, 0x21	; 33
+    398a:	b0 e0       	ldi	r27, 0x00	; 0
+    398c:	e0 e0       	ldi	r30, 0x00	; 0
+    398e:	f0 e0       	ldi	r31, 0x00	; 0
+    3990:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+    3994:	8c 01       	movw	r16, r24
+    3996:	cb 01       	movw	r24, r22
+    3998:	ba 01       	movw	r22, r20
+    399a:	f8 01       	movw	r30, r16
+    399c:	11 82       	std	Z+1, r1	; 0x01
+    399e:	10 82       	st	Z, r1
+    39a0:	13 82       	std	Z+3, r1	; 0x03
+    39a2:	12 82       	std	Z+2, r1	; 0x02
+    39a4:	15 82       	std	Z+5, r1	; 0x05
+    39a6:	14 82       	std	Z+4, r1	; 0x04
+    39a8:	16 82       	std	Z+6, r1	; 0x06
+    39aa:	30 e0       	ldi	r19, 0x00	; 0
+    39ac:	ae 01       	movw	r20, r28
+    39ae:	4f 5f       	subi	r20, 0xFF	; 255
+    39b0:	5f 4f       	sbci	r21, 0xFF	; 255
+    39b2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    39b6:	be 01       	movw	r22, r28
+    39b8:	6f 5f       	subi	r22, 0xFF	; 255
+    39ba:	7f 4f       	sbci	r23, 0xFF	; 255
+    39bc:	c8 01       	movw	r24, r16
+    39be:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    39c2:	a1 96       	adiw	r28, 0x21	; 33
+    39c4:	e4 e0       	ldi	r30, 0x04	; 4
+    39c6:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6StringC2Elh:
+
+00007352 <_ZN6StringC1Elh>:
+    7352:	a2 e2       	ldi	r26, 0x22	; 34
+    7354:	b0 e0       	ldi	r27, 0x00	; 0
+    7356:	e0 e0       	ldi	r30, 0x00	; 0
+    7358:	f0 e0       	ldi	r31, 0x00	; 0
+    735a:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+    735e:	8c 01       	movw	r16, r24
+    7360:	cb 01       	movw	r24, r22
+    7362:	ba 01       	movw	r22, r20
+    7364:	f8 01       	movw	r30, r16
+    7366:	11 82       	std	Z+1, r1	; 0x01
+    7368:	10 82       	st	Z, r1
+    736a:	13 82       	std	Z+3, r1	; 0x03
+    736c:	12 82       	std	Z+2, r1	; 0x02
+    736e:	15 82       	std	Z+5, r1	; 0x05
+    7370:	14 82       	std	Z+4, r1	; 0x04
+    7372:	16 82       	std	Z+6, r1	; 0x06
+    7374:	30 e0       	ldi	r19, 0x00	; 0
+    7376:	ae 01       	movw	r20, r28
+    7378:	4f 5f       	subi	r20, 0xFF	; 255
+    737a:	5f 4f       	sbci	r21, 0xFF	; 255
+    737c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    7380:	be 01       	movw	r22, r28
+    7382:	6f 5f       	subi	r22, 0xFF	; 255
+    7384:	7f 4f       	sbci	r23, 0xFF	; 255
+    7386:	c8 01       	movw	r24, r16
+    7388:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    738c:	a2 96       	adiw	r28, 0x22	; 34
+    738e:	e4 e0       	ldi	r30, 0x04	; 4
+    7390:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6StringC2Ejh:
+
+0000e6e6 <_ZN6StringC1Ejh>:
+    e6e6:	a1 e1       	ldi	r26, 0x11	; 17
+    e6e8:	b0 e0       	ldi	r27, 0x00	; 0
+    e6ea:	e0 e0       	ldi	r30, 0x00	; 0
+    e6ec:	f0 e0       	ldi	r31, 0x00	; 0
+    e6ee:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+    e6f2:	8c 01       	movw	r16, r24
+    e6f4:	cb 01       	movw	r24, r22
+    e6f6:	f8 01       	movw	r30, r16
+    e6f8:	11 82       	std	Z+1, r1	; 0x01
+    e6fa:	10 82       	st	Z, r1
+    e6fc:	13 82       	std	Z+3, r1	; 0x03
+    e6fe:	12 82       	std	Z+2, r1	; 0x02
+    e700:	15 82       	std	Z+5, r1	; 0x05
+    e702:	14 82       	std	Z+4, r1	; 0x04
+    e704:	16 82       	std	Z+6, r1	; 0x06
+    e706:	50 e0       	ldi	r21, 0x00	; 0
+    e708:	be 01       	movw	r22, r28
+    e70a:	6f 5f       	subi	r22, 0xFF	; 255
+    e70c:	7f 4f       	sbci	r23, 0xFF	; 255
+    e70e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    e712:	be 01       	movw	r22, r28
+    e714:	6f 5f       	subi	r22, 0xFF	; 255
+    e716:	7f 4f       	sbci	r23, 0xFF	; 255
+    e718:	c8 01       	movw	r24, r16
+    e71a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    e71e:	61 96       	adiw	r28, 0x11	; 17
+    e720:	e4 e0       	ldi	r30, 0x04	; 4
+    e722:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6StringC2Eih:
+
+0001ce0c <_ZN6StringC1Eih>:
+   1ce0c:	a2 e1       	ldi	r26, 0x12	; 18
+   1ce0e:	b0 e0       	ldi	r27, 0x00	; 0
+   1ce10:	e0 e0       	ldi	r30, 0x00	; 0
+   1ce12:	f0 e0       	ldi	r31, 0x00	; 0
+   1ce14:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+   1ce18:	8c 01       	movw	r16, r24
+   1ce1a:	cb 01       	movw	r24, r22
+   1ce1c:	f8 01       	movw	r30, r16
+   1ce1e:	11 82       	std	Z+1, r1	; 0x01
+   1ce20:	10 82       	st	Z, r1
+   1ce22:	13 82       	std	Z+3, r1	; 0x03
+   1ce24:	12 82       	std	Z+2, r1	; 0x02
+   1ce26:	15 82       	std	Z+5, r1	; 0x05
+   1ce28:	14 82       	std	Z+4, r1	; 0x04
+   1ce2a:	16 82       	std	Z+6, r1	; 0x06
+   1ce2c:	50 e0       	ldi	r21, 0x00	; 0
+   1ce2e:	be 01       	movw	r22, r28
+   1ce30:	6f 5f       	subi	r22, 0xFF	; 255
+   1ce32:	7f 4f       	sbci	r23, 0xFF	; 255
+   1ce34:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   1ce38:	be 01       	movw	r22, r28
+   1ce3a:	6f 5f       	subi	r22, 0xFF	; 255
+   1ce3c:	7f 4f       	sbci	r23, 0xFF	; 255
+   1ce3e:	c8 01       	movw	r24, r16
+   1ce40:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   1ce44:	62 96       	adiw	r28, 0x12	; 18
+   1ce46:	e4 e0       	ldi	r30, 0x04	; 4
+   1ce48:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6StringC2Ehh:
+
+00039c58 <_ZN6StringC1Ehh>:
+   39c58:	a9 e0       	ldi	r26, 0x09	; 9
+   39c5a:	b0 e0       	ldi	r27, 0x00	; 0
+   39c5c:	e0 e0       	ldi	r30, 0x00	; 0
+   39c5e:	f0 e0       	ldi	r31, 0x00	; 0
+   39c60:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+   39c64:	8c 01       	movw	r16, r24
+   39c66:	86 2f       	mov	r24, r22
+   39c68:	f8 01       	movw	r30, r16
+   39c6a:	11 82       	std	Z+1, r1	; 0x01
+   39c6c:	10 82       	st	Z, r1
+   39c6e:	13 82       	std	Z+3, r1	; 0x03
+   39c70:	12 82       	std	Z+2, r1	; 0x02
+   39c72:	15 82       	std	Z+5, r1	; 0x05
+   39c74:	14 82       	std	Z+4, r1	; 0x04
+   39c76:	16 82       	std	Z+6, r1	; 0x06
+   39c78:	50 e0       	ldi	r21, 0x00	; 0
+   39c7a:	be 01       	movw	r22, r28
+   39c7c:	6f 5f       	subi	r22, 0xFF	; 255
+   39c7e:	7f 4f       	sbci	r23, 0xFF	; 255
+   39c80:	90 e0       	ldi	r25, 0x00	; 0
+   39c82:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   39c86:	be 01       	movw	r22, r28
+   39c88:	6f 5f       	subi	r22, 0xFF	; 255
+   39c8a:	7f 4f       	sbci	r23, 0xFF	; 255
+   39c8c:	c8 01       	movw	r24, r16
+   39c8e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   39c92:	29 96       	adiw	r28, 0x09	; 9
+   39c94:	e4 e0       	ldi	r30, 0x04	; 4
+   39c96:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6StringC2Ec:
+
+000738f2 <_ZN6StringC1Ec>:
+   738f2:	a2 e0       	ldi	r26, 0x02	; 2
+   738f4:	b0 e0       	ldi	r27, 0x00	; 0
+   738f6:	e0 e0       	ldi	r30, 0x00	; 0
+   738f8:	f0 e0       	ldi	r31, 0x00	; 0
+   738fa:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+   738fe:	fc 01       	movw	r30, r24
+   73900:	11 82       	std	Z+1, r1	; 0x01
+   73902:	10 82       	st	Z, r1
+   73904:	13 82       	std	Z+3, r1	; 0x03
+   73906:	12 82       	std	Z+2, r1	; 0x02
+   73908:	15 82       	std	Z+5, r1	; 0x05
+   7390a:	14 82       	std	Z+4, r1	; 0x04
+   7390c:	16 82       	std	Z+6, r1	; 0x06
+   7390e:	69 83       	std	Y+1, r22	; 0x01
+   73910:	1a 82       	std	Y+2, r1	; 0x02
+   73912:	be 01       	movw	r22, r28
+   73914:	6f 5f       	subi	r22, 0xFF	; 255
+   73916:	7f 4f       	sbci	r23, 0xFF	; 255
+   73918:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   7391c:	22 96       	adiw	r28, 0x02	; 2
+   7391e:	e2 e0       	ldi	r30, 0x02	; 2
+   73920:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6String6concatEPKcj:
+
+000e7216 <_ZN6String6concatEPKcj>:
+   e7216:	ef 92       	push	r14
+   e7218:	ff 92       	push	r15
+   e721a:	0f 93       	push	r16
+   e721c:	1f 93       	push	r17
+   e721e:	cf 93       	push	r28
+   e7220:	df 93       	push	r29
+   e7222:	ec 01       	movw	r28, r24
+   e7224:	7b 01       	movw	r14, r22
+   e7226:	0c 81       	ldd	r16, Y+4	; 0x04
+   e7228:	1d 81       	ldd	r17, Y+5	; 0x05
+   e722a:	61 15       	cp	r22, r1
+   e722c:	71 05       	cpc	r23, r1
+   e722e:	01 f4       	brne	.+0      	; 0xe7230 <_ZN6String6concatEPKcj+0x1a>
+   e7230:	80 e0       	ldi	r24, 0x00	; 0
+   e7232:	00 c0       	rjmp	.+0      	; 0xe7234 <_ZN6String6concatEPKcj+0x1e>
+   e7234:	41 15       	cp	r20, r1
+   e7236:	51 05       	cpc	r21, r1
+   e7238:	01 f0       	breq	.+0      	; 0xe723a <_ZN6String6concatEPKcj+0x24>
+   e723a:	04 0f       	add	r16, r20
+   e723c:	15 1f       	adc	r17, r21
+   e723e:	b8 01       	movw	r22, r16
+   e7240:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   e7244:	88 23       	and	r24, r24
+   e7246:	01 f0       	breq	.+0      	; 0xe7248 <_ZN6String6concatEPKcj+0x32>
+   e7248:	28 81       	ld	r18, Y
+   e724a:	39 81       	ldd	r19, Y+1	; 0x01
+   e724c:	8c 81       	ldd	r24, Y+4	; 0x04
+   e724e:	9d 81       	ldd	r25, Y+5	; 0x05
+   e7250:	b7 01       	movw	r22, r14
+   e7252:	82 0f       	add	r24, r18
+   e7254:	93 1f       	adc	r25, r19
+   e7256:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   e725a:	1d 83       	std	Y+5, r17	; 0x05
+   e725c:	0c 83       	std	Y+4, r16	; 0x04
+   e725e:	81 e0       	ldi	r24, 0x01	; 1
+   e7260:	cd b7       	in	r28, 0x3d	; 61
+   e7262:	de b7       	in	r29, 0x3e	; 62
+   e7264:	e6 e0       	ldi	r30, 0x06	; 6
+   e7266:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6String6concatERKS_:
+
+001ce480 <_ZN6String6concatERKS_>:
+  1ce480:	fb 01       	movw	r30, r22
+  1ce482:	44 81       	ldd	r20, Z+4	; 0x04
+  1ce484:	55 81       	ldd	r21, Z+5	; 0x05
+  1ce486:	60 81       	ld	r22, Z
+  1ce488:	71 81       	ldd	r23, Z+1	; 0x01
+  1ce48a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  1ce48e:	08 95       	ret
+
+Disassembly of section .text._ZN6String6concatEPKc:
+
+0039c910 <_ZN6String6concatEPKc>:
+  39c910:	61 15       	cp	r22, r1
+  39c912:	71 05       	cpc	r23, r1
+  39c914:	01 f0       	breq	.+0      	; 0x39c916 <_ZN6String6concatEPKc+0x6>
+  39c916:	db 01       	movw	r26, r22
+  39c918:	0d 90       	ld	r0, X+
+  39c91a:	00 20       	and	r0, r0
+  39c91c:	01 f4       	brne	.+0      	; 0x39c91e <_ZN6String6concatEPKc+0xe>
+  39c91e:	ad 01       	movw	r20, r26
+  39c920:	41 50       	subi	r20, 0x01	; 1
+  39c922:	51 09       	sbc	r21, r1
+  39c924:	46 1b       	sub	r20, r22
+  39c926:	57 0b       	sbc	r21, r23
+  39c928:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  39c92c:	08 95       	ret
+  39c92e:	80 e0       	ldi	r24, 0x00	; 0
+  39c930:	08 95       	ret
+
+Disassembly of section .text._ZN6String6concatEc:
+
+00739242 <_ZN6String6concatEc>:
+  739242:	a2 e0       	ldi	r26, 0x02	; 2
+  739244:	b0 e0       	ldi	r27, 0x00	; 0
+  739246:	e0 e0       	ldi	r30, 0x00	; 0
+  739248:	f0 e0       	ldi	r31, 0x00	; 0
+  73924a:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+  73924e:	69 83       	std	Y+1, r22	; 0x01
+  739250:	1a 82       	std	Y+2, r1	; 0x02
+  739252:	41 e0       	ldi	r20, 0x01	; 1
+  739254:	50 e0       	ldi	r21, 0x00	; 0
+  739256:	be 01       	movw	r22, r28
+  739258:	6f 5f       	subi	r22, 0xFF	; 255
+  73925a:	7f 4f       	sbci	r23, 0xFF	; 255
+  73925c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  739260:	22 96       	adiw	r28, 0x02	; 2
+  739262:	e2 e0       	ldi	r30, 0x02	; 2
+  739264:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6String6concatEh:
+
+00e724aa <_ZN6String6concatEh>:
+  e724aa:	a4 e0       	ldi	r26, 0x04	; 4
+  e724ac:	b0 e0       	ldi	r27, 0x00	; 0
+  e724ae:	e0 e0       	ldi	r30, 0x00	; 0
+  e724b0:	f0 e0       	ldi	r31, 0x00	; 0
+  e724b2:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+  e724b6:	7c 01       	movw	r14, r24
+  e724b8:	86 2f       	mov	r24, r22
+  e724ba:	4a e0       	ldi	r20, 0x0A	; 10
+  e724bc:	50 e0       	ldi	r21, 0x00	; 0
+  e724be:	8e 01       	movw	r16, r28
+  e724c0:	0f 5f       	subi	r16, 0xFF	; 255
+  e724c2:	1f 4f       	sbci	r17, 0xFF	; 255
+  e724c4:	b8 01       	movw	r22, r16
+  e724c6:	90 e0       	ldi	r25, 0x00	; 0
+  e724c8:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  e724cc:	f8 01       	movw	r30, r16
+  e724ce:	01 90       	ld	r0, Z+
+  e724d0:	00 20       	and	r0, r0
+  e724d2:	01 f4       	brne	.+0      	; 0xe724d4 <_ZN6String6concatEh+0x2a>
+  e724d4:	af 01       	movw	r20, r30
+  e724d6:	41 50       	subi	r20, 0x01	; 1
+  e724d8:	51 09       	sbc	r21, r1
+  e724da:	40 1b       	sub	r20, r16
+  e724dc:	51 0b       	sbc	r21, r17
+  e724de:	b8 01       	movw	r22, r16
+  e724e0:	c7 01       	movw	r24, r14
+  e724e2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  e724e6:	24 96       	adiw	r28, 0x04	; 4
+  e724e8:	e6 e0       	ldi	r30, 0x06	; 6
+  e724ea:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6String6concatEi:
+
+01ce4998 <_ZN6String6concatEi>:
+ 1ce4998:	a7 e0       	ldi	r26, 0x07	; 7
+ 1ce499a:	b0 e0       	ldi	r27, 0x00	; 0
+ 1ce499c:	e0 e0       	ldi	r30, 0x00	; 0
+ 1ce499e:	f0 e0       	ldi	r31, 0x00	; 0
+ 1ce49a0:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+ 1ce49a4:	7c 01       	movw	r14, r24
+ 1ce49a6:	cb 01       	movw	r24, r22
+ 1ce49a8:	4a e0       	ldi	r20, 0x0A	; 10
+ 1ce49aa:	50 e0       	ldi	r21, 0x00	; 0
+ 1ce49ac:	8e 01       	movw	r16, r28
+ 1ce49ae:	0f 5f       	subi	r16, 0xFF	; 255
+ 1ce49b0:	1f 4f       	sbci	r17, 0xFF	; 255
+ 1ce49b2:	b8 01       	movw	r22, r16
+ 1ce49b4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 1ce49b8:	f8 01       	movw	r30, r16
+ 1ce49ba:	01 90       	ld	r0, Z+
+ 1ce49bc:	00 20       	and	r0, r0
+ 1ce49be:	01 f4       	brne	.+0      	; 0x1ce49c0 <_ZN6String6concatEi+0x28>
+ 1ce49c0:	af 01       	movw	r20, r30
+ 1ce49c2:	41 50       	subi	r20, 0x01	; 1
+ 1ce49c4:	51 09       	sbc	r21, r1
+ 1ce49c6:	40 1b       	sub	r20, r16
+ 1ce49c8:	51 0b       	sbc	r21, r17
+ 1ce49ca:	b8 01       	movw	r22, r16
+ 1ce49cc:	c7 01       	movw	r24, r14
+ 1ce49ce:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 1ce49d2:	27 96       	adiw	r28, 0x07	; 7
+ 1ce49d4:	e6 e0       	ldi	r30, 0x06	; 6
+ 1ce49d6:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6String6concatEj:
+
+039c9372 <_ZN6String6concatEj>:
+ 39c9372:	a6 e0       	ldi	r26, 0x06	; 6
+ 39c9374:	b0 e0       	ldi	r27, 0x00	; 0
+ 39c9376:	e0 e0       	ldi	r30, 0x00	; 0
+ 39c9378:	f0 e0       	ldi	r31, 0x00	; 0
+ 39c937a:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+ 39c937e:	7c 01       	movw	r14, r24
+ 39c9380:	cb 01       	movw	r24, r22
+ 39c9382:	4a e0       	ldi	r20, 0x0A	; 10
+ 39c9384:	50 e0       	ldi	r21, 0x00	; 0
+ 39c9386:	8e 01       	movw	r16, r28
+ 39c9388:	0f 5f       	subi	r16, 0xFF	; 255
+ 39c938a:	1f 4f       	sbci	r17, 0xFF	; 255
+ 39c938c:	b8 01       	movw	r22, r16
+ 39c938e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 39c9392:	f8 01       	movw	r30, r16
+ 39c9394:	01 90       	ld	r0, Z+
+ 39c9396:	00 20       	and	r0, r0
+ 39c9398:	01 f4       	brne	.+0      	; 0x39c939a <_ZN6String6concatEj+0x28>
+ 39c939a:	af 01       	movw	r20, r30
+ 39c939c:	41 50       	subi	r20, 0x01	; 1
+ 39c939e:	51 09       	sbc	r21, r1
+ 39c93a0:	40 1b       	sub	r20, r16
+ 39c93a2:	51 0b       	sbc	r21, r17
+ 39c93a4:	b8 01       	movw	r22, r16
+ 39c93a6:	c7 01       	movw	r24, r14
+ 39c93a8:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 39c93ac:	26 96       	adiw	r28, 0x06	; 6
+ 39c93ae:	e6 e0       	ldi	r30, 0x06	; 6
+ 39c93b0:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6String6concatEl:
+
+07392726 <_ZN6String6concatEl>:
+ 7392726:	ac e0       	ldi	r26, 0x0C	; 12
+ 7392728:	b0 e0       	ldi	r27, 0x00	; 0
+ 739272a:	e0 e0       	ldi	r30, 0x00	; 0
+ 739272c:	f0 e0       	ldi	r31, 0x00	; 0
+ 739272e:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+ 7392732:	7c 01       	movw	r14, r24
+ 7392734:	cb 01       	movw	r24, r22
+ 7392736:	ba 01       	movw	r22, r20
+ 7392738:	2a e0       	ldi	r18, 0x0A	; 10
+ 739273a:	30 e0       	ldi	r19, 0x00	; 0
+ 739273c:	8e 01       	movw	r16, r28
+ 739273e:	0f 5f       	subi	r16, 0xFF	; 255
+ 7392740:	1f 4f       	sbci	r17, 0xFF	; 255
+ 7392742:	a8 01       	movw	r20, r16
+ 7392744:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 7392748:	f8 01       	movw	r30, r16
+ 739274a:	01 90       	ld	r0, Z+
+ 739274c:	00 20       	and	r0, r0
+ 739274e:	01 f4       	brne	.+0      	; 0x7392750 <_ZN6String6concatEl+0x2a>
+ 7392750:	af 01       	movw	r20, r30
+ 7392752:	41 50       	subi	r20, 0x01	; 1
+ 7392754:	51 09       	sbc	r21, r1
+ 7392756:	40 1b       	sub	r20, r16
+ 7392758:	51 0b       	sbc	r21, r17
+ 739275a:	b8 01       	movw	r22, r16
+ 739275c:	c7 01       	movw	r24, r14
+ 739275e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 7392762:	2c 96       	adiw	r28, 0x0c	; 12
+ 7392764:	e6 e0       	ldi	r30, 0x06	; 6
+ 7392766:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6String6concatEm:
+
+0e724e90 <_ZN6String6concatEm>:
+ e724e90:	ab e0       	ldi	r26, 0x0B	; 11
+ e724e92:	b0 e0       	ldi	r27, 0x00	; 0
+ e724e94:	e0 e0       	ldi	r30, 0x00	; 0
+ e724e96:	f0 e0       	ldi	r31, 0x00	; 0
+ e724e98:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+ e724e9c:	7c 01       	movw	r14, r24
+ e724e9e:	cb 01       	movw	r24, r22
+ e724ea0:	ba 01       	movw	r22, r20
+ e724ea2:	2a e0       	ldi	r18, 0x0A	; 10
+ e724ea4:	30 e0       	ldi	r19, 0x00	; 0
+ e724ea6:	8e 01       	movw	r16, r28
+ e724ea8:	0f 5f       	subi	r16, 0xFF	; 255
+ e724eaa:	1f 4f       	sbci	r17, 0xFF	; 255
+ e724eac:	a8 01       	movw	r20, r16
+ e724eae:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ e724eb2:	f8 01       	movw	r30, r16
+ e724eb4:	01 90       	ld	r0, Z+
+ e724eb6:	00 20       	and	r0, r0
+ e724eb8:	01 f4       	brne	.+0      	; 0xe724eba <_ZN6String6concatEm+0x2a>
+ e724eba:	af 01       	movw	r20, r30
+ e724ebc:	41 50       	subi	r20, 0x01	; 1
+ e724ebe:	51 09       	sbc	r21, r1
+ e724ec0:	40 1b       	sub	r20, r16
+ e724ec2:	51 0b       	sbc	r21, r17
+ e724ec4:	b8 01       	movw	r22, r16
+ e724ec6:	c7 01       	movw	r24, r14
+ e724ec8:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ e724ecc:	2b 96       	adiw	r28, 0x0b	; 11
+ e724ece:	e6 e0       	ldi	r30, 0x06	; 6
+ e724ed0:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZplRK15StringSumHelperRK6String:
+
+1ce49d64 <_ZplRK15StringSumHelperRK6String>:
+1ce49d64:	cf 93       	push	r28
+1ce49d66:	df 93       	push	r29
+1ce49d68:	d8 2f       	mov	r29, r24
+1ce49d6a:	c9 2f       	mov	r28, r25
+1ce49d6c:	fb 01       	movw	r30, r22
+1ce49d6e:	44 81       	ldd	r20, Z+4	; 0x04
+1ce49d70:	55 81       	ldd	r21, Z+5	; 0x05
+1ce49d72:	60 81       	ld	r22, Z
+1ce49d74:	71 81       	ldd	r23, Z+1	; 0x01
+1ce49d76:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+1ce49d7a:	81 11       	cpse	r24, r1
+1ce49d7c:	00 c0       	rjmp	.+0      	; 0x1ce49d7e <_ZplRK15StringSumHelperRK6String+0x1a>
+1ce49d7e:	8d 2f       	mov	r24, r29
+1ce49d80:	9c 2f       	mov	r25, r28
+1ce49d82:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+1ce49d86:	8d 2f       	mov	r24, r29
+1ce49d88:	9c 2f       	mov	r25, r28
+1ce49d8a:	df 91       	pop	r29
+1ce49d8c:	cf 91       	pop	r28
+1ce49d8e:	08 95       	ret
+
+Disassembly of section .text._ZplRK15StringSumHelperPKc:
+
+39c93af4 <_ZplRK15StringSumHelperPKc>:
+39c93af4:	cf 93       	push	r28
+39c93af6:	df 93       	push	r29
+39c93af8:	d8 2f       	mov	r29, r24
+39c93afa:	c9 2f       	mov	r28, r25
+39c93afc:	61 15       	cp	r22, r1
+39c93afe:	71 05       	cpc	r23, r1
+39c93b00:	01 f0       	breq	.+0      	; 0x39c93b02 <_ZplRK15StringSumHelperPKc+0xe>
+39c93b02:	db 01       	movw	r26, r22
+39c93b04:	0d 90       	ld	r0, X+
+39c93b06:	00 20       	and	r0, r0
+39c93b08:	01 f4       	brne	.+0      	; 0x39c93b0a <_ZplRK15StringSumHelperPKc+0x16>
+39c93b0a:	ad 01       	movw	r20, r26
+39c93b0c:	41 50       	subi	r20, 0x01	; 1
+39c93b0e:	51 09       	sbc	r21, r1
+39c93b10:	46 1b       	sub	r20, r22
+39c93b12:	57 0b       	sbc	r21, r23
+39c93b14:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+39c93b18:	81 11       	cpse	r24, r1
+39c93b1a:	00 c0       	rjmp	.+0      	; 0x39c93b1c <_ZplRK15StringSumHelperPKc+0x28>
+39c93b1c:	8d 2f       	mov	r24, r29
+39c93b1e:	9c 2f       	mov	r25, r28
+39c93b20:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+39c93b24:	8d 2f       	mov	r24, r29
+39c93b26:	9c 2f       	mov	r25, r28
+39c93b28:	df 91       	pop	r29
+39c93b2a:	cf 91       	pop	r28
+39c93b2c:	08 95       	ret
+
+Disassembly of section .text._ZplRK15StringSumHelperc:
+
+73927622 <_ZplRK15StringSumHelperc>:
+73927622:	cf 93       	push	r28
+73927624:	df 93       	push	r29
+73927626:	d8 2f       	mov	r29, r24
+73927628:	c9 2f       	mov	r28, r25
+7392762a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+7392762e:	81 11       	cpse	r24, r1
+73927630:	00 c0       	rjmp	.+0      	; 0x73927632 <_ZplRK15StringSumHelperc+0x10>
+73927632:	8d 2f       	mov	r24, r29
+73927634:	9c 2f       	mov	r25, r28
+73927636:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+7392763a:	8d 2f       	mov	r24, r29
+7392763c:	9c 2f       	mov	r25, r28
+7392763e:	df 91       	pop	r29
+73927640:	cf 91       	pop	r28
+73927642:	08 95       	ret
+
+Disassembly of section .text._ZplRK15StringSumHelperh:
+
+e724ec66 <_ZplRK15StringSumHelperh>:
+e724ec66:	cf 93       	push	r28
+e724ec68:	df 93       	push	r29
+e724ec6a:	d8 2f       	mov	r29, r24
+e724ec6c:	c9 2f       	mov	r28, r25
+e724ec6e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+e724ec72:	81 11       	cpse	r24, r1
+e724ec74:	00 c0       	rjmp	.+0      	; 0xe724ec76 <_ZplRK15StringSumHelperh+0x10>
+e724ec76:	8d 2f       	mov	r24, r29
+e724ec78:	9c 2f       	mov	r25, r28
+e724ec7a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+e724ec7e:	8d 2f       	mov	r24, r29
+e724ec80:	9c 2f       	mov	r25, r28
+e724ec82:	df 91       	pop	r29
+e724ec84:	cf 91       	pop	r28
+e724ec86:	08 95       	ret
+
+Disassembly of section .text._ZplRK15StringSumHelperi:
+
+ce49d8ee <_ZplRK15StringSumHelperi>:
+ce49d8ee:	cf 93       	push	r28
+ce49d8f0:	df 93       	push	r29
+ce49d8f2:	d8 2f       	mov	r29, r24
+ce49d8f4:	c9 2f       	mov	r28, r25
+ce49d8f6:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ce49d8fa:	81 11       	cpse	r24, r1
+ce49d8fc:	00 c0       	rjmp	.+0      	; 0xce49d8fe <_ZplRK15StringSumHelperc+0x5ab762dc>
+ce49d8fe:	8d 2f       	mov	r24, r29
+ce49d900:	9c 2f       	mov	r25, r28
+ce49d902:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ce49d906:	8d 2f       	mov	r24, r29
+ce49d908:	9c 2f       	mov	r25, r28
+ce49d90a:	df 91       	pop	r29
+ce49d90c:	cf 91       	pop	r28
+ce49d90e:	08 95       	ret
+
+Disassembly of section .text._ZplRK15StringSumHelperj:
+
+9c93b1fe <_ZplRK15StringSumHelperj>:
+9c93b1fe:	cf 93       	push	r28
+9c93b200:	df 93       	push	r29
+9c93b202:	d8 2f       	mov	r29, r24
+9c93b204:	c9 2f       	mov	r28, r25
+9c93b206:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+9c93b20a:	81 11       	cpse	r24, r1
+9c93b20c:	00 c0       	rjmp	.+0      	; 0x9c93b20e <_ZplRK15StringSumHelperc+0x29013bec>
+9c93b20e:	8d 2f       	mov	r24, r29
+9c93b210:	9c 2f       	mov	r25, r28
+9c93b212:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+9c93b216:	8d 2f       	mov	r24, r29
+9c93b218:	9c 2f       	mov	r25, r28
+9c93b21a:	df 91       	pop	r29
+9c93b21c:	cf 91       	pop	r28
+9c93b21e:	08 95       	ret
+
+Disassembly of section .text._ZplRK15StringSumHelperl:
+
+3927641e <_ZplRK15StringSumHelperl>:
+3927641e:	cf 93       	push	r28
+39276420:	df 93       	push	r29
+39276422:	d8 2f       	mov	r29, r24
+39276424:	c9 2f       	mov	r28, r25
+39276426:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+3927642a:	81 11       	cpse	r24, r1
+3927642c:	00 c0       	rjmp	.+0      	; 0x3927642e <_ZplRK15StringSumHelperRK6String+0x1c42c6ca>
+3927642e:	8d 2f       	mov	r24, r29
+39276430:	9c 2f       	mov	r25, r28
+39276432:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+39276436:	8d 2f       	mov	r24, r29
+39276438:	9c 2f       	mov	r25, r28
+3927643a:	df 91       	pop	r29
+3927643c:	cf 91       	pop	r28
+3927643e:	08 95       	ret
+
+Disassembly of section .text._ZplRK15StringSumHelperm:
+
+724ec85e <_ZplRK15StringSumHelperm>:
+724ec85e:	cf 93       	push	r28
+724ec860:	df 93       	push	r29
+724ec862:	d8 2f       	mov	r29, r24
+724ec864:	c9 2f       	mov	r28, r25
+724ec866:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+724ec86a:	81 11       	cpse	r24, r1
+724ec86c:	00 c0       	rjmp	.+0      	; 0x724ec86e <_ZplRK15StringSumHelperPKc+0x38858d7a>
+724ec86e:	8d 2f       	mov	r24, r29
+724ec870:	9c 2f       	mov	r25, r28
+724ec872:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+724ec876:	8d 2f       	mov	r24, r29
+724ec878:	9c 2f       	mov	r25, r28
+724ec87a:	df 91       	pop	r29
+724ec87c:	cf 91       	pop	r28
+724ec87e:	08 95       	ret
+
+Disassembly of section .text._ZNK6String9compareToERKS_:
+
+e49d90de <_ZNK6String9compareToERKS_>:
+e49d90de:	cf 93       	push	r28
+e49d90e0:	df 93       	push	r29
+e49d90e2:	dc 01       	movw	r26, r24
+e49d90e4:	ed 91       	ld	r30, X+
+e49d90e6:	fc 91       	ld	r31, X
+e49d90e8:	eb 01       	movw	r28, r22
+e49d90ea:	a8 81       	ld	r26, Y
+e49d90ec:	b9 81       	ldd	r27, Y+1	; 0x01
+e49d90ee:	30 97       	sbiw	r30, 0x00	; 0
+e49d90f0:	01 f0       	breq	.+0      	; 0xe49d90f2 <_ZplRK15StringSumHelperc+0x710b1ad0>
+e49d90f2:	10 97       	sbiw	r26, 0x00	; 0
+e49d90f4:	01 f4       	brne	.+0      	; 0xe49d90f6 <_ZplRK15StringSumHelperc+0x710b1ad4>
+e49d90f6:	10 97       	sbiw	r26, 0x00	; 0
+e49d90f8:	01 f0       	breq	.+0      	; 0xe49d90fa <_ZplRK15StringSumHelperc+0x710b1ad8>
+e49d90fa:	eb 01       	movw	r28, r22
+e49d90fc:	2c 81       	ldd	r18, Y+4	; 0x04
+e49d90fe:	3d 81       	ldd	r19, Y+5	; 0x05
+e49d9100:	23 2b       	or	r18, r19
+e49d9102:	01 f0       	breq	.+0      	; 0xe49d9104 <_ZplRK15StringSumHelperc+0x710b1ae2>
+e49d9104:	2c 91       	ld	r18, X
+e49d9106:	30 e0       	ldi	r19, 0x00	; 0
+e49d9108:	31 95       	neg	r19
+e49d910a:	21 95       	neg	r18
+e49d910c:	31 09       	sbc	r19, r1
+e49d910e:	00 c0       	rjmp	.+0      	; 0xe49d9110 <_ZplRK15StringSumHelperc+0x710b1aee>
+e49d9110:	30 97       	sbiw	r30, 0x00	; 0
+e49d9112:	01 f0       	breq	.+0      	; 0xe49d9114 <_ZplRK15StringSumHelperc+0x710b1af2>
+e49d9114:	dc 01       	movw	r26, r24
+e49d9116:	14 96       	adiw	r26, 0x04	; 4
+e49d9118:	8d 91       	ld	r24, X+
+e49d911a:	9c 91       	ld	r25, X
+e49d911c:	15 97       	sbiw	r26, 0x05	; 5
+e49d911e:	89 2b       	or	r24, r25
+e49d9120:	01 f0       	breq	.+0      	; 0xe49d9122 <_ZplRK15StringSumHelperc+0x710b1b00>
+e49d9122:	20 81       	ld	r18, Z
+e49d9124:	30 e0       	ldi	r19, 0x00	; 0
+e49d9126:	00 c0       	rjmp	.+0      	; 0xe49d9128 <_ZplRK15StringSumHelperc+0x710b1b06>
+e49d9128:	bd 01       	movw	r22, r26
+e49d912a:	cf 01       	movw	r24, r30
+e49d912c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+e49d9130:	9c 01       	movw	r18, r24
+e49d9132:	00 c0       	rjmp	.+0      	; 0xe49d9134 <_ZplRK15StringSumHelperc+0x710b1b12>
+e49d9134:	20 e0       	ldi	r18, 0x00	; 0
+e49d9136:	30 e0       	ldi	r19, 0x00	; 0
+e49d9138:	c9 01       	movw	r24, r18
+e49d913a:	df 91       	pop	r29
+e49d913c:	cf 91       	pop	r28
+e49d913e:	08 95       	ret
+
+Disassembly of section .text._ZNK6String6equalsERKS_:
+
+c93b221e <_ZNK6String6equalsERKS_>:
+c93b221e:	fc 01       	movw	r30, r24
+c93b2220:	44 81       	ldd	r20, Z+4	; 0x04
+c93b2222:	55 81       	ldd	r21, Z+5	; 0x05
+c93b2224:	fb 01       	movw	r30, r22
+c93b2226:	24 81       	ldd	r18, Z+4	; 0x04
+c93b2228:	35 81       	ldd	r19, Z+5	; 0x05
+c93b222a:	42 17       	cp	r20, r18
+c93b222c:	53 07       	cpc	r21, r19
+c93b222e:	01 f4       	brne	.+0      	; 0xc93b2230 <_ZplRK15StringSumHelperc+0x55a8ac0e>
+c93b2230:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+c93b2234:	21 e0       	ldi	r18, 0x01	; 1
+c93b2236:	89 2b       	or	r24, r25
+c93b2238:	01 f0       	breq	.+0      	; 0xc93b223a <_ZplRK15StringSumHelperc+0x55a8ac18>
+c93b223a:	20 e0       	ldi	r18, 0x00	; 0
+c93b223c:	82 2f       	mov	r24, r18
+c93b223e:	08 95       	ret
+
+Disassembly of section .text._ZNK6String6equalsEPKc:
+
+9276445e <_ZNK6String6equalsEPKc>:
+9276445e:	dc 01       	movw	r26, r24
+92764460:	14 96       	adiw	r26, 0x04	; 4
+92764462:	2d 91       	ld	r18, X+
+92764464:	3c 91       	ld	r19, X
+92764466:	15 97       	sbiw	r26, 0x05	; 5
+92764468:	23 2b       	or	r18, r19
+9276446a:	01 f4       	brne	.+0      	; 0x9276446c <_ZplRK15StringSumHelperc+0x1ee3ce4a>
+9276446c:	81 e0       	ldi	r24, 0x01	; 1
+9276446e:	61 15       	cp	r22, r1
+92764470:	71 05       	cpc	r23, r1
+92764472:	01 f0       	breq	.+0      	; 0x92764474 <_ZplRK15StringSumHelperc+0x1ee3ce52>
+92764474:	fb 01       	movw	r30, r22
+92764476:	00 c0       	rjmp	.+0      	; 0x92764478 <_ZplRK15StringSumHelperc+0x1ee3ce56>
+92764478:	08 95       	ret
+9276447a:	dc 01       	movw	r26, r24
+9276447c:	ed 91       	ld	r30, X+
+9276447e:	fc 91       	ld	r31, X
+92764480:	61 15       	cp	r22, r1
+92764482:	71 05       	cpc	r23, r1
+92764484:	01 f4       	brne	.+0      	; 0x92764486 <_ZplRK15StringSumHelperc+0x1ee3ce64>
+92764486:	81 e0       	ldi	r24, 0x01	; 1
+92764488:	90 81       	ld	r25, Z
+9276448a:	99 23       	and	r25, r25
+9276448c:	01 f0       	breq	.+0      	; 0x9276448e <_ZplRK15StringSumHelperc+0x1ee3ce6c>
+9276448e:	00 c0       	rjmp	.+0      	; 0x92764490 <_ZplRK15StringSumHelperc+0x1ee3ce6e>
+92764490:	cf 01       	movw	r24, r30
+92764492:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+92764496:	9c 01       	movw	r18, r24
+92764498:	81 e0       	ldi	r24, 0x01	; 1
+9276449a:	23 2b       	or	r18, r19
+9276449c:	01 f0       	breq	.+0      	; 0x9276449e <_ZplRK15StringSumHelperc+0x1ee3ce7c>
+9276449e:	80 e0       	ldi	r24, 0x00	; 0
+927644a0:	08 95       	ret
+
+Disassembly of section .text._ZNK6StringltERKS_:
+
+24ec8900 <_ZNK6StringltERKS_>:
+24ec8900:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+24ec8904:	89 2f       	mov	r24, r25
+24ec8906:	88 1f       	adc	r24, r24
+24ec8908:	88 27       	eor	r24, r24
+24ec890a:	88 1f       	adc	r24, r24
+24ec890c:	08 95       	ret
+
+Disassembly of section .text._ZNK6StringgtERKS_:
+
+49d9120e <_ZNK6StringgtERKS_>:
+49d9120e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+49d91212:	21 e0       	ldi	r18, 0x01	; 1
+49d91214:	18 16       	cp	r1, r24
+49d91216:	19 06       	cpc	r1, r25
+49d91218:	04 f0       	brlt	.+0      	; 0x49d9121a <_ZplRK15StringSumHelperPKc+0x100fd726>
+49d9121a:	20 e0       	ldi	r18, 0x00	; 0
+49d9121c:	82 2f       	mov	r24, r18
+49d9121e:	08 95       	ret
+
+Disassembly of section .text._ZNK6StringleERKS_:
+
+93b2242e <_ZNK6StringleERKS_>:
+93b2242e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+93b22432:	21 e0       	ldi	r18, 0x01	; 1
+93b22434:	18 16       	cp	r1, r24
+93b22436:	19 06       	cpc	r1, r25
+93b22438:	04 f4       	brge	.+0      	; 0x93b2243a <_ZplRK15StringSumHelperc+0x201fae18>
+93b2243a:	20 e0       	ldi	r18, 0x00	; 0
+93b2243c:	82 2f       	mov	r24, r18
+93b2243e:	08 95       	ret
+
+Disassembly of section .text._ZNK6StringgeERKS_:
+
+2764486e <_ZNK6StringgeERKS_>:
+2764486e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+27644872:	89 2f       	mov	r24, r25
+27644874:	80 95       	com	r24
+27644876:	88 1f       	adc	r24, r24
+27644878:	88 27       	eor	r24, r24
+2764487a:	88 1f       	adc	r24, r24
+2764487c:	08 95       	ret
+
+Disassembly of section .text._ZNK6String16equalsIgnoreCaseERKS_:
+
+4ec890ec <_ZNK6String16equalsIgnoreCaseERKS_>:
+4ec890ec:	ef 92       	push	r14
+4ec890ee:	ff 92       	push	r15
+4ec890f0:	0f 93       	push	r16
+4ec890f2:	1f 93       	push	r17
+4ec890f4:	cf 93       	push	r28
+4ec890f6:	df 93       	push	r29
+4ec890f8:	86 17       	cp	r24, r22
+4ec890fa:	97 07       	cpc	r25, r23
+4ec890fc:	01 f0       	breq	.+0      	; 0x4ec890fe <_ZplRK15StringSumHelperPKc+0x14ff560a>
+4ec890fe:	fc 01       	movw	r30, r24
+4ec89100:	24 81       	ldd	r18, Z+4	; 0x04
+4ec89102:	35 81       	ldd	r19, Z+5	; 0x05
+4ec89104:	fb 01       	movw	r30, r22
+4ec89106:	44 81       	ldd	r20, Z+4	; 0x04
+4ec89108:	55 81       	ldd	r21, Z+5	; 0x05
+4ec8910a:	24 17       	cp	r18, r20
+4ec8910c:	35 07       	cpc	r19, r21
+4ec8910e:	01 f4       	brne	.+0      	; 0x4ec89110 <_ZplRK15StringSumHelperPKc+0x14ff561c>
+4ec89110:	23 2b       	or	r18, r19
+4ec89112:	01 f0       	breq	.+0      	; 0x4ec89114 <_ZplRK15StringSumHelperPKc+0x14ff5620>
+4ec89114:	c0 81       	ld	r28, Z
+4ec89116:	d1 81       	ldd	r29, Z+1	; 0x01
+4ec89118:	fc 01       	movw	r30, r24
+4ec8911a:	00 81       	ld	r16, Z
+4ec8911c:	11 81       	ldd	r17, Z+1	; 0x01
+4ec8911e:	00 c0       	rjmp	.+0      	; 0x4ec89120 <_ZplRK15StringSumHelperPKc+0x14ff562c>
+4ec89120:	90 e0       	ldi	r25, 0x00	; 0
+4ec89122:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+4ec89126:	7c 01       	movw	r14, r24
+4ec89128:	89 91       	ld	r24, Y+
+4ec8912a:	90 e0       	ldi	r25, 0x00	; 0
+4ec8912c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+4ec89130:	e8 16       	cp	r14, r24
+4ec89132:	f9 06       	cpc	r15, r25
+4ec89134:	01 f4       	brne	.+0      	; 0x4ec89136 <_ZplRK15StringSumHelperPKc+0x14ff5642>
+4ec89136:	f8 01       	movw	r30, r16
+4ec89138:	81 91       	ld	r24, Z+
+4ec8913a:	8f 01       	movw	r16, r30
+4ec8913c:	81 11       	cpse	r24, r1
+4ec8913e:	00 c0       	rjmp	.+0      	; 0x4ec89140 <_ZplRK15StringSumHelperPKc+0x14ff564c>
+4ec89140:	81 e0       	ldi	r24, 0x01	; 1
+4ec89142:	00 c0       	rjmp	.+0      	; 0x4ec89144 <_ZplRK15StringSumHelperPKc+0x14ff5650>
+4ec89144:	80 e0       	ldi	r24, 0x00	; 0
+4ec89146:	cd b7       	in	r28, 0x3d	; 61
+4ec89148:	de b7       	in	r29, 0x3e	; 62
+4ec8914a:	e6 e0       	ldi	r30, 0x06	; 6
+4ec8914c:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZNK6String10startsWithERKS_j:
+
+9d91223c <_ZNK6String10startsWithERKS_j>:
+9d91223c:	fa 01       	movw	r30, r20
+9d91223e:	db 01       	movw	r26, r22
+9d912240:	14 96       	adiw	r26, 0x04	; 4
+9d912242:	4d 91       	ld	r20, X+
+9d912244:	5c 91       	ld	r21, X
+9d912246:	15 97       	sbiw	r26, 0x05	; 5
+9d912248:	dc 01       	movw	r26, r24
+9d91224a:	14 96       	adiw	r26, 0x04	; 4
+9d91224c:	2d 91       	ld	r18, X+
+9d91224e:	3c 91       	ld	r19, X
+9d912250:	15 97       	sbiw	r26, 0x05	; 5
+9d912252:	24 1b       	sub	r18, r20
+9d912254:	35 0b       	sbc	r19, r21
+9d912256:	2e 17       	cp	r18, r30
+9d912258:	3f 07       	cpc	r19, r31
+9d91225a:	00 f0       	brcs	.+0      	; 0x9d91225c <_ZplRK15StringSumHelperc+0x29feac3a>
+9d91225c:	8d 91       	ld	r24, X+
+9d91225e:	9c 91       	ld	r25, X
+9d912260:	00 97       	sbiw	r24, 0x00	; 0
+9d912262:	01 f0       	breq	.+0      	; 0x9d912264 <_ZplRK15StringSumHelperc+0x29feac42>
+9d912264:	db 01       	movw	r26, r22
+9d912266:	6d 91       	ld	r22, X+
+9d912268:	7c 91       	ld	r23, X
+9d91226a:	61 15       	cp	r22, r1
+9d91226c:	71 05       	cpc	r23, r1
+9d91226e:	01 f0       	breq	.+0      	; 0x9d912270 <_ZplRK15StringSumHelperc+0x29feac4e>
+9d912270:	8e 0f       	add	r24, r30
+9d912272:	9f 1f       	adc	r25, r31
+9d912274:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+9d912278:	9c 01       	movw	r18, r24
+9d91227a:	81 e0       	ldi	r24, 0x01	; 1
+9d91227c:	23 2b       	or	r18, r19
+9d91227e:	01 f0       	breq	.+0      	; 0x9d912280 <_ZplRK15StringSumHelperc+0x29feac5e>
+9d912280:	80 e0       	ldi	r24, 0x00	; 0
+9d912282:	08 95       	ret
+
+Disassembly of section .text._ZNK6String10startsWithERKS_:
+
+3b2244c0 <_ZNK6String10startsWithERKS_>:
+3b2244c0:	fc 01       	movw	r30, r24
+3b2244c2:	44 81       	ldd	r20, Z+4	; 0x04
+3b2244c4:	55 81       	ldd	r21, Z+5	; 0x05
+3b2244c6:	fb 01       	movw	r30, r22
+3b2244c8:	24 81       	ldd	r18, Z+4	; 0x04
+3b2244ca:	35 81       	ldd	r19, Z+5	; 0x05
+3b2244cc:	42 17       	cp	r20, r18
+3b2244ce:	53 07       	cpc	r21, r19
+3b2244d0:	00 f0       	brcs	.+0      	; 0x3b2244d2 <_ZplRK15StringSumHelperPKc+0x15909de>
+3b2244d2:	40 e0       	ldi	r20, 0x00	; 0
+3b2244d4:	50 e0       	ldi	r21, 0x00	; 0
+3b2244d6:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+3b2244da:	08 95       	ret
+3b2244dc:	80 e0       	ldi	r24, 0x00	; 0
+3b2244de:	08 95       	ret
+
+Disassembly of section .text._ZNK6String8endsWithERKS_:
+
+764489a0 <_ZNK6String8endsWithERKS_>:
+764489a0:	fc 01       	movw	r30, r24
+764489a2:	84 81       	ldd	r24, Z+4	; 0x04
+764489a4:	95 81       	ldd	r25, Z+5	; 0x05
+764489a6:	db 01       	movw	r26, r22
+764489a8:	14 96       	adiw	r26, 0x04	; 4
+764489aa:	4d 91       	ld	r20, X+
+764489ac:	5c 91       	ld	r21, X
+764489ae:	15 97       	sbiw	r26, 0x05	; 5
+764489b0:	84 17       	cp	r24, r20
+764489b2:	95 07       	cpc	r25, r21
+764489b4:	00 f0       	brcs	.+0      	; 0x764489b6 <_ZplRK15StringSumHelperc+0x2b21394>
+764489b6:	20 81       	ld	r18, Z
+764489b8:	31 81       	ldd	r19, Z+1	; 0x01
+764489ba:	21 15       	cp	r18, r1
+764489bc:	31 05       	cpc	r19, r1
+764489be:	01 f0       	breq	.+0      	; 0x764489c0 <_ZplRK15StringSumHelperc+0x2b2139e>
+764489c0:	6d 91       	ld	r22, X+
+764489c2:	7c 91       	ld	r23, X
+764489c4:	61 15       	cp	r22, r1
+764489c6:	71 05       	cpc	r23, r1
+764489c8:	01 f0       	breq	.+0      	; 0x764489ca <_ZplRK15StringSumHelperc+0x2b213a8>
+764489ca:	84 1b       	sub	r24, r20
+764489cc:	95 0b       	sbc	r25, r21
+764489ce:	82 0f       	add	r24, r18
+764489d0:	93 1f       	adc	r25, r19
+764489d2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+764489d6:	9c 01       	movw	r18, r24
+764489d8:	81 e0       	ldi	r24, 0x01	; 1
+764489da:	23 2b       	or	r18, r19
+764489dc:	01 f0       	breq	.+0      	; 0x764489de <_ZplRK15StringSumHelperc+0x2b213bc>
+764489de:	80 e0       	ldi	r24, 0x00	; 0
+764489e0:	08 95       	ret
+
+Disassembly of section .text._ZN6String9setCharAtEjc:
+
+ec891382 <_ZN6String9setCharAtEjc>:
+ec891382:	dc 01       	movw	r26, r24
+ec891384:	14 96       	adiw	r26, 0x04	; 4
+ec891386:	2d 91       	ld	r18, X+
+ec891388:	3c 91       	ld	r19, X
+ec89138a:	15 97       	sbiw	r26, 0x05	; 5
+ec89138c:	62 17       	cp	r22, r18
+ec89138e:	73 07       	cpc	r23, r19
+ec891390:	00 f4       	brcc	.+0      	; 0xec891392 <_ZplRK15StringSumHelperh+0x564272c>
+ec891392:	ed 91       	ld	r30, X+
+ec891394:	fc 91       	ld	r31, X
+ec891396:	e6 0f       	add	r30, r22
+ec891398:	f7 1f       	adc	r31, r23
+ec89139a:	40 83       	st	Z, r20
+ec89139c:	08 95       	ret
+
+Disassembly of section .text._ZN6StringixEj:
+
+d9122720 <_ZN6StringixEj>:
+d9122720:	fc 01       	movw	r30, r24
+d9122722:	24 81       	ldd	r18, Z+4	; 0x04
+d9122724:	35 81       	ldd	r19, Z+5	; 0x05
+d9122726:	62 17       	cp	r22, r18
+d9122728:	73 07       	cpc	r23, r19
+d912272a:	00 f4       	brcc	.+0      	; 0xd912272c <_ZplRK15StringSumHelperc+0x657fb10a>
+d912272c:	80 81       	ld	r24, Z
+d912272e:	91 81       	ldd	r25, Z+1	; 0x01
+d9122730:	00 97       	sbiw	r24, 0x00	; 0
+d9122732:	01 f4       	brne	.+0      	; 0xd9122734 <_ZplRK15StringSumHelperc+0x657fb112>
+d9122734:	10 92 00 00 	sts	0x0000, r1
+d9122738:	60 e0       	ldi	r22, 0x00	; 0
+d912273a:	70 e0       	ldi	r23, 0x00	; 0
+d912273c:	00 c0       	rjmp	.+0      	; 0xd912273e <_ZplRK15StringSumHelperc+0x657fb11c>
+d912273e:	68 0f       	add	r22, r24
+d9122740:	79 1f       	adc	r23, r25
+d9122742:	cb 01       	movw	r24, r22
+d9122744:	08 95       	ret
+
+Disassembly of section .text._ZNK6StringixEj:
+
+b2244e66 <_ZNK6StringixEj>:
+b2244e66:	fc 01       	movw	r30, r24
+b2244e68:	24 81       	ldd	r18, Z+4	; 0x04
+b2244e6a:	35 81       	ldd	r19, Z+5	; 0x05
+b2244e6c:	62 17       	cp	r22, r18
+b2244e6e:	73 07       	cpc	r23, r19
+b2244e70:	00 f4       	brcc	.+0      	; 0xb2244e72 <_ZplRK15StringSumHelperc+0x3e91d850>
+b2244e72:	80 81       	ld	r24, Z
+b2244e74:	91 81       	ldd	r25, Z+1	; 0x01
+b2244e76:	00 97       	sbiw	r24, 0x00	; 0
+b2244e78:	01 f0       	breq	.+0      	; 0xb2244e7a <_ZplRK15StringSumHelperc+0x3e91d858>
+b2244e7a:	fc 01       	movw	r30, r24
+b2244e7c:	e6 0f       	add	r30, r22
+b2244e7e:	f7 1f       	adc	r31, r23
+b2244e80:	80 81       	ld	r24, Z
+b2244e82:	08 95       	ret
+b2244e84:	80 e0       	ldi	r24, 0x00	; 0
+b2244e86:	08 95       	ret
+
+Disassembly of section .text._ZNK6String6charAtEj:
+
+64489cee <_ZNK6String6charAtEj>:
+64489cee:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+64489cf2:	08 95       	ret
+
+Disassembly of section .text._ZNK6String8getBytesEPhjj:
+
+c89139e2 <_ZNK6String8getBytesEPhjj>:
+c89139e2:	0f 93       	push	r16
+c89139e4:	1f 93       	push	r17
+c89139e6:	cf 93       	push	r28
+c89139e8:	df 93       	push	r29
+c89139ea:	eb 01       	movw	r28, r22
+c89139ec:	41 15       	cp	r20, r1
+c89139ee:	51 05       	cpc	r21, r1
+c89139f0:	01 f0       	breq	.+0      	; 0xc89139f2 <_ZplRK15StringSumHelperc+0x54fec3d0>
+c89139f2:	20 97       	sbiw	r28, 0x00	; 0
+c89139f4:	01 f0       	breq	.+0      	; 0xc89139f6 <_ZplRK15StringSumHelperc+0x54fec3d4>
+c89139f6:	fc 01       	movw	r30, r24
+c89139f8:	04 81       	ldd	r16, Z+4	; 0x04
+c89139fa:	15 81       	ldd	r17, Z+5	; 0x05
+c89139fc:	20 17       	cp	r18, r16
+c89139fe:	31 07       	cpc	r19, r17
+c8913a00:	00 f0       	brcs	.+0      	; 0xc8913a02 <_ZplRK15StringSumHelperc+0x54fec3e0>
+c8913a02:	00 c0       	rjmp	.+0      	; 0xc8913a04 <_ZplRK15StringSumHelperc+0x54fec3e2>
+c8913a04:	41 50       	subi	r20, 0x01	; 1
+c8913a06:	51 09       	sbc	r21, r1
+c8913a08:	02 1b       	sub	r16, r18
+c8913a0a:	13 0b       	sbc	r17, r19
+c8913a0c:	40 17       	cp	r20, r16
+c8913a0e:	51 07       	cpc	r21, r17
+c8913a10:	00 f4       	brcc	.+0      	; 0xc8913a12 <_ZplRK15StringSumHelperc+0x54fec3f0>
+c8913a12:	8a 01       	movw	r16, r20
+c8913a14:	fc 01       	movw	r30, r24
+c8913a16:	60 81       	ld	r22, Z
+c8913a18:	71 81       	ldd	r23, Z+1	; 0x01
+c8913a1a:	62 0f       	add	r22, r18
+c8913a1c:	73 1f       	adc	r23, r19
+c8913a1e:	a8 01       	movw	r20, r16
+c8913a20:	ce 01       	movw	r24, r28
+c8913a22:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+c8913a26:	c0 0f       	add	r28, r16
+c8913a28:	d1 1f       	adc	r29, r17
+c8913a2a:	18 82       	st	Y, r1
+c8913a2c:	df 91       	pop	r29
+c8913a2e:	cf 91       	pop	r28
+c8913a30:	1f 91       	pop	r17
+c8913a32:	0f 91       	pop	r16
+c8913a34:	08 95       	ret
+
+Disassembly of section .text._ZNK6String7indexOfEcj:
+
+91227418 <_ZNK6String7indexOfEcj>:
+91227418:	cf 93       	push	r28
+9122741a:	df 93       	push	r29
+9122741c:	fc 01       	movw	r30, r24
+9122741e:	84 81       	ldd	r24, Z+4	; 0x04
+91227420:	95 81       	ldd	r25, Z+5	; 0x05
+91227422:	48 17       	cp	r20, r24
+91227424:	59 07       	cpc	r21, r25
+91227426:	00 f4       	brcc	.+0      	; 0x91227428 <_ZplRK15StringSumHelperc+0x1d8ffe06>
+91227428:	c0 81       	ld	r28, Z
+9122742a:	d1 81       	ldd	r29, Z+1	; 0x01
+9122742c:	70 e0       	ldi	r23, 0x00	; 0
+9122742e:	ce 01       	movw	r24, r28
+91227430:	84 0f       	add	r24, r20
+91227432:	95 1f       	adc	r25, r21
+91227434:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+91227438:	00 97       	sbiw	r24, 0x00	; 0
+9122743a:	01 f0       	breq	.+0      	; 0x9122743c <_ZplRK15StringSumHelperc+0x1d8ffe1a>
+9122743c:	9c 01       	movw	r18, r24
+9122743e:	2c 1b       	sub	r18, r28
+91227440:	3d 0b       	sbc	r19, r29
+91227442:	00 c0       	rjmp	.+0      	; 0x91227444 <_ZplRK15StringSumHelperc+0x1d8ffe22>
+91227444:	2f ef       	ldi	r18, 0xFF	; 255
+91227446:	3f ef       	ldi	r19, 0xFF	; 255
+91227448:	c9 01       	movw	r24, r18
+9122744a:	df 91       	pop	r29
+9122744c:	cf 91       	pop	r28
+9122744e:	08 95       	ret
+
+Disassembly of section .text._ZNK6String7indexOfEc:
+
+2244e868 <_ZNK6String7indexOfEc>:
+2244e868:	40 e0       	ldi	r20, 0x00	; 0
+2244e86a:	50 e0       	ldi	r21, 0x00	; 0
+2244e86c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+2244e870:	08 95       	ret
+
+Disassembly of section .text._ZNK6String7indexOfERKS_j:
+
+4489d0da <_ZNK6String7indexOfERKS_j>:
+4489d0da:	cf 93       	push	r28
+4489d0dc:	df 93       	push	r29
+4489d0de:	fc 01       	movw	r30, r24
+4489d0e0:	84 81       	ldd	r24, Z+4	; 0x04
+4489d0e2:	95 81       	ldd	r25, Z+5	; 0x05
+4489d0e4:	48 17       	cp	r20, r24
+4489d0e6:	59 07       	cpc	r21, r25
+4489d0e8:	00 f4       	brcc	.+0      	; 0x4489d0ea <_ZplRK15StringSumHelperPKc+0xac095f6>
+4489d0ea:	c0 81       	ld	r28, Z
+4489d0ec:	d1 81       	ldd	r29, Z+1	; 0x01
+4489d0ee:	fb 01       	movw	r30, r22
+4489d0f0:	60 81       	ld	r22, Z
+4489d0f2:	71 81       	ldd	r23, Z+1	; 0x01
+4489d0f4:	ce 01       	movw	r24, r28
+4489d0f6:	84 0f       	add	r24, r20
+4489d0f8:	95 1f       	adc	r25, r21
+4489d0fa:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+4489d0fe:	00 97       	sbiw	r24, 0x00	; 0
+4489d100:	01 f0       	breq	.+0      	; 0x4489d102 <_ZplRK15StringSumHelperPKc+0xac0960e>
+4489d102:	9c 01       	movw	r18, r24
+4489d104:	2c 1b       	sub	r18, r28
+4489d106:	3d 0b       	sbc	r19, r29
+4489d108:	00 c0       	rjmp	.+0      	; 0x4489d10a <_ZplRK15StringSumHelperPKc+0xac09616>
+4489d10a:	2f ef       	ldi	r18, 0xFF	; 255
+4489d10c:	3f ef       	ldi	r19, 0xFF	; 255
+4489d10e:	c9 01       	movw	r24, r18
+4489d110:	df 91       	pop	r29
+4489d112:	cf 91       	pop	r28
+4489d114:	08 95       	ret
+
+Disassembly of section .text._ZNK6String7indexOfERKS_:
+
+8913a1f0 <_ZNK6String7indexOfERKS_>:
+8913a1f0:	40 e0       	ldi	r20, 0x00	; 0
+8913a1f2:	50 e0       	ldi	r21, 0x00	; 0
+8913a1f4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+8913a1f8:	08 95       	ret
+
+Disassembly of section .text._ZNK6String11lastIndexOfEcj:
+
+122743ea <_ZNK6String11lastIndexOfEcj>:
+122743ea:	a0 e0       	ldi	r26, 0x00	; 0
+122743ec:	b0 e0       	ldi	r27, 0x00	; 0
+122743ee:	e0 e0       	ldi	r30, 0x00	; 0
+122743f0:	f0 e0       	ldi	r31, 0x00	; 0
+122743f2:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+122743f6:	ec 01       	movw	r28, r24
+122743f8:	8c 81       	ldd	r24, Y+4	; 0x04
+122743fa:	9d 81       	ldd	r25, Y+5	; 0x05
+122743fc:	48 17       	cp	r20, r24
+122743fe:	59 07       	cpc	r21, r25
+12274400:	00 f0       	brcs	.+0      	; 0x12274402 <_ZN6String6concatEm+0x3b4f572>
+12274402:	2f ef       	ldi	r18, 0xFF	; 255
+12274404:	3f ef       	ldi	r19, 0xFF	; 255
+12274406:	00 c0       	rjmp	.+0      	; 0x12274408 <_ZN6String6concatEm+0x3b4f578>
+12274408:	8a 01       	movw	r16, r20
+1227440a:	0f 5f       	subi	r16, 0xFF	; 255
+1227440c:	1f 4f       	sbci	r17, 0xFF	; 255
+1227440e:	e8 81       	ld	r30, Y
+12274410:	f9 81       	ldd	r31, Y+1	; 0x01
+12274412:	e0 0f       	add	r30, r16
+12274414:	f1 1f       	adc	r31, r17
+12274416:	d0 80       	ld	r13, Z
+12274418:	10 82       	st	Z, r1
+1227441a:	e8 80       	ld	r14, Y
+1227441c:	f9 80       	ldd	r15, Y+1	; 0x01
+1227441e:	70 e0       	ldi	r23, 0x00	; 0
+12274420:	c7 01       	movw	r24, r14
+12274422:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+12274426:	f7 01       	movw	r30, r14
+12274428:	e0 0f       	add	r30, r16
+1227442a:	f1 1f       	adc	r31, r17
+1227442c:	d0 82       	st	Z, r13
+1227442e:	00 97       	sbiw	r24, 0x00	; 0
+12274430:	01 f0       	breq	.+0      	; 0x12274432 <_ZN6String6concatEm+0x3b4f5a2>
+12274432:	28 81       	ld	r18, Y
+12274434:	39 81       	ldd	r19, Y+1	; 0x01
+12274436:	ac 01       	movw	r20, r24
+12274438:	42 1b       	sub	r20, r18
+1227443a:	53 0b       	sbc	r21, r19
+1227443c:	9a 01       	movw	r18, r20
+1227443e:	c9 01       	movw	r24, r18
+12274440:	cd b7       	in	r28, 0x3d	; 61
+12274442:	de b7       	in	r29, 0x3e	; 62
+12274444:	e7 e0       	ldi	r30, 0x07	; 7
+12274446:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZNK6String11lastIndexOfEc:
+
+244e8834 <_ZNK6String11lastIndexOfEc>:
+244e8834:	fc 01       	movw	r30, r24
+244e8836:	44 81       	ldd	r20, Z+4	; 0x04
+244e8838:	55 81       	ldd	r21, Z+5	; 0x05
+244e883a:	41 50       	subi	r20, 0x01	; 1
+244e883c:	51 09       	sbc	r21, r1
+244e883e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+244e8842:	08 95       	ret
+
+Disassembly of section .text._ZNK6String11lastIndexOfERKS_j:
+
+489d1078 <_ZNK6String11lastIndexOfERKS_j>:
+489d1078:	a0 e0       	ldi	r26, 0x00	; 0
+489d107a:	b0 e0       	ldi	r27, 0x00	; 0
+489d107c:	e0 e0       	ldi	r30, 0x00	; 0
+489d107e:	f0 e0       	ldi	r31, 0x00	; 0
+489d1080:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+489d1084:	6b 01       	movw	r12, r22
+489d1086:	8a 01       	movw	r16, r20
+489d1088:	fb 01       	movw	r30, r22
+489d108a:	44 81       	ldd	r20, Z+4	; 0x04
+489d108c:	55 81       	ldd	r21, Z+5	; 0x05
+489d108e:	41 15       	cp	r20, r1
+489d1090:	51 05       	cpc	r21, r1
+489d1092:	01 f0       	breq	.+0      	; 0x489d1094 <_ZplRK15StringSumHelperPKc+0xed3d5a0>
+489d1094:	fc 01       	movw	r30, r24
+489d1096:	24 81       	ldd	r18, Z+4	; 0x04
+489d1098:	35 81       	ldd	r19, Z+5	; 0x05
+489d109a:	21 15       	cp	r18, r1
+489d109c:	31 05       	cpc	r19, r1
+489d109e:	01 f0       	breq	.+0      	; 0x489d10a0 <_ZplRK15StringSumHelperPKc+0xed3d5ac>
+489d10a0:	24 17       	cp	r18, r20
+489d10a2:	35 07       	cpc	r19, r21
+489d10a4:	00 f0       	brcs	.+0      	; 0x489d10a6 <_ZplRK15StringSumHelperPKc+0xed3d5b2>
+489d10a6:	02 17       	cp	r16, r18
+489d10a8:	13 07       	cpc	r17, r19
+489d10aa:	00 f0       	brcs	.+0      	; 0x489d10ac <_ZplRK15StringSumHelperPKc+0xed3d5b8>
+489d10ac:	89 01       	movw	r16, r18
+489d10ae:	01 50       	subi	r16, 0x01	; 1
+489d10b0:	11 09       	sbc	r17, r1
+489d10b2:	fc 01       	movw	r30, r24
+489d10b4:	e0 80       	ld	r14, Z
+489d10b6:	f1 80       	ldd	r15, Z+1	; 0x01
+489d10b8:	c7 01       	movw	r24, r14
+489d10ba:	cf ef       	ldi	r28, 0xFF	; 255
+489d10bc:	df ef       	ldi	r29, 0xFF	; 255
+489d10be:	57 01       	movw	r10, r14
+489d10c0:	a0 0e       	add	r10, r16
+489d10c2:	b1 1e       	adc	r11, r17
+489d10c4:	00 c0       	rjmp	.+0      	; 0x489d10c6 <_ZplRK15StringSumHelperPKc+0xed3d5d2>
+489d10c6:	f6 01       	movw	r30, r12
+489d10c8:	60 81       	ld	r22, Z
+489d10ca:	71 81       	ldd	r23, Z+1	; 0x01
+489d10cc:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+489d10d0:	00 97       	sbiw	r24, 0x00	; 0
+489d10d2:	01 f0       	breq	.+0      	; 0x489d10d4 <_ZplRK15StringSumHelperPKc+0xed3d5e0>
+489d10d4:	9c 01       	movw	r18, r24
+489d10d6:	2e 19       	sub	r18, r14
+489d10d8:	3f 09       	sbc	r19, r15
+489d10da:	02 17       	cp	r16, r18
+489d10dc:	13 07       	cpc	r17, r19
+489d10de:	00 f4       	brcc	.+0      	; 0x489d10e0 <_ZplRK15StringSumHelperPKc+0xed3d5ec>
+489d10e0:	9e 01       	movw	r18, r28
+489d10e2:	01 96       	adiw	r24, 0x01	; 1
+489d10e4:	e9 01       	movw	r28, r18
+489d10e6:	a8 16       	cp	r10, r24
+489d10e8:	b9 06       	cpc	r11, r25
+489d10ea:	00 f4       	brcc	.+0      	; 0x489d10ec <_ZplRK15StringSumHelperPKc+0xed3d5f8>
+489d10ec:	00 c0       	rjmp	.+0      	; 0x489d10ee <_ZplRK15StringSumHelperPKc+0xed3d5fa>
+489d10ee:	cf ef       	ldi	r28, 0xFF	; 255
+489d10f0:	df ef       	ldi	r29, 0xFF	; 255
+489d10f2:	ce 01       	movw	r24, r28
+489d10f4:	cd b7       	in	r28, 0x3d	; 61
+489d10f6:	de b7       	in	r29, 0x3e	; 62
+489d10f8:	ea e0       	ldi	r30, 0x0A	; 10
+489d10fa:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZNK6String11lastIndexOfERKS_:
+
+913a2176 <_ZNK6String11lastIndexOfERKS_>:
+913a2176:	fc 01       	movw	r30, r24
+913a2178:	44 81       	ldd	r20, Z+4	; 0x04
+913a217a:	55 81       	ldd	r21, Z+5	; 0x05
+913a217c:	fb 01       	movw	r30, r22
+913a217e:	24 81       	ldd	r18, Z+4	; 0x04
+913a2180:	35 81       	ldd	r19, Z+5	; 0x05
+913a2182:	42 1b       	sub	r20, r18
+913a2184:	53 0b       	sbc	r21, r19
+913a2186:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+913a218a:	08 95       	ret
+
+Disassembly of section .text._ZNK6String9substringEjj:
+
+44e88605 <_ZNK6String9substringEjj>:
+44e88605:	a0 e0       	ldi	r26, 0x00	; 0
+44e88607:	b0 e0       	ldi	r27, 0x00	; 0
+44e88609:	e0 e0       	ldi	r30, 0x00	; 0
+44e8860b:	f0 e0       	ldi	r31, 0x00	; 0
+44e8860d:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+44e88611:	6c 01       	movw	r12, r24
+44e88613:	7b 01       	movw	r14, r22
+44e88615:	ea 01       	movw	r28, r20
+44e88617:	89 01       	movw	r16, r18
+44e88619:	24 17       	cp	r18, r20
+44e8861b:	35 07       	cpc	r19, r21
+44e8861d:	00 f4       	brcc	.+0      	; 0x44e8861f <_ZplRK15StringSumHelperPKc+0xb1f4b2b>
+44e8861f:	8d 2f       	mov	r24, r29
+44e88621:	e9 01       	movw	r28, r18
+44e88623:	04 2f       	mov	r16, r20
+44e88625:	18 2f       	mov	r17, r24
+44e88627:	60 e0       	ldi	r22, 0x00	; 0
+44e88629:	70 e0       	ldi	r23, 0x00	; 0
+44e8862b:	c6 01       	movw	r24, r12
+44e8862d:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+44e88631:	d7 01       	movw	r26, r14
+44e88633:	14 96       	adiw	r26, 0x04	; 4
+44e88635:	8d 91       	ld	r24, X+
+44e88637:	9c 91       	ld	r25, X
+44e88639:	15 97       	sbiw	r26, 0x05	; 5
+44e8863b:	8c 17       	cp	r24, r28
+44e8863d:	9d 07       	cpc	r25, r29
+44e8863f:	00 f0       	brcs	.+0      	; 0x44e88641 <_ZplRK15StringSumHelperPKc+0xb1f4b4d>
+44e88641:	80 17       	cp	r24, r16
+44e88643:	91 07       	cpc	r25, r17
+44e88645:	00 f4       	brcc	.+0      	; 0x44e88647 <_ZplRK15StringSumHelperPKc+0xb1f4b53>
+44e88647:	8c 01       	movw	r16, r24
+44e88649:	d7 01       	movw	r26, r14
+44e8864b:	ed 91       	ld	r30, X+
+44e8864d:	fc 91       	ld	r31, X
+44e8864f:	11 97       	sbiw	r26, 0x01	; 1
+44e88651:	e0 0f       	add	r30, r16
+44e88653:	f1 1f       	adc	r31, r17
+44e88655:	b0 80       	ld	r11, Z
+44e88657:	10 82       	st	Z, r1
+44e88659:	6d 91       	ld	r22, X+
+44e8865b:	7c 91       	ld	r23, X
+44e8865d:	6c 0f       	add	r22, r28
+44e8865f:	7d 1f       	adc	r23, r29
+44e88661:	c6 01       	movw	r24, r12
+44e88663:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+44e88667:	d7 01       	movw	r26, r14
+44e88669:	ed 91       	ld	r30, X+
+44e8866b:	fc 91       	ld	r31, X
+44e8866d:	e0 0f       	add	r30, r16
+44e8866f:	f1 1f       	adc	r31, r17
+44e88671:	b0 82       	st	Z, r11
+44e88673:	c6 01       	movw	r24, r12
+44e88675:	cd b7       	in	r28, 0x3d	; 61
+44e88677:	de b7       	in	r29, 0x3e	; 62
+44e88679:	e9 e0       	ldi	r30, 0x09	; 9
+44e8867b:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZNK6String9substringEj:
+
+89d10c84 <_ZNK6String9substringEj>:
+89d10c84:	cf 93       	push	r28
+89d10c86:	df 93       	push	r29
+89d10c88:	ec 01       	movw	r28, r24
+89d10c8a:	fb 01       	movw	r30, r22
+89d10c8c:	24 81       	ldd	r18, Z+4	; 0x04
+89d10c8e:	35 81       	ldd	r19, Z+5	; 0x05
+89d10c90:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+89d10c94:	ce 01       	movw	r24, r28
+89d10c96:	df 91       	pop	r29
+89d10c98:	cf 91       	pop	r28
+89d10c9a:	08 95       	ret
+
+Disassembly of section .text._ZN6String7replaceEcc:
+
+13a21920 <_ZN6String7replaceEcc>:
+13a21920:	dc 01       	movw	r26, r24
+13a21922:	ed 91       	ld	r30, X+
+13a21924:	fc 91       	ld	r31, X
+13a21926:	30 97       	sbiw	r30, 0x00	; 0
+13a21928:	01 f4       	brne	.+0      	; 0x13a2192a <_ZN6String6concatEm+0x52fca9a>
+13a2192a:	08 95       	ret
+13a2192c:	86 13       	cpse	r24, r22
+13a2192e:	00 c0       	rjmp	.+0      	; 0x13a21930 <_ZN6String6concatEm+0x52fcaa0>
+13a21930:	40 83       	st	Z, r20
+13a21932:	31 96       	adiw	r30, 0x01	; 1
+13a21934:	80 81       	ld	r24, Z
+13a21936:	81 11       	cpse	r24, r1
+13a21938:	00 c0       	rjmp	.+0      	; 0x13a2193a <_ZN6String6concatEm+0x52fcaaa>
+13a2193a:	08 95       	ret
+
+Disassembly of section .text._ZN6String7replaceERKS_S1_:
+
+2744325c <_ZN6String7replaceERKS_S1_>:
+2744325c:	a0 e0       	ldi	r26, 0x00	; 0
+2744325e:	b0 e0       	ldi	r27, 0x00	; 0
+27443260:	e0 e0       	ldi	r30, 0x00	; 0
+27443262:	f0 e0       	ldi	r31, 0x00	; 0
+27443264:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+27443268:	8c 01       	movw	r16, r24
+2744326a:	5b 01       	movw	r10, r22
+2744326c:	7a 01       	movw	r14, r20
+2744326e:	dc 01       	movw	r26, r24
+27443270:	14 96       	adiw	r26, 0x04	; 4
+27443272:	4d 90       	ld	r4, X+
+27443274:	5c 90       	ld	r5, X
+27443276:	15 97       	sbiw	r26, 0x05	; 5
+27443278:	41 14       	cp	r4, r1
+2744327a:	51 04       	cpc	r5, r1
+2744327c:	01 f4       	brne	.+0      	; 0x2744327e <_ZplRK15StringSumHelperRK6String+0xa5f951a>
+2744327e:	00 c0       	rjmp	.+0      	; 0x27443280 <_ZplRK15StringSumHelperRK6String+0xa5f951c>
+27443280:	fb 01       	movw	r30, r22
+27443282:	64 80       	ldd	r6, Z+4	; 0x04
+27443284:	75 80       	ldd	r7, Z+5	; 0x05
+27443286:	61 14       	cp	r6, r1
+27443288:	71 04       	cpc	r7, r1
+2744328a:	01 f4       	brne	.+0      	; 0x2744328c <_ZplRK15StringSumHelperRK6String+0xa5f9528>
+2744328c:	00 c0       	rjmp	.+0      	; 0x2744328e <_ZplRK15StringSumHelperRK6String+0xa5f952a>
+2744328e:	da 01       	movw	r26, r20
+27443290:	14 96       	adiw	r26, 0x04	; 4
+27443292:	cd 90       	ld	r12, X+
+27443294:	dc 90       	ld	r13, X
+27443296:	15 97       	sbiw	r26, 0x05	; 5
+27443298:	c6 18       	sub	r12, r6
+2744329a:	d7 08       	sbc	r13, r7
+2744329c:	fc 01       	movw	r30, r24
+2744329e:	c0 81       	ld	r28, Z
+274432a0:	d1 81       	ldd	r29, Z+1	; 0x01
+274432a2:	c1 14       	cp	r12, r1
+274432a4:	d1 04       	cpc	r13, r1
+274432a6:	01 f4       	brne	.+0      	; 0x274432a8 <_ZplRK15StringSumHelperRK6String+0xa5f9544>
+274432a8:	00 c0       	rjmp	.+0      	; 0x274432aa <_ZplRK15StringSumHelperRK6String+0xa5f9546>
+274432aa:	d7 01       	movw	r26, r14
+274432ac:	6c 91       	ld	r22, X
+274432ae:	11 96       	adiw	r26, 0x01	; 1
+274432b0:	7c 91       	ld	r23, X
+274432b2:	11 97       	sbiw	r26, 0x01	; 1
+274432b4:	14 96       	adiw	r26, 0x04	; 4
+274432b6:	4d 91       	ld	r20, X+
+274432b8:	5c 91       	ld	r21, X
+274432ba:	15 97       	sbiw	r26, 0x05	; 5
+274432bc:	c8 01       	movw	r24, r16
+274432be:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+274432c2:	f7 01       	movw	r30, r14
+274432c4:	c4 81       	ldd	r28, Z+4	; 0x04
+274432c6:	d5 81       	ldd	r29, Z+5	; 0x05
+274432c8:	c0 0f       	add	r28, r16
+274432ca:	d1 1f       	adc	r29, r17
+274432cc:	d5 01       	movw	r26, r10
+274432ce:	6d 91       	ld	r22, X+
+274432d0:	7c 91       	ld	r23, X
+274432d2:	ce 01       	movw	r24, r28
+274432d4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+274432d8:	8c 01       	movw	r16, r24
+274432da:	00 97       	sbiw	r24, 0x00	; 0
+274432dc:	01 f4       	brne	.+0      	; 0x274432de <_ZplRK15StringSumHelperRK6String+0xa5f957a>
+274432de:	00 c0       	rjmp	.+0      	; 0x274432e0 <_ZplRK15StringSumHelperRK6String+0xa5f957c>
+274432e0:	d7 fe       	sbrs	r13, 7
+274432e2:	00 c0       	rjmp	.+0      	; 0x274432e4 <_ZplRK15StringSumHelperRK6String+0xa5f9580>
+274432e4:	4e 01       	movw	r8, r28
+274432e6:	00 c0       	rjmp	.+0      	; 0x274432e8 <_ZplRK15StringSumHelperRK6String+0xa5f9584>
+274432e8:	fb 01       	movw	r30, r22
+274432ea:	20 80       	ld	r2, Z
+274432ec:	31 80       	ldd	r3, Z+1	; 0x01
+274432ee:	42 01       	movw	r8, r4
+274432f0:	00 c0       	rjmp	.+0      	; 0x274432f2 <_ZplRK15StringSumHelperRK6String+0xa5f958e>
+274432f2:	32 01       	movw	r6, r4
+274432f4:	6c 1a       	sub	r6, r28
+274432f6:	7d 0a       	sbc	r7, r29
+274432f8:	a3 01       	movw	r20, r6
+274432fa:	be 01       	movw	r22, r28
+274432fc:	c4 01       	movw	r24, r8
+274432fe:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+27443302:	68 0c       	add	r6, r8
+27443304:	79 1c       	adc	r7, r9
+27443306:	d7 01       	movw	r26, r14
+27443308:	6c 91       	ld	r22, X
+2744330a:	11 96       	adiw	r26, 0x01	; 1
+2744330c:	7c 91       	ld	r23, X
+2744330e:	11 97       	sbiw	r26, 0x01	; 1
+27443310:	14 96       	adiw	r26, 0x04	; 4
+27443312:	4d 91       	ld	r20, X+
+27443314:	5c 91       	ld	r21, X
+27443316:	15 97       	sbiw	r26, 0x05	; 5
+27443318:	c3 01       	movw	r24, r6
+2744331a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+2744331e:	f7 01       	movw	r30, r14
+27443320:	84 80       	ldd	r8, Z+4	; 0x04
+27443322:	95 80       	ldd	r9, Z+5	; 0x05
+27443324:	86 0c       	add	r8, r6
+27443326:	97 1c       	adc	r9, r7
+27443328:	d5 01       	movw	r26, r10
+2744332a:	14 96       	adiw	r26, 0x04	; 4
+2744332c:	cd 91       	ld	r28, X+
+2744332e:	dc 91       	ld	r29, X
+27443330:	15 97       	sbiw	r26, 0x05	; 5
+27443332:	c4 0d       	add	r28, r4
+27443334:	d5 1d       	adc	r29, r5
+27443336:	f8 01       	movw	r30, r16
+27443338:	84 81       	ldd	r24, Z+4	; 0x04
+2744333a:	95 81       	ldd	r25, Z+5	; 0x05
+2744333c:	8c 0d       	add	r24, r12
+2744333e:	9d 1d       	adc	r25, r13
+27443340:	95 83       	std	Z+5, r25	; 0x05
+27443342:	84 83       	std	Z+4, r24	; 0x04
+27443344:	d5 01       	movw	r26, r10
+27443346:	6d 91       	ld	r22, X+
+27443348:	7c 91       	ld	r23, X
+2744334a:	ce 01       	movw	r24, r28
+2744334c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+27443350:	2c 01       	movw	r4, r24
+27443352:	00 97       	sbiw	r24, 0x00	; 0
+27443354:	01 f4       	brne	.+0      	; 0x27443356 <_ZplRK15StringSumHelperRK6String+0xa5f95f2>
+27443356:	be 01       	movw	r22, r28
+27443358:	c4 01       	movw	r24, r8
+2744335a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+2744335e:	00 c0       	rjmp	.+0      	; 0x27443360 <_ZplRK15StringSumHelperRK6String+0xa5f95fc>
+27443360:	ec 01       	movw	r28, r24
+27443362:	c6 0d       	add	r28, r6
+27443364:	d7 1d       	adc	r29, r7
+27443366:	8c 0c       	add	r8, r12
+27443368:	9d 1c       	adc	r9, r13
+2744336a:	b1 01       	movw	r22, r2
+2744336c:	ce 01       	movw	r24, r28
+2744336e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+27443372:	00 97       	sbiw	r24, 0x00	; 0
+27443374:	01 f4       	brne	.+0      	; 0x27443376 <_ZplRK15StringSumHelperRK6String+0xa5f9612>
+27443376:	84 14       	cp	r8, r4
+27443378:	95 04       	cpc	r9, r5
+2744337a:	01 f4       	brne	.+0      	; 0x2744337c <_ZplRK15StringSumHelperRK6String+0xa5f9618>
+2744337c:	00 c0       	rjmp	.+0      	; 0x2744337e <_ZplRK15StringSumHelperRK6String+0xa5f961a>
+2744337e:	f8 01       	movw	r30, r16
+27443380:	82 81       	ldd	r24, Z+2	; 0x02
+27443382:	93 81       	ldd	r25, Z+3	; 0x03
+27443384:	88 15       	cp	r24, r8
+27443386:	99 05       	cpc	r25, r9
+27443388:	00 f4       	brcc	.+0      	; 0x2744338a <_ZplRK15StringSumHelperRK6String+0xa5f9626>
+2744338a:	b4 01       	movw	r22, r8
+2744338c:	c8 01       	movw	r24, r16
+2744338e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+27443392:	88 23       	and	r24, r24
+27443394:	01 f4       	brne	.+0      	; 0x27443396 <_ZplRK15StringSumHelperRK6String+0xa5f9632>
+27443396:	00 c0       	rjmp	.+0      	; 0x27443398 <_ZplRK15StringSumHelperRK6String+0xa5f9634>
+27443398:	00 c0       	rjmp	.+0      	; 0x2744339a <_ZplRK15StringSumHelperRK6String+0xa5f9636>
+2744339a:	97 fd       	sbrc	r25, 7
+2744339c:	00 c0       	rjmp	.+0      	; 0x2744339e <_ZplRK15StringSumHelperRK6String+0xa5f963a>
+2744339e:	ac 01       	movw	r20, r24
+274433a0:	b5 01       	movw	r22, r10
+274433a2:	c8 01       	movw	r24, r16
+274433a4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+274433a8:	ec 01       	movw	r28, r24
+274433aa:	97 ff       	sbrs	r25, 7
+274433ac:	00 c0       	rjmp	.+0      	; 0x274433ae <_ZplRK15StringSumHelperRK6String+0xa5f964a>
+274433ae:	00 c0       	rjmp	.+0      	; 0x274433b0 <_ZplRK15StringSumHelperRK6String+0xa5f964c>
+274433b0:	d8 01       	movw	r26, r16
+274433b2:	14 96       	adiw	r26, 0x04	; 4
+274433b4:	8d 91       	ld	r24, X+
+274433b6:	9c 91       	ld	r25, X
+274433b8:	15 97       	sbiw	r26, 0x05	; 5
+274433ba:	00 c0       	rjmp	.+0      	; 0x274433bc <_ZplRK15StringSumHelperRK6String+0xa5f9658>
+274433bc:	f8 01       	movw	r30, r16
+274433be:	80 81       	ld	r24, Z
+274433c0:	91 81       	ldd	r25, Z+1	; 0x01
+274433c2:	d5 01       	movw	r26, r10
+274433c4:	14 96       	adiw	r26, 0x04	; 4
+274433c6:	2d 91       	ld	r18, X+
+274433c8:	3c 91       	ld	r19, X
+274433ca:	15 97       	sbiw	r26, 0x05	; 5
+274433cc:	2c 0f       	add	r18, r28
+274433ce:	3d 1f       	adc	r19, r29
+274433d0:	82 0f       	add	r24, r18
+274433d2:	93 1f       	adc	r25, r19
+274433d4:	44 81       	ldd	r20, Z+4	; 0x04
+274433d6:	55 81       	ldd	r21, Z+5	; 0x05
+274433d8:	42 1b       	sub	r20, r18
+274433da:	53 0b       	sbc	r21, r19
+274433dc:	bc 01       	movw	r22, r24
+274433de:	8c 0d       	add	r24, r12
+274433e0:	9d 1d       	adc	r25, r13
+274433e2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+274433e6:	f8 01       	movw	r30, r16
+274433e8:	84 81       	ldd	r24, Z+4	; 0x04
+274433ea:	95 81       	ldd	r25, Z+5	; 0x05
+274433ec:	8c 0d       	add	r24, r12
+274433ee:	9d 1d       	adc	r25, r13
+274433f0:	95 83       	std	Z+5, r25	; 0x05
+274433f2:	84 83       	std	Z+4, r24	; 0x04
+274433f4:	01 90       	ld	r0, Z+
+274433f6:	f0 81       	ld	r31, Z
+274433f8:	e0 2d       	mov	r30, r0
+274433fa:	e8 0f       	add	r30, r24
+274433fc:	f9 1f       	adc	r31, r25
+274433fe:	10 82       	st	Z, r1
+27443400:	d8 01       	movw	r26, r16
+27443402:	2d 91       	ld	r18, X+
+27443404:	3c 91       	ld	r19, X
+27443406:	2c 0f       	add	r18, r28
+27443408:	3d 1f       	adc	r19, r29
+2744340a:	f7 01       	movw	r30, r14
+2744340c:	60 81       	ld	r22, Z
+2744340e:	71 81       	ldd	r23, Z+1	; 0x01
+27443410:	44 81       	ldd	r20, Z+4	; 0x04
+27443412:	55 81       	ldd	r21, Z+5	; 0x05
+27443414:	c9 01       	movw	r24, r18
+27443416:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+2744341a:	ce 01       	movw	r24, r28
+2744341c:	01 97       	sbiw	r24, 0x01	; 1
+2744341e:	00 c0       	rjmp	.+0      	; 0x27443420 <_ZplRK15StringSumHelperRK6String+0xa5f96bc>
+27443420:	cd b7       	in	r28, 0x3d	; 61
+27443422:	de b7       	in	r29, 0x3e	; 62
+27443424:	e2 e1       	ldi	r30, 0x12	; 18
+27443426:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN6String11toLowerCaseEv:
+
+4e886686 <_ZN6String11toLowerCaseEv>:
+4e886686:	cf 93       	push	r28
+4e886688:	df 93       	push	r29
+4e88668a:	fc 01       	movw	r30, r24
+4e88668c:	c0 81       	ld	r28, Z
+4e88668e:	d1 81       	ldd	r29, Z+1	; 0x01
+4e886690:	20 97       	sbiw	r28, 0x00	; 0
+4e886692:	01 f4       	brne	.+0      	; 0x4e886694 <_ZplRK15StringSumHelperPKc+0x14bf2ba0>
+4e886694:	00 c0       	rjmp	.+0      	; 0x4e886696 <_ZplRK15StringSumHelperPKc+0x14bf2ba2>
+4e886696:	90 e0       	ldi	r25, 0x00	; 0
+4e886698:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+4e88669c:	89 93       	st	Y+, r24
+4e88669e:	88 81       	ld	r24, Y
+4e8866a0:	81 11       	cpse	r24, r1
+4e8866a2:	00 c0       	rjmp	.+0      	; 0x4e8866a4 <_ZplRK15StringSumHelperPKc+0x14bf2bb0>
+4e8866a4:	df 91       	pop	r29
+4e8866a6:	cf 91       	pop	r28
+4e8866a8:	08 95       	ret
+
+Disassembly of section .text._ZN6String11toUpperCaseEv:
+
+9d10cd30 <_ZN6String11toUpperCaseEv>:
+9d10cd30:	cf 93       	push	r28
+9d10cd32:	df 93       	push	r29
+9d10cd34:	fc 01       	movw	r30, r24
+9d10cd36:	c0 81       	ld	r28, Z
+9d10cd38:	d1 81       	ldd	r29, Z+1	; 0x01
+9d10cd3a:	20 97       	sbiw	r28, 0x00	; 0
+9d10cd3c:	01 f4       	brne	.+0      	; 0x9d10cd3e <_ZplRK15StringSumHelperc+0x297e571c>
+9d10cd3e:	00 c0       	rjmp	.+0      	; 0x9d10cd40 <_ZplRK15StringSumHelperc+0x297e571e>
+9d10cd40:	90 e0       	ldi	r25, 0x00	; 0
+9d10cd42:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+9d10cd46:	89 93       	st	Y+, r24
+9d10cd48:	88 81       	ld	r24, Y
+9d10cd4a:	81 11       	cpse	r24, r1
+9d10cd4c:	00 c0       	rjmp	.+0      	; 0x9d10cd4e <_ZplRK15StringSumHelperc+0x297e572c>
+9d10cd4e:	df 91       	pop	r29
+9d10cd50:	cf 91       	pop	r28
+9d10cd52:	08 95       	ret
+
+Disassembly of section .text._ZN6String4trimEv:
+
+3a219a84 <_ZN6String4trimEv>:
+3a219a84:	a0 e0       	ldi	r26, 0x00	; 0
+3a219a86:	b0 e0       	ldi	r27, 0x00	; 0
+3a219a88:	e0 e0       	ldi	r30, 0x00	; 0
+3a219a8a:	f0 e0       	ldi	r31, 0x00	; 0
+3a219a8c:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+3a219a90:	6c 01       	movw	r12, r24
+3a219a92:	dc 01       	movw	r26, r24
+3a219a94:	ed 90       	ld	r14, X+
+3a219a96:	fc 90       	ld	r15, X
+3a219a98:	11 97       	sbiw	r26, 0x01	; 1
+3a219a9a:	e1 14       	cp	r14, r1
+3a219a9c:	f1 04       	cpc	r15, r1
+3a219a9e:	01 f4       	brne	.+0      	; 0x3a219aa0 <_ZplRK15StringSumHelperPKc+0x585fac>
+3a219aa0:	00 c0       	rjmp	.+0      	; 0x3a219aa2 <_ZplRK15StringSumHelperPKc+0x585fae>
+3a219aa2:	14 96       	adiw	r26, 0x04	; 4
+3a219aa4:	0d 91       	ld	r16, X+
+3a219aa6:	1c 91       	ld	r17, X
+3a219aa8:	15 97       	sbiw	r26, 0x05	; 5
+3a219aaa:	01 15       	cp	r16, r1
+3a219aac:	11 05       	cpc	r17, r1
+3a219aae:	01 f0       	breq	.+0      	; 0x3a219ab0 <_ZplRK15StringSumHelperPKc+0x585fbc>
+3a219ab0:	57 01       	movw	r10, r14
+3a219ab2:	e5 01       	movw	r28, r10
+3a219ab4:	bf ef       	ldi	r27, 0xFF	; 255
+3a219ab6:	ab 1a       	sub	r10, r27
+3a219ab8:	bb 0a       	sbc	r11, r27
+3a219aba:	88 81       	ld	r24, Y
+3a219abc:	90 e0       	ldi	r25, 0x00	; 0
+3a219abe:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+3a219ac2:	89 2b       	or	r24, r25
+3a219ac4:	01 f4       	brne	.+0      	; 0x3a219ac6 <_ZplRK15StringSumHelperPKc+0x585fd2>
+3a219ac6:	01 50       	subi	r16, 0x01	; 1
+3a219ac8:	11 09       	sbc	r17, r1
+3a219aca:	0e 0d       	add	r16, r14
+3a219acc:	1f 1d       	adc	r17, r15
+3a219ace:	f8 01       	movw	r30, r16
+3a219ad0:	80 81       	ld	r24, Z
+3a219ad2:	90 e0       	ldi	r25, 0x00	; 0
+3a219ad4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+3a219ad8:	89 2b       	or	r24, r25
+3a219ada:	01 f4       	brne	.+0      	; 0x3a219adc <_ZplRK15StringSumHelperPKc+0x585fe8>
+3a219adc:	0f 5f       	subi	r16, 0xFF	; 255
+3a219ade:	1f 4f       	sbci	r17, 0xFF	; 255
+3a219ae0:	0c 1b       	sub	r16, r28
+3a219ae2:	1d 0b       	sbc	r17, r29
+3a219ae4:	d6 01       	movw	r26, r12
+3a219ae6:	15 96       	adiw	r26, 0x05	; 5
+3a219ae8:	1c 93       	st	X, r17
+3a219aea:	0e 93       	st	-X, r16
+3a219aec:	14 97       	sbiw	r26, 0x04	; 4
+3a219aee:	ec 16       	cp	r14, r28
+3a219af0:	fd 06       	cpc	r15, r29
+3a219af2:	00 f4       	brcc	.+0      	; 0x3a219af4 <_ZplRK15StringSumHelperPKc+0x586000>
+3a219af4:	00 c0       	rjmp	.+0      	; 0x3a219af6 <_ZplRK15StringSumHelperPKc+0x586002>
+3a219af6:	0c 17       	cp	r16, r28
+3a219af8:	1d 07       	cpc	r17, r29
+3a219afa:	00 f4       	brcc	.+0      	; 0x3a219afc <_ZplRK15StringSumHelperPKc+0x586008>
+3a219afc:	00 c0       	rjmp	.+0      	; 0x3a219afe <_ZplRK15StringSumHelperPKc+0x58600a>
+3a219afe:	a8 01       	movw	r20, r16
+3a219b00:	be 01       	movw	r22, r28
+3a219b02:	c7 01       	movw	r24, r14
+3a219b04:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+3a219b08:	d6 01       	movw	r26, r12
+3a219b0a:	ed 91       	ld	r30, X+
+3a219b0c:	fc 91       	ld	r31, X
+3a219b0e:	11 97       	sbiw	r26, 0x01	; 1
+3a219b10:	14 96       	adiw	r26, 0x04	; 4
+3a219b12:	8d 91       	ld	r24, X+
+3a219b14:	9c 91       	ld	r25, X
+3a219b16:	15 97       	sbiw	r26, 0x05	; 5
+3a219b18:	e8 0f       	add	r30, r24
+3a219b1a:	f9 1f       	adc	r31, r25
+3a219b1c:	10 82       	st	Z, r1
+3a219b1e:	00 c0       	rjmp	.+0      	; 0x3a219b20 <_ZplRK15StringSumHelperPKc+0x58602c>
+3a219b20:	01 50       	subi	r16, 0x01	; 1
+3a219b22:	11 09       	sbc	r17, r1
+3a219b24:	00 c0       	rjmp	.+0      	; 0x3a219b26 <_ZplRK15StringSumHelperPKc+0x586032>
+3a219b26:	cd b7       	in	r28, 0x3d	; 61
+3a219b28:	de b7       	in	r29, 0x3e	; 62
+3a219b2a:	ea e0       	ldi	r30, 0x0A	; 10
+3a219b2c:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZNK6String5toIntEv:
+
+744335b4 <_ZNK6String5toIntEv>:
+744335b4:	0f 93       	push	r16
+744335b6:	1f 93       	push	r17
+744335b8:	fc 01       	movw	r30, r24
+744335ba:	80 81       	ld	r24, Z
+744335bc:	91 81       	ldd	r25, Z+1	; 0x01
+744335be:	00 97       	sbiw	r24, 0x00	; 0
+744335c0:	01 f0       	breq	.+0      	; 0x744335c2 <_ZplRK15StringSumHelperc+0xb0bfa0>
+744335c2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+744335c6:	8b 01       	movw	r16, r22
+744335c8:	9c 01       	movw	r18, r24
+744335ca:	00 c0       	rjmp	.+0      	; 0x744335cc <_ZplRK15StringSumHelperc+0xb0bfaa>
+744335cc:	00 e0       	ldi	r16, 0x00	; 0
+744335ce:	10 e0       	ldi	r17, 0x00	; 0
+744335d0:	98 01       	movw	r18, r16
+744335d2:	b8 01       	movw	r22, r16
+744335d4:	c9 01       	movw	r24, r18
+744335d6:	1f 91       	pop	r17
+744335d8:	0f 91       	pop	r16
+744335da:	08 95       	ret

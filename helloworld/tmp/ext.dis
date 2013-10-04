@@ -1,0 +1,33 @@
+
+tmp/ext.o:     file format elf32-avr
+
+
+Disassembly of section .text._Z5onoffi:
+
+00000000 <_Z5onoffi>:
+   0:	cf 92       	push	r12
+   2:	df 92       	push	r13
+   4:	ef 92       	push	r14
+   6:	ff 92       	push	r15
+   8:	6c 01       	movw	r12, r24
+   a:	61 e0       	ldi	r22, 0x01	; 1
+   c:	8d e0       	ldi	r24, 0x0D	; 13
+   e:	0e 94 00 00 	call	0	; 0x0 <_Z5onoffi>
+  12:	ee 24       	eor	r14, r14
+  14:	d7 fc       	sbrc	r13, 7
+  16:	e0 94       	com	r14
+  18:	fe 2c       	mov	r15, r14
+  1a:	c7 01       	movw	r24, r14
+  1c:	b6 01       	movw	r22, r12
+  1e:	0e 94 00 00 	call	0	; 0x0 <_Z5onoffi>
+  22:	60 e0       	ldi	r22, 0x00	; 0
+  24:	8d e0       	ldi	r24, 0x0D	; 13
+  26:	0e 94 00 00 	call	0	; 0x0 <_Z5onoffi>
+  2a:	c7 01       	movw	r24, r14
+  2c:	b6 01       	movw	r22, r12
+  2e:	0e 94 00 00 	call	0	; 0x0 <_Z5onoffi>
+  32:	ff 90       	pop	r15
+  34:	ef 90       	pop	r14
+  36:	df 90       	pop	r13
+  38:	cf 90       	pop	r12
+  3a:	08 95       	ret

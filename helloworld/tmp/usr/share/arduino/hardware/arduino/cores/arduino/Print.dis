@@ -1,0 +1,869 @@
+
+tmp//usr/share/arduino/hardware/arduino/cores/arduino/Print.o:     file format elf32-avr
+
+
+Disassembly of section .text._ZN5Print5writeEPKhj:
+
+00000000 <_ZN5Print5writeEPKhj>:
+   0:	a0 e0       	ldi	r26, 0x00	; 0
+   2:	b0 e0       	ldi	r27, 0x00	; 0
+   4:	e0 e0       	ldi	r30, 0x00	; 0
+   6:	f0 e0       	ldi	r31, 0x00	; 0
+   8:	0c 94 00 00 	jmp	0	; 0x0 <_ZN5Print5writeEPKhj>
+   c:	6c 01       	movw	r12, r24
+   e:	eb 01       	movw	r28, r22
+  10:	7a 01       	movw	r14, r20
+  12:	e6 0e       	add	r14, r22
+  14:	f7 1e       	adc	r15, r23
+  16:	00 e0       	ldi	r16, 0x00	; 0
+  18:	10 e0       	ldi	r17, 0x00	; 0
+  1a:	00 c0       	rjmp	.+0      	; 0x1c <_ZN5Print5writeEPKhj+0x1c>
+  1c:	69 91       	ld	r22, Y+
+  1e:	d6 01       	movw	r26, r12
+  20:	ed 91       	ld	r30, X+
+  22:	fc 91       	ld	r31, X
+  24:	01 90       	ld	r0, Z+
+  26:	f0 81       	ld	r31, Z
+  28:	e0 2d       	mov	r30, r0
+  2a:	c6 01       	movw	r24, r12
+  2c:	09 95       	icall
+  2e:	08 0f       	add	r16, r24
+  30:	19 1f       	adc	r17, r25
+  32:	ce 15       	cp	r28, r14
+  34:	df 05       	cpc	r29, r15
+  36:	01 f4       	brne	.+0      	; 0x38 <_ZN5Print5writeEPKhj+0x38>
+  38:	c8 01       	movw	r24, r16
+  3a:	cd b7       	in	r28, 0x3d	; 61
+  3c:	de b7       	in	r29, 0x3e	; 62
+  3e:	e8 e0       	ldi	r30, 0x08	; 8
+  40:	0c 94 00 00 	jmp	0	; 0x0 <_ZN5Print5writeEPKhj>
+
+Disassembly of section .text._ZN5Print5writeEPKc:
+
+00000044 <_ZN5Print5writeEPKc>:
+  44:	61 15       	cp	r22, r1
+  46:	71 05       	cpc	r23, r1
+  48:	01 f0       	breq	.+0      	; 0x4a <_ZN5Print5writeEPKc+0x6>
+  4a:	db 01       	movw	r26, r22
+  4c:	0d 90       	ld	r0, X+
+  4e:	00 20       	and	r0, r0
+  50:	01 f4       	brne	.+0      	; 0x52 <_ZN5Print5writeEPKc+0xe>
+  52:	ad 01       	movw	r20, r26
+  54:	41 50       	subi	r20, 0x01	; 1
+  56:	51 09       	sbc	r21, r1
+  58:	46 1b       	sub	r20, r22
+  5a:	57 0b       	sbc	r21, r23
+  5c:	dc 01       	movw	r26, r24
+  5e:	ed 91       	ld	r30, X+
+  60:	fc 91       	ld	r31, X
+  62:	02 80       	ldd	r0, Z+2	; 0x02
+  64:	f3 81       	ldd	r31, Z+3	; 0x03
+  66:	e0 2d       	mov	r30, r0
+  68:	09 95       	icall
+  6a:	9c 01       	movw	r18, r24
+  6c:	00 c0       	rjmp	.+0      	; 0x6e <_ZN5Print5writeEPKc+0x2a>
+  6e:	20 e0       	ldi	r18, 0x00	; 0
+  70:	30 e0       	ldi	r19, 0x00	; 0
+  72:	c9 01       	movw	r24, r18
+  74:	08 95       	ret
+
+Disassembly of section .text._ZN5Print5printEPK19__FlashStringHelper:
+
+000000ba <_ZN5Print5printEPK19__FlashStringHelper>:
+  ba:	ef 92       	push	r14
+  bc:	ff 92       	push	r15
+  be:	0f 93       	push	r16
+  c0:	1f 93       	push	r17
+  c2:	cf 93       	push	r28
+  c4:	df 93       	push	r29
+  c6:	7c 01       	movw	r14, r24
+  c8:	eb 01       	movw	r28, r22
+  ca:	00 e0       	ldi	r16, 0x00	; 0
+  cc:	10 e0       	ldi	r17, 0x00	; 0
+  ce:	fe 01       	movw	r30, r28
+  d0:	21 96       	adiw	r28, 0x01	; 1
+  d2:	64 91       	lpm	r22, Z
+  d4:	66 23       	and	r22, r22
+  d6:	01 f0       	breq	.+0      	; 0xd8 <_ZN5Print5printEPK19__FlashStringHelper+0x1e>
+  d8:	f7 01       	movw	r30, r14
+  da:	a0 81       	ld	r26, Z
+  dc:	b1 81       	ldd	r27, Z+1	; 0x01
+  de:	ed 91       	ld	r30, X+
+  e0:	fc 91       	ld	r31, X
+  e2:	c7 01       	movw	r24, r14
+  e4:	09 95       	icall
+  e6:	08 0f       	add	r16, r24
+  e8:	19 1f       	adc	r17, r25
+  ea:	00 c0       	rjmp	.+0      	; 0xec <_ZN5Print5printEPK19__FlashStringHelper+0x32>
+  ec:	c8 01       	movw	r24, r16
+  ee:	cd b7       	in	r28, 0x3d	; 61
+  f0:	de b7       	in	r29, 0x3e	; 62
+  f2:	e6 e0       	ldi	r30, 0x06	; 6
+  f4:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN5Print5printERK6String:
+
+000001b2 <_ZN5Print5printERK6String>:
+ 1b2:	a0 e0       	ldi	r26, 0x00	; 0
+ 1b4:	b0 e0       	ldi	r27, 0x00	; 0
+ 1b6:	e0 e0       	ldi	r30, 0x00	; 0
+ 1b8:	f0 e0       	ldi	r31, 0x00	; 0
+ 1ba:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+ 1be:	7c 01       	movw	r14, r24
+ 1c0:	6b 01       	movw	r12, r22
+ 1c2:	00 e0       	ldi	r16, 0x00	; 0
+ 1c4:	10 e0       	ldi	r17, 0x00	; 0
+ 1c6:	c0 e0       	ldi	r28, 0x00	; 0
+ 1c8:	d0 e0       	ldi	r29, 0x00	; 0
+ 1ca:	00 c0       	rjmp	.+0      	; 0x1cc <_ZN5Print5printERK6String+0x1a>
+ 1cc:	d7 01       	movw	r26, r14
+ 1ce:	ed 91       	ld	r30, X+
+ 1d0:	fc 91       	ld	r31, X
+ 1d2:	a0 80       	ld	r10, Z
+ 1d4:	b1 80       	ldd	r11, Z+1	; 0x01
+ 1d6:	b8 01       	movw	r22, r16
+ 1d8:	c6 01       	movw	r24, r12
+ 1da:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 1de:	68 2f       	mov	r22, r24
+ 1e0:	c7 01       	movw	r24, r14
+ 1e2:	f5 01       	movw	r30, r10
+ 1e4:	09 95       	icall
+ 1e6:	c8 0f       	add	r28, r24
+ 1e8:	d9 1f       	adc	r29, r25
+ 1ea:	0f 5f       	subi	r16, 0xFF	; 255
+ 1ec:	1f 4f       	sbci	r17, 0xFF	; 255
+ 1ee:	d6 01       	movw	r26, r12
+ 1f0:	14 96       	adiw	r26, 0x04	; 4
+ 1f2:	8d 91       	ld	r24, X+
+ 1f4:	9c 91       	ld	r25, X
+ 1f6:	15 97       	sbiw	r26, 0x05	; 5
+ 1f8:	08 17       	cp	r16, r24
+ 1fa:	19 07       	cpc	r17, r25
+ 1fc:	00 f0       	brcs	.+0      	; 0x1fe <_ZN5Print5printERK6String+0x4c>
+ 1fe:	ce 01       	movw	r24, r28
+ 200:	cd b7       	in	r28, 0x3d	; 61
+ 202:	de b7       	in	r29, 0x3e	; 62
+ 204:	ea e0       	ldi	r30, 0x0A	; 10
+ 206:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN5Print5printEPKc:
+
+000003bc <_ZN5Print5printEPKc>:
+ 3bc:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 3c0:	08 95       	ret
+
+Disassembly of section .text._ZN5Print5printEc:
+
+0000077e <_ZN5Print5printEc>:
+ 77e:	dc 01       	movw	r26, r24
+ 780:	ed 91       	ld	r30, X+
+ 782:	fc 91       	ld	r31, X
+ 784:	01 90       	ld	r0, Z+
+ 786:	f0 81       	ld	r31, Z
+ 788:	e0 2d       	mov	r30, r0
+ 78a:	09 95       	icall
+ 78c:	08 95       	ret
+
+Disassembly of section .text._ZN5Print5printERK9Printable:
+
+00000f0c <_ZN5Print5printERK9Printable>:
+ f0c:	db 01       	movw	r26, r22
+ f0e:	ed 91       	ld	r30, X+
+ f10:	fc 91       	ld	r31, X
+ f12:	11 97       	sbiw	r26, 0x01	; 1
+ f14:	01 90       	ld	r0, Z+
+ f16:	f0 81       	ld	r31, Z
+ f18:	e0 2d       	mov	r30, r0
+ f1a:	bc 01       	movw	r22, r24
+ f1c:	cd 01       	movw	r24, r26
+ f1e:	09 95       	icall
+ f20:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnEv:
+
+00001e2e <_ZN5Print7printlnEv>:
+    1e2e:	0f 93       	push	r16
+    1e30:	1f 93       	push	r17
+    1e32:	cf 93       	push	r28
+    1e34:	df 93       	push	r29
+    1e36:	ec 01       	movw	r28, r24
+    1e38:	6d e0       	ldi	r22, 0x0D	; 13
+    1e3a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    1e3e:	8c 01       	movw	r16, r24
+    1e40:	6a e0       	ldi	r22, 0x0A	; 10
+    1e42:	ce 01       	movw	r24, r28
+    1e44:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    1e48:	9c 01       	movw	r18, r24
+    1e4a:	20 0f       	add	r18, r16
+    1e4c:	31 1f       	adc	r19, r17
+    1e4e:	c9 01       	movw	r24, r18
+    1e50:	df 91       	pop	r29
+    1e52:	cf 91       	pop	r28
+    1e54:	1f 91       	pop	r17
+    1e56:	0f 91       	pop	r16
+    1e58:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnEPK19__FlashStringHelper:
+
+00003c88 <_ZN5Print7printlnEPK19__FlashStringHelper>:
+    3c88:	0f 93       	push	r16
+    3c8a:	1f 93       	push	r17
+    3c8c:	cf 93       	push	r28
+    3c8e:	df 93       	push	r29
+    3c90:	ec 01       	movw	r28, r24
+    3c92:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    3c96:	8c 01       	movw	r16, r24
+    3c98:	ce 01       	movw	r24, r28
+    3c9a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    3c9e:	9c 01       	movw	r18, r24
+    3ca0:	20 0f       	add	r18, r16
+    3ca2:	31 1f       	adc	r19, r17
+    3ca4:	c9 01       	movw	r24, r18
+    3ca6:	df 91       	pop	r29
+    3ca8:	cf 91       	pop	r28
+    3caa:	1f 91       	pop	r17
+    3cac:	0f 91       	pop	r16
+    3cae:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnERK6String:
+
+00007938 <_ZN5Print7printlnERK6String>:
+    7938:	0f 93       	push	r16
+    793a:	1f 93       	push	r17
+    793c:	cf 93       	push	r28
+    793e:	df 93       	push	r29
+    7940:	ec 01       	movw	r28, r24
+    7942:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    7946:	8c 01       	movw	r16, r24
+    7948:	ce 01       	movw	r24, r28
+    794a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    794e:	9c 01       	movw	r18, r24
+    7950:	20 0f       	add	r18, r16
+    7952:	31 1f       	adc	r19, r17
+    7954:	c9 01       	movw	r24, r18
+    7956:	df 91       	pop	r29
+    7958:	cf 91       	pop	r28
+    795a:	1f 91       	pop	r17
+    795c:	0f 91       	pop	r16
+    795e:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnEPKc:
+
+0000f298 <_ZN5Print7printlnEPKc>:
+    f298:	0f 93       	push	r16
+    f29a:	1f 93       	push	r17
+    f29c:	cf 93       	push	r28
+    f29e:	df 93       	push	r29
+    f2a0:	ec 01       	movw	r28, r24
+    f2a2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    f2a6:	8c 01       	movw	r16, r24
+    f2a8:	ce 01       	movw	r24, r28
+    f2aa:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    f2ae:	98 01       	movw	r18, r16
+    f2b0:	28 0f       	add	r18, r24
+    f2b2:	39 1f       	adc	r19, r25
+    f2b4:	c9 01       	movw	r24, r18
+    f2b6:	df 91       	pop	r29
+    f2b8:	cf 91       	pop	r28
+    f2ba:	1f 91       	pop	r17
+    f2bc:	0f 91       	pop	r16
+    f2be:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnEc:
+
+0001e558 <_ZN5Print7printlnEc>:
+   1e558:	0f 93       	push	r16
+   1e55a:	1f 93       	push	r17
+   1e55c:	cf 93       	push	r28
+   1e55e:	df 93       	push	r29
+   1e560:	ec 01       	movw	r28, r24
+   1e562:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   1e566:	8c 01       	movw	r16, r24
+   1e568:	ce 01       	movw	r24, r28
+   1e56a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   1e56e:	9c 01       	movw	r18, r24
+   1e570:	20 0f       	add	r18, r16
+   1e572:	31 1f       	adc	r19, r17
+   1e574:	c9 01       	movw	r24, r18
+   1e576:	df 91       	pop	r29
+   1e578:	cf 91       	pop	r28
+   1e57a:	1f 91       	pop	r17
+   1e57c:	0f 91       	pop	r16
+   1e57e:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnERK9Printable:
+
+0003cad8 <_ZN5Print7printlnERK9Printable>:
+   3cad8:	0f 93       	push	r16
+   3cada:	1f 93       	push	r17
+   3cadc:	cf 93       	push	r28
+   3cade:	df 93       	push	r29
+   3cae0:	ec 01       	movw	r28, r24
+   3cae2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   3cae6:	8c 01       	movw	r16, r24
+   3cae8:	ce 01       	movw	r24, r28
+   3caea:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   3caee:	9c 01       	movw	r18, r24
+   3caf0:	20 0f       	add	r18, r16
+   3caf2:	31 1f       	adc	r19, r17
+   3caf4:	c9 01       	movw	r24, r18
+   3caf6:	df 91       	pop	r29
+   3caf8:	cf 91       	pop	r28
+   3cafa:	1f 91       	pop	r17
+   3cafc:	0f 91       	pop	r16
+   3cafe:	08 95       	ret
+
+Disassembly of section .text._ZN5Print11printNumberEmh:
+
+000795d8 <_ZN5Print11printNumberEmh>:
+   795d8:	4f 92       	push	r4
+   795da:	5f 92       	push	r5
+   795dc:	6f 92       	push	r6
+   795de:	7f 92       	push	r7
+   795e0:	9f 92       	push	r9
+   795e2:	af 92       	push	r10
+   795e4:	bf 92       	push	r11
+   795e6:	cf 92       	push	r12
+   795e8:	df 92       	push	r13
+   795ea:	ef 92       	push	r14
+   795ec:	ff 92       	push	r15
+   795ee:	0f 93       	push	r16
+   795f0:	1f 93       	push	r17
+   795f2:	cf 93       	push	r28
+   795f4:	df 93       	push	r29
+   795f6:	cd b7       	in	r28, 0x3d	; 61
+   795f8:	de b7       	in	r29, 0x3e	; 62
+   795fa:	a1 97       	sbiw	r28, 0x21	; 33
+   795fc:	0f b6       	in	r0, 0x3f	; 63
+   795fe:	f8 94       	cli
+   79600:	de bf       	out	0x3e, r29	; 62
+   79602:	0f be       	out	0x3f, r0	; 63
+   79604:	cd bf       	out	0x3d, r28	; 61
+   79606:	5c 01       	movw	r10, r24
+   79608:	6a 01       	movw	r12, r20
+   7960a:	7b 01       	movw	r14, r22
+   7960c:	92 2e       	mov	r9, r18
+   7960e:	19 a2       	std	Y+33, r1	; 0x21
+   79610:	81 e0       	ldi	r24, 0x01	; 1
+   79612:	82 17       	cp	r24, r18
+   79614:	00 f0       	brcs	.+0      	; 0x79616 <_ZN5Print11printNumberEmh+0x3e>
+   79616:	8a e0       	ldi	r24, 0x0A	; 10
+   79618:	98 2e       	mov	r9, r24
+   7961a:	8e 01       	movw	r16, r28
+   7961c:	0f 5d       	subi	r16, 0xDF	; 223
+   7961e:	1f 4f       	sbci	r17, 0xFF	; 255
+   79620:	49 2c       	mov	r4, r9
+   79622:	51 2c       	mov	r5, r1
+   79624:	61 2c       	mov	r6, r1
+   79626:	71 2c       	mov	r7, r1
+   79628:	c7 01       	movw	r24, r14
+   7962a:	b6 01       	movw	r22, r12
+   7962c:	a3 01       	movw	r20, r6
+   7962e:	92 01       	movw	r18, r4
+   79630:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   79634:	8c 2d       	mov	r24, r12
+   79636:	92 9e       	mul	r9, r18
+   79638:	80 19       	sub	r24, r0
+   7963a:	11 24       	eor	r1, r1
+   7963c:	01 50       	subi	r16, 0x01	; 1
+   7963e:	11 09       	sbc	r17, r1
+   79640:	8a 30       	cpi	r24, 0x0A	; 10
+   79642:	00 f4       	brcc	.+0      	; 0x79644 <_ZN5Print11printNumberEmh+0x6c>
+   79644:	80 5d       	subi	r24, 0xD0	; 208
+   79646:	00 c0       	rjmp	.+0      	; 0x79648 <_ZN5Print11printNumberEmh+0x70>
+   79648:	89 5c       	subi	r24, 0xC9	; 201
+   7964a:	f8 01       	movw	r30, r16
+   7964c:	80 83       	st	Z, r24
+   7964e:	69 01       	movw	r12, r18
+   79650:	7a 01       	movw	r14, r20
+   79652:	c1 14       	cp	r12, r1
+   79654:	d1 04       	cpc	r13, r1
+   79656:	e1 04       	cpc	r14, r1
+   79658:	f1 04       	cpc	r15, r1
+   7965a:	01 f4       	brne	.+0      	; 0x7965c <_ZN5Print11printNumberEmh+0x84>
+   7965c:	b8 01       	movw	r22, r16
+   7965e:	c5 01       	movw	r24, r10
+   79660:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   79664:	a1 96       	adiw	r28, 0x21	; 33
+   79666:	0f b6       	in	r0, 0x3f	; 63
+   79668:	f8 94       	cli
+   7966a:	de bf       	out	0x3e, r29	; 62
+   7966c:	0f be       	out	0x3f, r0	; 63
+   7966e:	cd bf       	out	0x3d, r28	; 61
+   79670:	df 91       	pop	r29
+   79672:	cf 91       	pop	r28
+   79674:	1f 91       	pop	r17
+   79676:	0f 91       	pop	r16
+   79678:	ff 90       	pop	r15
+   7967a:	ef 90       	pop	r14
+   7967c:	df 90       	pop	r13
+   7967e:	cf 90       	pop	r12
+   79680:	bf 90       	pop	r11
+   79682:	af 90       	pop	r10
+   79684:	9f 90       	pop	r9
+   79686:	7f 90       	pop	r7
+   79688:	6f 90       	pop	r6
+   7968a:	5f 90       	pop	r5
+   7968c:	4f 90       	pop	r4
+   7968e:	08 95       	ret
+
+Disassembly of section .text._ZN5Print5printEmi:
+
+000f2c68 <_ZN5Print5printEmi>:
+   f2c68:	21 15       	cp	r18, r1
+   f2c6a:	31 05       	cpc	r19, r1
+   f2c6c:	01 f4       	brne	.+0      	; 0xf2c6e <_ZN5Print5printEmi+0x6>
+   f2c6e:	dc 01       	movw	r26, r24
+   f2c70:	ed 91       	ld	r30, X+
+   f2c72:	fc 91       	ld	r31, X
+   f2c74:	01 90       	ld	r0, Z+
+   f2c76:	f0 81       	ld	r31, Z
+   f2c78:	e0 2d       	mov	r30, r0
+   f2c7a:	64 2f       	mov	r22, r20
+   f2c7c:	09 95       	icall
+   f2c7e:	08 95       	ret
+   f2c80:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   f2c84:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnEmi:
+
+001e58ee <_ZN5Print7printlnEmi>:
+  1e58ee:	0f 93       	push	r16
+  1e58f0:	1f 93       	push	r17
+  1e58f2:	cf 93       	push	r28
+  1e58f4:	df 93       	push	r29
+  1e58f6:	ec 01       	movw	r28, r24
+  1e58f8:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  1e58fc:	8c 01       	movw	r16, r24
+  1e58fe:	ce 01       	movw	r24, r28
+  1e5900:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  1e5904:	9c 01       	movw	r18, r24
+  1e5906:	20 0f       	add	r18, r16
+  1e5908:	31 1f       	adc	r19, r17
+  1e590a:	c9 01       	movw	r24, r18
+  1e590c:	df 91       	pop	r29
+  1e590e:	cf 91       	pop	r28
+  1e5910:	1f 91       	pop	r17
+  1e5912:	0f 91       	pop	r16
+  1e5914:	08 95       	ret
+
+Disassembly of section .text._ZN5Print5printEji:
+
+003cb204 <_ZN5Print5printEji>:
+  3cb204:	9a 01       	movw	r18, r20
+  3cb206:	ab 01       	movw	r20, r22
+  3cb208:	60 e0       	ldi	r22, 0x00	; 0
+  3cb20a:	70 e0       	ldi	r23, 0x00	; 0
+  3cb20c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  3cb210:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnEji:
+
+00796416 <_ZN5Print7printlnEji>:
+  796416:	0f 93       	push	r16
+  796418:	1f 93       	push	r17
+  79641a:	cf 93       	push	r28
+  79641c:	df 93       	push	r29
+  79641e:	ec 01       	movw	r28, r24
+  796420:	9a 01       	movw	r18, r20
+  796422:	ab 01       	movw	r20, r22
+  796424:	60 e0       	ldi	r22, 0x00	; 0
+  796426:	70 e0       	ldi	r23, 0x00	; 0
+  796428:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  79642c:	8c 01       	movw	r16, r24
+  79642e:	ce 01       	movw	r24, r28
+  796430:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  796434:	98 01       	movw	r18, r16
+  796436:	28 0f       	add	r18, r24
+  796438:	39 1f       	adc	r19, r25
+  79643a:	c9 01       	movw	r24, r18
+  79643c:	df 91       	pop	r29
+  79643e:	cf 91       	pop	r28
+  796440:	1f 91       	pop	r17
+  796442:	0f 91       	pop	r16
+  796444:	08 95       	ret
+
+Disassembly of section .text._ZN5Print5printEhi:
+
+00f2c85c <_ZN5Print5printEhi>:
+  f2c85c:	9a 01       	movw	r18, r20
+  f2c85e:	46 2f       	mov	r20, r22
+  f2c860:	50 e0       	ldi	r21, 0x00	; 0
+  f2c862:	60 e0       	ldi	r22, 0x00	; 0
+  f2c864:	70 e0       	ldi	r23, 0x00	; 0
+  f2c866:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  f2c86a:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnEhi:
+
+01e590c8 <_ZN5Print7printlnEhi>:
+ 1e590c8:	0f 93       	push	r16
+ 1e590ca:	1f 93       	push	r17
+ 1e590cc:	cf 93       	push	r28
+ 1e590ce:	df 93       	push	r29
+ 1e590d0:	ec 01       	movw	r28, r24
+ 1e590d2:	9a 01       	movw	r18, r20
+ 1e590d4:	46 2f       	mov	r20, r22
+ 1e590d6:	50 e0       	ldi	r21, 0x00	; 0
+ 1e590d8:	60 e0       	ldi	r22, 0x00	; 0
+ 1e590da:	70 e0       	ldi	r23, 0x00	; 0
+ 1e590dc:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 1e590e0:	8c 01       	movw	r16, r24
+ 1e590e2:	ce 01       	movw	r24, r28
+ 1e590e4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 1e590e8:	98 01       	movw	r18, r16
+ 1e590ea:	28 0f       	add	r18, r24
+ 1e590ec:	39 1f       	adc	r19, r25
+ 1e590ee:	c9 01       	movw	r24, r18
+ 1e590f0:	df 91       	pop	r29
+ 1e590f2:	cf 91       	pop	r28
+ 1e590f4:	1f 91       	pop	r17
+ 1e590f6:	0f 91       	pop	r16
+ 1e590f8:	08 95       	ret
+
+Disassembly of section .text._ZN5Print5printEli:
+
+03cb21c2 <_ZN5Print5printEli>:
+ 3cb21c2:	a0 e0       	ldi	r26, 0x00	; 0
+ 3cb21c4:	b0 e0       	ldi	r27, 0x00	; 0
+ 3cb21c6:	e0 e0       	ldi	r30, 0x00	; 0
+ 3cb21c8:	f0 e0       	ldi	r31, 0x00	; 0
+ 3cb21ca:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+ 3cb21ce:	ec 01       	movw	r28, r24
+ 3cb21d0:	6a 01       	movw	r12, r20
+ 3cb21d2:	7b 01       	movw	r14, r22
+ 3cb21d4:	21 15       	cp	r18, r1
+ 3cb21d6:	31 05       	cpc	r19, r1
+ 3cb21d8:	01 f4       	brne	.+0      	; 0x3cb21da <_ZN5Print5printEli+0x18>
+ 3cb21da:	e8 81       	ld	r30, Y
+ 3cb21dc:	f9 81       	ldd	r31, Y+1	; 0x01
+ 3cb21de:	01 90       	ld	r0, Z+
+ 3cb21e0:	f0 81       	ld	r31, Z
+ 3cb21e2:	e0 2d       	mov	r30, r0
+ 3cb21e4:	64 2f       	mov	r22, r20
+ 3cb21e6:	09 95       	icall
+ 3cb21e8:	00 c0       	rjmp	.+0      	; 0x3cb21ea <_ZN5Print5printEli+0x28>
+ 3cb21ea:	2a 30       	cpi	r18, 0x0A	; 10
+ 3cb21ec:	31 05       	cpc	r19, r1
+ 3cb21ee:	01 f4       	brne	.+0      	; 0x3cb21f0 <_ZN5Print5printEli+0x2e>
+ 3cb21f0:	77 ff       	sbrs	r23, 7
+ 3cb21f2:	00 c0       	rjmp	.+0      	; 0x3cb21f4 <_ZN5Print5printEli+0x32>
+ 3cb21f4:	6d e2       	ldi	r22, 0x2D	; 45
+ 3cb21f6:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 3cb21fa:	8c 01       	movw	r16, r24
+ 3cb21fc:	44 27       	eor	r20, r20
+ 3cb21fe:	55 27       	eor	r21, r21
+ 3cb2200:	ba 01       	movw	r22, r20
+ 3cb2202:	4c 19       	sub	r20, r12
+ 3cb2204:	5d 09       	sbc	r21, r13
+ 3cb2206:	6e 09       	sbc	r22, r14
+ 3cb2208:	7f 09       	sbc	r23, r15
+ 3cb220a:	2a e0       	ldi	r18, 0x0A	; 10
+ 3cb220c:	ce 01       	movw	r24, r28
+ 3cb220e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 3cb2212:	08 0f       	add	r16, r24
+ 3cb2214:	19 1f       	adc	r17, r25
+ 3cb2216:	00 c0       	rjmp	.+0      	; 0x3cb2218 <_ZN5Print5printEli+0x56>
+ 3cb2218:	2a e0       	ldi	r18, 0x0A	; 10
+ 3cb221a:	b7 01       	movw	r22, r14
+ 3cb221c:	a6 01       	movw	r20, r12
+ 3cb221e:	ce 01       	movw	r24, r28
+ 3cb2220:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 3cb2224:	8c 01       	movw	r16, r24
+ 3cb2226:	c8 01       	movw	r24, r16
+ 3cb2228:	cd b7       	in	r28, 0x3d	; 61
+ 3cb222a:	de b7       	in	r29, 0x3e	; 62
+ 3cb222c:	e8 e0       	ldi	r30, 0x08	; 8
+ 3cb222e:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN5Print7printlnEli:
+
+079643f4 <_ZN5Print7printlnEli>:
+ 79643f4:	0f 93       	push	r16
+ 79643f6:	1f 93       	push	r17
+ 79643f8:	cf 93       	push	r28
+ 79643fa:	df 93       	push	r29
+ 79643fc:	ec 01       	movw	r28, r24
+ 79643fe:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 7964402:	8c 01       	movw	r16, r24
+ 7964404:	ce 01       	movw	r24, r28
+ 7964406:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 796440a:	9c 01       	movw	r18, r24
+ 796440c:	20 0f       	add	r18, r16
+ 796440e:	31 1f       	adc	r19, r17
+ 7964410:	c9 01       	movw	r24, r18
+ 7964412:	df 91       	pop	r29
+ 7964414:	cf 91       	pop	r28
+ 7964416:	1f 91       	pop	r17
+ 7964418:	0f 91       	pop	r16
+ 796441a:	08 95       	ret
+
+Disassembly of section .text._ZN5Print5printEii:
+
+0f2c8810 <_ZN5Print5printEii>:
+ f2c8810:	9a 01       	movw	r18, r20
+ f2c8812:	ab 01       	movw	r20, r22
+ f2c8814:	66 27       	eor	r22, r22
+ f2c8816:	57 fd       	sbrc	r21, 7
+ f2c8818:	60 95       	com	r22
+ f2c881a:	76 2f       	mov	r23, r22
+ f2c881c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ f2c8820:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnEii:
+
+1e591032 <_ZN5Print7printlnEii>:
+1e591032:	0f 93       	push	r16
+1e591034:	1f 93       	push	r17
+1e591036:	cf 93       	push	r28
+1e591038:	df 93       	push	r29
+1e59103a:	ec 01       	movw	r28, r24
+1e59103c:	9a 01       	movw	r18, r20
+1e59103e:	ab 01       	movw	r20, r22
+1e591040:	66 27       	eor	r22, r22
+1e591042:	57 fd       	sbrc	r21, 7
+1e591044:	60 95       	com	r22
+1e591046:	76 2f       	mov	r23, r22
+1e591048:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+1e59104c:	8c 01       	movw	r16, r24
+1e59104e:	ce 01       	movw	r24, r28
+1e591050:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+1e591054:	98 01       	movw	r18, r16
+1e591056:	28 0f       	add	r18, r24
+1e591058:	39 1f       	adc	r19, r25
+1e59105a:	c9 01       	movw	r24, r18
+1e59105c:	df 91       	pop	r29
+1e59105e:	cf 91       	pop	r28
+1e591060:	1f 91       	pop	r17
+1e591062:	0f 91       	pop	r16
+1e591064:	08 95       	ret
+
+Disassembly of section .text._ZN5Print10printFloatEdh:
+
+7964413e <_ZN5Print10printFloatEdh>:
+7964413e:	a0 e0       	ldi	r26, 0x00	; 0
+79644140:	b0 e0       	ldi	r27, 0x00	; 0
+79644142:	e0 e0       	ldi	r30, 0x00	; 0
+79644144:	f0 e0       	ldi	r31, 0x00	; 0
+79644146:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+7964414a:	ec 01       	movw	r28, r24
+7964414c:	6a 01       	movw	r12, r20
+7964414e:	7b 01       	movw	r14, r22
+79644150:	12 2f       	mov	r17, r18
+79644152:	9a 01       	movw	r18, r20
+79644154:	ab 01       	movw	r20, r22
+79644156:	c7 01       	movw	r24, r14
+79644158:	b6 01       	movw	r22, r12
+7964415a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+7964415e:	88 23       	and	r24, r24
+79644160:	01 f0       	breq	.+0      	; 0x79644162 <_ZN5Print10printFloatEdh+0x24>
+79644162:	60 e0       	ldi	r22, 0x00	; 0
+79644164:	70 e0       	ldi	r23, 0x00	; 0
+79644166:	00 c0       	rjmp	.+0      	; 0x79644168 <_ZN5Print10printFloatEdh+0x2a>
+79644168:	46 01       	movw	r8, r12
+7964416a:	57 01       	movw	r10, r14
+7964416c:	e8 94       	clt
+7964416e:	b7 f8       	bld	r11, 7
+79644170:	2f ef       	ldi	r18, 0xFF	; 255
+79644172:	3f ef       	ldi	r19, 0xFF	; 255
+79644174:	4f e7       	ldi	r20, 0x7F	; 127
+79644176:	5f e7       	ldi	r21, 0x7F	; 127
+79644178:	c5 01       	movw	r24, r10
+7964417a:	b4 01       	movw	r22, r8
+7964417c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+79644180:	81 11       	cpse	r24, r1
+79644182:	00 c0       	rjmp	.+0      	; 0x79644184 <_ZN5Print10printFloatEdh+0x46>
+79644184:	2f ef       	ldi	r18, 0xFF	; 255
+79644186:	3f ef       	ldi	r19, 0xFF	; 255
+79644188:	4f e7       	ldi	r20, 0x7F	; 127
+7964418a:	5f e7       	ldi	r21, 0x7F	; 127
+7964418c:	c5 01       	movw	r24, r10
+7964418e:	b4 01       	movw	r22, r8
+79644190:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+79644194:	18 16       	cp	r1, r24
+79644196:	04 f4       	brge	.+0      	; 0x79644198 <_ZN5Print10printFloatEdh+0x5a>
+79644198:	60 e0       	ldi	r22, 0x00	; 0
+7964419a:	70 e0       	ldi	r23, 0x00	; 0
+7964419c:	ce 01       	movw	r24, r28
+7964419e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+796441a2:	7c 01       	movw	r14, r24
+796441a4:	00 c0       	rjmp	.+0      	; 0x796441a6 <_ZN5Print10printFloatEdh+0x68>
+796441a6:	2f ef       	ldi	r18, 0xFF	; 255
+796441a8:	3f ef       	ldi	r19, 0xFF	; 255
+796441aa:	4f e7       	ldi	r20, 0x7F	; 127
+796441ac:	5f e4       	ldi	r21, 0x4F	; 79
+796441ae:	c7 01       	movw	r24, r14
+796441b0:	b6 01       	movw	r22, r12
+796441b2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+796441b6:	18 16       	cp	r1, r24
+796441b8:	04 f4       	brge	.+0      	; 0x796441ba <_ZN5Print10printFloatEdh+0x7c>
+796441ba:	00 c0       	rjmp	.+0      	; 0x796441bc <_ZN5Print10printFloatEdh+0x7e>
+796441bc:	2f ef       	ldi	r18, 0xFF	; 255
+796441be:	3f ef       	ldi	r19, 0xFF	; 255
+796441c0:	4f e7       	ldi	r20, 0x7F	; 127
+796441c2:	5f ec       	ldi	r21, 0xCF	; 207
+796441c4:	c7 01       	movw	r24, r14
+796441c6:	b6 01       	movw	r22, r12
+796441c8:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+796441cc:	87 ff       	sbrs	r24, 7
+796441ce:	00 c0       	rjmp	.+0      	; 0x796441d0 <_ZN5Print10printFloatEdh+0x92>
+796441d0:	60 e0       	ldi	r22, 0x00	; 0
+796441d2:	70 e0       	ldi	r23, 0x00	; 0
+796441d4:	00 c0       	rjmp	.+0      	; 0x796441d6 <_ZN5Print10printFloatEdh+0x98>
+796441d6:	20 e0       	ldi	r18, 0x00	; 0
+796441d8:	30 e0       	ldi	r19, 0x00	; 0
+796441da:	a9 01       	movw	r20, r18
+796441dc:	c7 01       	movw	r24, r14
+796441de:	b6 01       	movw	r22, r12
+796441e0:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+796441e4:	87 ff       	sbrs	r24, 7
+796441e6:	00 c0       	rjmp	.+0      	; 0x796441e8 <_ZN5Print10printFloatEdh+0xaa>
+796441e8:	6d e2       	ldi	r22, 0x2D	; 45
+796441ea:	ce 01       	movw	r24, r28
+796441ec:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+796441f0:	5c 01       	movw	r10, r24
+796441f2:	f7 fa       	bst	r15, 7
+796441f4:	f0 94       	com	r15
+796441f6:	f7 f8       	bld	r15, 7
+796441f8:	f0 94       	com	r15
+796441fa:	00 c0       	rjmp	.+0      	; 0x796441fc <_ZN5Print10printFloatEdh+0xbe>
+796441fc:	a1 2c       	mov	r10, r1
+796441fe:	b1 2c       	mov	r11, r1
+79644200:	00 e0       	ldi	r16, 0x00	; 0
+79644202:	60 e0       	ldi	r22, 0x00	; 0
+79644204:	70 e0       	ldi	r23, 0x00	; 0
+79644206:	80 e0       	ldi	r24, 0x00	; 0
+79644208:	9f e3       	ldi	r25, 0x3F	; 63
+7964420a:	00 c0       	rjmp	.+0      	; 0x7964420c <_ZN5Print10printFloatEdh+0xce>
+7964420c:	20 e0       	ldi	r18, 0x00	; 0
+7964420e:	30 e0       	ldi	r19, 0x00	; 0
+79644210:	40 e2       	ldi	r20, 0x20	; 32
+79644212:	51 e4       	ldi	r21, 0x41	; 65
+79644214:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+79644218:	0f 5f       	subi	r16, 0xFF	; 255
+7964421a:	01 13       	cpse	r16, r17
+7964421c:	00 c0       	rjmp	.+0      	; 0x7964421e <_ZN5Print10printFloatEdh+0xe0>
+7964421e:	26 2f       	mov	r18, r22
+79644220:	37 2f       	mov	r19, r23
+79644222:	48 2f       	mov	r20, r24
+79644224:	59 2f       	mov	r21, r25
+79644226:	c7 01       	movw	r24, r14
+79644228:	b6 01       	movw	r22, r12
+7964422a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+7964422e:	76 2e       	mov	r7, r22
+79644230:	87 2e       	mov	r8, r23
+79644232:	98 2e       	mov	r9, r24
+79644234:	c9 2e       	mov	r12, r25
+79644236:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+7964423a:	d6 2e       	mov	r13, r22
+7964423c:	e7 2e       	mov	r14, r23
+7964423e:	f8 2e       	mov	r15, r24
+79644240:	09 2f       	mov	r16, r25
+79644242:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+79644246:	9b 01       	movw	r18, r22
+79644248:	ac 01       	movw	r20, r24
+7964424a:	67 2d       	mov	r22, r7
+7964424c:	78 2d       	mov	r23, r8
+7964424e:	89 2d       	mov	r24, r9
+79644250:	9c 2d       	mov	r25, r12
+79644252:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+79644256:	c6 2e       	mov	r12, r22
+79644258:	97 2e       	mov	r9, r23
+7964425a:	88 2e       	mov	r8, r24
+7964425c:	79 2e       	mov	r7, r25
+7964425e:	2a e0       	ldi	r18, 0x0A	; 10
+79644260:	4d 2d       	mov	r20, r13
+79644262:	5e 2d       	mov	r21, r14
+79644264:	6f 2d       	mov	r22, r15
+79644266:	70 2f       	mov	r23, r16
+79644268:	ce 01       	movw	r24, r28
+7964426a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+7964426e:	7c 01       	movw	r14, r24
+79644270:	ea 0c       	add	r14, r10
+79644272:	fb 1c       	adc	r15, r11
+79644274:	11 23       	and	r17, r17
+79644276:	01 f0       	breq	.+0      	; 0x79644278 <_ZN5Print10printFloatEdh+0x13a>
+79644278:	60 e0       	ldi	r22, 0x00	; 0
+7964427a:	70 e0       	ldi	r23, 0x00	; 0
+7964427c:	ce 01       	movw	r24, r28
+7964427e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+79644282:	e8 0e       	add	r14, r24
+79644284:	f9 1e       	adc	r15, r25
+79644286:	00 c0       	rjmp	.+0      	; 0x79644288 <_ZN5Print10printFloatEdh+0x14a>
+79644288:	20 e0       	ldi	r18, 0x00	; 0
+7964428a:	30 e0       	ldi	r19, 0x00	; 0
+7964428c:	40 e2       	ldi	r20, 0x20	; 32
+7964428e:	51 e4       	ldi	r21, 0x41	; 65
+79644290:	6c 2d       	mov	r22, r12
+79644292:	79 2d       	mov	r23, r9
+79644294:	88 2d       	mov	r24, r8
+79644296:	97 2d       	mov	r25, r7
+79644298:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+7964429c:	76 2e       	mov	r7, r22
+7964429e:	07 2f       	mov	r16, r23
+796442a0:	6c 01       	movw	r12, r24
+796442a2:	9d 2d       	mov	r25, r13
+796442a4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+796442a8:	4b 01       	movw	r8, r22
+796442aa:	aa 24       	eor	r10, r10
+796442ac:	97 fc       	sbrc	r9, 7
+796442ae:	a0 94       	com	r10
+796442b0:	ba 2c       	mov	r11, r10
+796442b2:	2a e0       	ldi	r18, 0x0A	; 10
+796442b4:	30 e0       	ldi	r19, 0x00	; 0
+796442b6:	b5 01       	movw	r22, r10
+796442b8:	a4 01       	movw	r20, r8
+796442ba:	ce 01       	movw	r24, r28
+796442bc:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+796442c0:	e8 0e       	add	r14, r24
+796442c2:	f9 1e       	adc	r15, r25
+796442c4:	c5 01       	movw	r24, r10
+796442c6:	b4 01       	movw	r22, r8
+796442c8:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+796442cc:	9b 01       	movw	r18, r22
+796442ce:	ac 01       	movw	r20, r24
+796442d0:	67 2d       	mov	r22, r7
+796442d2:	70 2f       	mov	r23, r16
+796442d4:	8c 2d       	mov	r24, r12
+796442d6:	9d 2d       	mov	r25, r13
+796442d8:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+796442dc:	c6 2e       	mov	r12, r22
+796442de:	97 2e       	mov	r9, r23
+796442e0:	88 2e       	mov	r8, r24
+796442e2:	79 2e       	mov	r7, r25
+796442e4:	11 50       	subi	r17, 0x01	; 1
+796442e6:	11 11       	cpse	r17, r1
+796442e8:	00 c0       	rjmp	.+0      	; 0x796442ea <_ZN5Print10printFloatEdh+0x1ac>
+796442ea:	c7 01       	movw	r24, r14
+796442ec:	cd b7       	in	r28, 0x3d	; 61
+796442ee:	de b7       	in	r29, 0x3e	; 62
+796442f0:	ed e0       	ldi	r30, 0x0D	; 13
+796442f2:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN5Print5printEdi:
+
+f2c88434 <_ZN5Print5printEdi>:
+f2c88434:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+f2c88438:	08 95       	ret
+
+Disassembly of section .text._ZN5Print7printlnEdi:
+
+e591086e <_ZN5Print7printlnEdi>:
+e591086e:	0f 93       	push	r16
+e5910870:	1f 93       	push	r17
+e5910872:	cf 93       	push	r28
+e5910874:	df 93       	push	r29
+e5910876:	ec 01       	movw	r28, r24
+e5910878:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+e591087c:	8c 01       	movw	r16, r24
+e591087e:	ce 01       	movw	r24, r28
+e5910880:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+e5910884:	98 01       	movw	r18, r16
+e5910886:	28 0f       	add	r18, r24
+e5910888:	39 1f       	adc	r19, r25
+e591088a:	c9 01       	movw	r24, r18
+e591088c:	df 91       	pop	r29
+e591088e:	cf 91       	pop	r28
+e5910890:	1f 91       	pop	r17
+e5910892:	0f 91       	pop	r16
+e5910894:	08 95       	ret

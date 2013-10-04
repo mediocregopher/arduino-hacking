@@ -1,0 +1,171 @@
+
+tmp//usr/share/arduino/hardware/arduino/cores/arduino/WMath.o:     file format elf32-avr
+
+
+Disassembly of section .text._Z10randomSeedj:
+
+00000000 <_Z10randomSeedj>:
+   0:	00 97       	sbiw	r24, 0x00	; 0
+   2:	01 f0       	breq	.+0      	; 0x4 <_Z10randomSeedj+0x4>
+   4:	bc 01       	movw	r22, r24
+   6:	80 e0       	ldi	r24, 0x00	; 0
+   8:	90 e0       	ldi	r25, 0x00	; 0
+   a:	0e 94 00 00 	call	0	; 0x0 <_Z10randomSeedj>
+   e:	08 95       	ret
+
+Disassembly of section .text._Z6randoml:
+
+00000010 <_Z6randoml>:
+  10:	a4 e0       	ldi	r26, 0x04	; 4
+  12:	b0 e0       	ldi	r27, 0x00	; 0
+  14:	e0 e0       	ldi	r30, 0x00	; 0
+  16:	f0 e0       	ldi	r31, 0x00	; 0
+  18:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+  1c:	9b 01       	movw	r18, r22
+  1e:	ac 01       	movw	r20, r24
+  20:	61 15       	cp	r22, r1
+  22:	71 05       	cpc	r23, r1
+  24:	81 05       	cpc	r24, r1
+  26:	91 05       	cpc	r25, r1
+  28:	01 f0       	breq	.+0      	; 0x2a <_Z6randoml+0x1a>
+  2a:	69 83       	std	Y+1, r22	; 0x01
+  2c:	3a 83       	std	Y+2, r19	; 0x02
+  2e:	4b 83       	std	Y+3, r20	; 0x03
+  30:	5c 83       	std	Y+4, r21	; 0x04
+  32:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  36:	29 81       	ldd	r18, Y+1	; 0x01
+  38:	3a 81       	ldd	r19, Y+2	; 0x02
+  3a:	4b 81       	ldd	r20, Y+3	; 0x03
+  3c:	5c 81       	ldd	r21, Y+4	; 0x04
+  3e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  42:	8b 01       	movw	r16, r22
+  44:	9c 01       	movw	r18, r24
+  46:	00 c0       	rjmp	.+0      	; 0x48 <_Z6randoml+0x38>
+  48:	00 e0       	ldi	r16, 0x00	; 0
+  4a:	10 e0       	ldi	r17, 0x00	; 0
+  4c:	98 01       	movw	r18, r16
+  4e:	b8 01       	movw	r22, r16
+  50:	c9 01       	movw	r24, r18
+  52:	24 96       	adiw	r28, 0x04	; 4
+  54:	e4 e0       	ldi	r30, 0x04	; 4
+  56:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._Z6randomll:
+
+0000006a <_Z6randomll>:
+  6a:	cf 92       	push	r12
+  6c:	df 92       	push	r13
+  6e:	ef 92       	push	r14
+  70:	ff 92       	push	r15
+  72:	6b 01       	movw	r12, r22
+  74:	7c 01       	movw	r14, r24
+  76:	62 17       	cp	r22, r18
+  78:	73 07       	cpc	r23, r19
+  7a:	84 07       	cpc	r24, r20
+  7c:	95 07       	cpc	r25, r21
+  7e:	04 f4       	brge	.+0      	; 0x80 <_Z6randomll+0x16>
+  80:	ca 01       	movw	r24, r20
+  82:	b9 01       	movw	r22, r18
+  84:	6c 19       	sub	r22, r12
+  86:	7d 09       	sbc	r23, r13
+  88:	8e 09       	sbc	r24, r14
+  8a:	9f 09       	sbc	r25, r15
+  8c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  90:	c6 0e       	add	r12, r22
+  92:	d7 1e       	adc	r13, r23
+  94:	e8 1e       	adc	r14, r24
+  96:	f9 1e       	adc	r15, r25
+  98:	b6 01       	movw	r22, r12
+  9a:	c7 01       	movw	r24, r14
+  9c:	ff 90       	pop	r15
+  9e:	ef 90       	pop	r14
+  a0:	df 90       	pop	r13
+  a2:	cf 90       	pop	r12
+  a4:	08 95       	ret
+
+Disassembly of section .text._Z3maplllll:
+
+00000110 <_Z3maplllll>:
+ 110:	4f 92       	push	r4
+ 112:	5f 92       	push	r5
+ 114:	6f 92       	push	r6
+ 116:	7f 92       	push	r7
+ 118:	af 92       	push	r10
+ 11a:	bf 92       	push	r11
+ 11c:	cf 92       	push	r12
+ 11e:	df 92       	push	r13
+ 120:	ef 92       	push	r14
+ 122:	ff 92       	push	r15
+ 124:	0f 93       	push	r16
+ 126:	1f 93       	push	r17
+ 128:	cf 93       	push	r28
+ 12a:	df 93       	push	r29
+ 12c:	cd b7       	in	r28, 0x3d	; 61
+ 12e:	de b7       	in	r29, 0x3e	; 62
+ 130:	29 01       	movw	r4, r18
+ 132:	3a 01       	movw	r6, r20
+ 134:	62 1b       	sub	r22, r18
+ 136:	73 0b       	sbc	r23, r19
+ 138:	84 0b       	sbc	r24, r20
+ 13a:	95 0b       	sbc	r25, r21
+ 13c:	29 89       	ldd	r18, Y+17	; 0x11
+ 13e:	3a 89       	ldd	r19, Y+18	; 0x12
+ 140:	4b 89       	ldd	r20, Y+19	; 0x13
+ 142:	5c 89       	ldd	r21, Y+20	; 0x14
+ 144:	2a 19       	sub	r18, r10
+ 146:	3b 09       	sbc	r19, r11
+ 148:	4c 09       	sbc	r20, r12
+ 14a:	5d 09       	sbc	r21, r13
+ 14c:	29 8b       	std	Y+17, r18	; 0x11
+ 14e:	3a 8b       	std	Y+18, r19	; 0x12
+ 150:	4b 8b       	std	Y+19, r20	; 0x13
+ 152:	5c 8b       	std	Y+20, r21	; 0x14
+ 154:	9b 01       	movw	r18, r22
+ 156:	ac 01       	movw	r20, r24
+ 158:	69 89       	ldd	r22, Y+17	; 0x11
+ 15a:	7a 89       	ldd	r23, Y+18	; 0x12
+ 15c:	8b 89       	ldd	r24, Y+19	; 0x13
+ 15e:	9c 89       	ldd	r25, Y+20	; 0x14
+ 160:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 164:	e4 18       	sub	r14, r4
+ 166:	f5 08       	sbc	r15, r5
+ 168:	06 09       	sbc	r16, r6
+ 16a:	17 09       	sbc	r17, r7
+ 16c:	a8 01       	movw	r20, r16
+ 16e:	97 01       	movw	r18, r14
+ 170:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 174:	2a 0d       	add	r18, r10
+ 176:	3b 1d       	adc	r19, r11
+ 178:	4c 1d       	adc	r20, r12
+ 17a:	5d 1d       	adc	r21, r13
+ 17c:	b9 01       	movw	r22, r18
+ 17e:	ca 01       	movw	r24, r20
+ 180:	df 91       	pop	r29
+ 182:	cf 91       	pop	r28
+ 184:	1f 91       	pop	r17
+ 186:	0f 91       	pop	r16
+ 188:	ff 90       	pop	r15
+ 18a:	ef 90       	pop	r14
+ 18c:	df 90       	pop	r13
+ 18e:	cf 90       	pop	r12
+ 190:	bf 90       	pop	r11
+ 192:	af 90       	pop	r10
+ 194:	7f 90       	pop	r7
+ 196:	6f 90       	pop	r6
+ 198:	5f 90       	pop	r5
+ 19a:	4f 90       	pop	r4
+ 19c:	08 95       	ret
+
+Disassembly of section .text._Z8makeWordj:
+
+000002ae <_Z8makeWordj>:
+ 2ae:	08 95       	ret
+
+Disassembly of section .text._Z8makeWordhh:
+
+0000055e <_Z8makeWordhh>:
+ 55e:	38 2f       	mov	r19, r24
+ 560:	20 e0       	ldi	r18, 0x00	; 0
+ 562:	26 2b       	or	r18, r22
+ 564:	c9 01       	movw	r24, r18
+ 566:	08 95       	ret

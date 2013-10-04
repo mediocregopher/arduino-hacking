@@ -1,0 +1,753 @@
+
+tmp//usr/share/arduino/libraries/LiquidCrystal/LiquidCrystal.o:     file format elf32-avr
+
+
+Disassembly of section .text._ZN13LiquidCrystal11pulseEnableEv:
+
+00000000 <_ZN13LiquidCrystal11pulseEnableEv>:
+   0:	cf 93       	push	r28
+   2:	df 93       	push	r29
+   4:	ec 01       	movw	r28, r24
+   6:	60 e0       	ldi	r22, 0x00	; 0
+   8:	8e 81       	ldd	r24, Y+6	; 0x06
+   a:	0e 94 00 00 	call	0	; 0x0 <_ZN13LiquidCrystal11pulseEnableEv>
+   e:	81 e0       	ldi	r24, 0x01	; 1
+  10:	90 e0       	ldi	r25, 0x00	; 0
+  12:	0e 94 00 00 	call	0	; 0x0 <_ZN13LiquidCrystal11pulseEnableEv>
+  16:	61 e0       	ldi	r22, 0x01	; 1
+  18:	8e 81       	ldd	r24, Y+6	; 0x06
+  1a:	0e 94 00 00 	call	0	; 0x0 <_ZN13LiquidCrystal11pulseEnableEv>
+  1e:	81 e0       	ldi	r24, 0x01	; 1
+  20:	90 e0       	ldi	r25, 0x00	; 0
+  22:	0e 94 00 00 	call	0	; 0x0 <_ZN13LiquidCrystal11pulseEnableEv>
+  26:	60 e0       	ldi	r22, 0x00	; 0
+  28:	8e 81       	ldd	r24, Y+6	; 0x06
+  2a:	0e 94 00 00 	call	0	; 0x0 <_ZN13LiquidCrystal11pulseEnableEv>
+  2e:	84 e6       	ldi	r24, 0x64	; 100
+  30:	90 e0       	ldi	r25, 0x00	; 0
+  32:	0e 94 00 00 	call	0	; 0x0 <_ZN13LiquidCrystal11pulseEnableEv>
+  36:	df 91       	pop	r29
+  38:	cf 91       	pop	r28
+  3a:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal10write4bitsEh:
+
+0000003c <_ZN13LiquidCrystal10write4bitsEh>:
+  3c:	a0 e0       	ldi	r26, 0x00	; 0
+  3e:	b0 e0       	ldi	r27, 0x00	; 0
+  40:	e0 e0       	ldi	r30, 0x00	; 0
+  42:	f0 e0       	ldi	r31, 0x00	; 0
+  44:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+  48:	7c 01       	movw	r14, r24
+  4a:	c0 e0       	ldi	r28, 0x00	; 0
+  4c:	d0 e0       	ldi	r29, 0x00	; 0
+  4e:	c6 2e       	mov	r12, r22
+  50:	d1 2c       	mov	r13, r1
+  52:	87 01       	movw	r16, r14
+  54:	0c 0f       	add	r16, r28
+  56:	1d 1f       	adc	r17, r29
+  58:	61 e0       	ldi	r22, 0x01	; 1
+  5a:	f8 01       	movw	r30, r16
+  5c:	87 81       	ldd	r24, Z+7	; 0x07
+  5e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  62:	b6 01       	movw	r22, r12
+  64:	0c 2e       	mov	r0, r28
+  66:	00 c0       	rjmp	.+0      	; 0x68 <_ZN13LiquidCrystal10write4bitsEh+0x2c>
+  68:	75 95       	asr	r23
+  6a:	67 95       	ror	r22
+  6c:	0a 94       	dec	r0
+  6e:	02 f4       	brpl	.+0      	; 0x70 <_ZN13LiquidCrystal10write4bitsEh+0x34>
+  70:	61 70       	andi	r22, 0x01	; 1
+  72:	77 27       	eor	r23, r23
+  74:	f8 01       	movw	r30, r16
+  76:	87 81       	ldd	r24, Z+7	; 0x07
+  78:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  7c:	21 96       	adiw	r28, 0x01	; 1
+  7e:	c4 30       	cpi	r28, 0x04	; 4
+  80:	d1 05       	cpc	r29, r1
+  82:	01 f4       	brne	.+0      	; 0x84 <_ZN13LiquidCrystal10write4bitsEh+0x48>
+  84:	c7 01       	movw	r24, r14
+  86:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  8a:	cd b7       	in	r28, 0x3d	; 61
+  8c:	de b7       	in	r29, 0x3e	; 62
+  8e:	e8 e0       	ldi	r30, 0x08	; 8
+  90:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN13LiquidCrystal10write8bitsEh:
+
+000000d0 <_ZN13LiquidCrystal10write8bitsEh>:
+  d0:	a0 e0       	ldi	r26, 0x00	; 0
+  d2:	b0 e0       	ldi	r27, 0x00	; 0
+  d4:	e0 e0       	ldi	r30, 0x00	; 0
+  d6:	f0 e0       	ldi	r31, 0x00	; 0
+  d8:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+  dc:	7c 01       	movw	r14, r24
+  de:	c0 e0       	ldi	r28, 0x00	; 0
+  e0:	d0 e0       	ldi	r29, 0x00	; 0
+  e2:	c6 2e       	mov	r12, r22
+  e4:	d1 2c       	mov	r13, r1
+  e6:	87 01       	movw	r16, r14
+  e8:	0c 0f       	add	r16, r28
+  ea:	1d 1f       	adc	r17, r29
+  ec:	61 e0       	ldi	r22, 0x01	; 1
+  ee:	f8 01       	movw	r30, r16
+  f0:	87 81       	ldd	r24, Z+7	; 0x07
+  f2:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  f6:	b6 01       	movw	r22, r12
+  f8:	0c 2e       	mov	r0, r28
+  fa:	00 c0       	rjmp	.+0      	; 0xfc <_ZN13LiquidCrystal10write8bitsEh+0x2c>
+  fc:	75 95       	asr	r23
+  fe:	67 95       	ror	r22
+ 100:	0a 94       	dec	r0
+ 102:	02 f4       	brpl	.+0      	; 0x104 <_ZN13LiquidCrystal10write8bitsEh+0x34>
+ 104:	61 70       	andi	r22, 0x01	; 1
+ 106:	77 27       	eor	r23, r23
+ 108:	f8 01       	movw	r30, r16
+ 10a:	87 81       	ldd	r24, Z+7	; 0x07
+ 10c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 110:	21 96       	adiw	r28, 0x01	; 1
+ 112:	c8 30       	cpi	r28, 0x08	; 8
+ 114:	d1 05       	cpc	r29, r1
+ 116:	01 f4       	brne	.+0      	; 0x118 <_ZN13LiquidCrystal10write8bitsEh+0x48>
+ 118:	c7 01       	movw	r24, r14
+ 11a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 11e:	cd b7       	in	r28, 0x3d	; 61
+ 120:	de b7       	in	r29, 0x3e	; 62
+ 122:	e8 e0       	ldi	r30, 0x08	; 8
+ 124:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN13LiquidCrystal4sendEhh:
+
+000001f8 <_ZN13LiquidCrystal4sendEhh>:
+ 1f8:	1f 93       	push	r17
+ 1fa:	cf 93       	push	r28
+ 1fc:	df 93       	push	r29
+ 1fe:	ec 01       	movw	r28, r24
+ 200:	16 2f       	mov	r17, r22
+ 202:	64 2f       	mov	r22, r20
+ 204:	8c 81       	ldd	r24, Y+4	; 0x04
+ 206:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 20a:	8d 81       	ldd	r24, Y+5	; 0x05
+ 20c:	8f 3f       	cpi	r24, 0xFF	; 255
+ 20e:	01 f0       	breq	.+0      	; 0x210 <_ZN13LiquidCrystal4sendEhh+0x18>
+ 210:	60 e0       	ldi	r22, 0x00	; 0
+ 212:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 216:	8f 85       	ldd	r24, Y+15	; 0x0f
+ 218:	61 2f       	mov	r22, r17
+ 21a:	84 ff       	sbrs	r24, 4
+ 21c:	00 c0       	rjmp	.+0      	; 0x21e <_ZN13LiquidCrystal4sendEhh+0x26>
+ 21e:	ce 01       	movw	r24, r28
+ 220:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 224:	00 c0       	rjmp	.+0      	; 0x226 <_ZN13LiquidCrystal4sendEhh+0x2e>
+ 226:	70 e0       	ldi	r23, 0x00	; 0
+ 228:	84 e0       	ldi	r24, 0x04	; 4
+ 22a:	75 95       	asr	r23
+ 22c:	67 95       	ror	r22
+ 22e:	8a 95       	dec	r24
+ 230:	01 f4       	brne	.+0      	; 0x232 <_ZN13LiquidCrystal4sendEhh+0x3a>
+ 232:	ce 01       	movw	r24, r28
+ 234:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 238:	61 2f       	mov	r22, r17
+ 23a:	ce 01       	movw	r24, r28
+ 23c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 240:	df 91       	pop	r29
+ 242:	cf 91       	pop	r28
+ 244:	1f 91       	pop	r17
+ 246:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal5writeEh:
+
+00000440 <_ZN13LiquidCrystal5writeEh>:
+ 440:	41 e0       	ldi	r20, 0x01	; 1
+ 442:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 446:	81 e0       	ldi	r24, 0x01	; 1
+ 448:	90 e0       	ldi	r25, 0x00	; 0
+ 44a:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal7commandEh:
+
+0000088c <_ZN13LiquidCrystal7commandEh>:
+ 88c:	40 e0       	ldi	r20, 0x00	; 0
+ 88e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 892:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal10createCharEhPh:
+
+00001120 <_ZN13LiquidCrystal10createCharEhPh>:
+    1120:	a2 e0       	ldi	r26, 0x02	; 2
+    1122:	b0 e0       	ldi	r27, 0x00	; 0
+    1124:	e0 e0       	ldi	r30, 0x00	; 0
+    1126:	f0 e0       	ldi	r31, 0x00	; 0
+    1128:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+    112c:	8c 01       	movw	r16, r24
+    112e:	67 70       	andi	r22, 0x07	; 7
+    1130:	88 e0       	ldi	r24, 0x08	; 8
+    1132:	68 9f       	mul	r22, r24
+    1134:	b0 01       	movw	r22, r0
+    1136:	11 24       	eor	r1, r1
+    1138:	60 64       	ori	r22, 0x40	; 64
+    113a:	c8 01       	movw	r24, r16
+    113c:	49 83       	std	Y+1, r20	; 0x01
+    113e:	5a 83       	std	Y+2, r21	; 0x02
+    1140:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    1144:	49 81       	ldd	r20, Y+1	; 0x01
+    1146:	c4 2e       	mov	r12, r20
+    1148:	5a 81       	ldd	r21, Y+2	; 0x02
+    114a:	d5 2e       	mov	r13, r21
+    114c:	e1 2c       	mov	r14, r1
+    114e:	f1 2c       	mov	r15, r1
+    1150:	d6 01       	movw	r26, r12
+    1152:	6d 91       	ld	r22, X+
+    1154:	6d 01       	movw	r12, r26
+    1156:	d8 01       	movw	r26, r16
+    1158:	ed 91       	ld	r30, X+
+    115a:	fc 91       	ld	r31, X
+    115c:	01 90       	ld	r0, Z+
+    115e:	f0 81       	ld	r31, Z
+    1160:	e0 2d       	mov	r30, r0
+    1162:	c8 01       	movw	r24, r16
+    1164:	09 95       	icall
+    1166:	bf ef       	ldi	r27, 0xFF	; 255
+    1168:	eb 1a       	sub	r14, r27
+    116a:	fb 0a       	sbc	r15, r27
+    116c:	e8 e0       	ldi	r30, 0x08	; 8
+    116e:	ee 16       	cp	r14, r30
+    1170:	f1 04       	cpc	r15, r1
+    1172:	01 f4       	brne	.+0      	; 0x1174 <_ZN13LiquidCrystal10createCharEhPh+0x54>
+    1174:	22 96       	adiw	r28, 0x02	; 2
+    1176:	e8 e0       	ldi	r30, 0x08	; 8
+    1178:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN13LiquidCrystal12noAutoscrollEv:
+
+0000229c <_ZN13LiquidCrystal12noAutoscrollEv>:
+    229c:	fc 01       	movw	r30, r24
+    229e:	61 89       	ldd	r22, Z+17	; 0x11
+    22a0:	6e 7f       	andi	r22, 0xFE	; 254
+    22a2:	61 8b       	std	Z+17, r22	; 0x11
+    22a4:	64 60       	ori	r22, 0x04	; 4
+    22a6:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    22aa:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal10autoscrollEv:
+
+00004548 <_ZN13LiquidCrystal10autoscrollEv>:
+    4548:	fc 01       	movw	r30, r24
+    454a:	61 89       	ldd	r22, Z+17	; 0x11
+    454c:	26 2f       	mov	r18, r22
+    454e:	21 60       	ori	r18, 0x01	; 1
+    4550:	21 8b       	std	Z+17, r18	; 0x11
+    4552:	65 60       	ori	r22, 0x05	; 5
+    4554:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    4558:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal11rightToLeftEv:
+
+00008aa2 <_ZN13LiquidCrystal11rightToLeftEv>:
+    8aa2:	fc 01       	movw	r30, r24
+    8aa4:	61 89       	ldd	r22, Z+17	; 0x11
+    8aa6:	6d 7f       	andi	r22, 0xFD	; 253
+    8aa8:	61 8b       	std	Z+17, r22	; 0x11
+    8aaa:	64 60       	ori	r22, 0x04	; 4
+    8aac:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+    8ab0:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal11leftToRightEv:
+
+00011554 <_ZN13LiquidCrystal11leftToRightEv>:
+   11554:	fc 01       	movw	r30, r24
+   11556:	61 89       	ldd	r22, Z+17	; 0x11
+   11558:	26 2f       	mov	r18, r22
+   1155a:	22 60       	ori	r18, 0x02	; 2
+   1155c:	21 8b       	std	Z+17, r18	; 0x11
+   1155e:	66 60       	ori	r22, 0x06	; 6
+   11560:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   11564:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal18scrollDisplayRightEv:
+
+00022aba <_ZN13LiquidCrystal18scrollDisplayRightEv>:
+   22aba:	6c e1       	ldi	r22, 0x1C	; 28
+   22abc:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   22ac0:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal17scrollDisplayLeftEv:
+
+0004557c <_ZN13LiquidCrystal17scrollDisplayLeftEv>:
+   4557c:	68 e1       	ldi	r22, 0x18	; 24
+   4557e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   45582:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal5blinkEv:
+
+0008ab00 <_ZN13LiquidCrystal5blinkEv>:
+   8ab00:	fc 01       	movw	r30, r24
+   8ab02:	60 89       	ldd	r22, Z+16	; 0x10
+   8ab04:	26 2f       	mov	r18, r22
+   8ab06:	21 60       	ori	r18, 0x01	; 1
+   8ab08:	20 8b       	std	Z+16, r18	; 0x10
+   8ab0a:	69 60       	ori	r22, 0x09	; 9
+   8ab0c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+   8ab10:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal7noBlinkEv:
+
+00115612 <_ZN13LiquidCrystal7noBlinkEv>:
+  115612:	fc 01       	movw	r30, r24
+  115614:	60 89       	ldd	r22, Z+16	; 0x10
+  115616:	6e 7f       	andi	r22, 0xFE	; 254
+  115618:	60 8b       	std	Z+16, r22	; 0x10
+  11561a:	68 60       	ori	r22, 0x08	; 8
+  11561c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  115620:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal6cursorEv:
+
+0022ac34 <_ZN13LiquidCrystal6cursorEv>:
+  22ac34:	fc 01       	movw	r30, r24
+  22ac36:	60 89       	ldd	r22, Z+16	; 0x10
+  22ac38:	26 2f       	mov	r18, r22
+  22ac3a:	22 60       	ori	r18, 0x02	; 2
+  22ac3c:	20 8b       	std	Z+16, r18	; 0x10
+  22ac3e:	6a 60       	ori	r22, 0x0A	; 10
+  22ac40:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  22ac44:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal8noCursorEv:
+
+0045587a <_ZN13LiquidCrystal8noCursorEv>:
+  45587a:	fc 01       	movw	r30, r24
+  45587c:	60 89       	ldd	r22, Z+16	; 0x10
+  45587e:	6d 7f       	andi	r22, 0xFD	; 253
+  455880:	60 8b       	std	Z+16, r22	; 0x10
+  455882:	68 60       	ori	r22, 0x08	; 8
+  455884:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  455888:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal7displayEv:
+
+008ab104 <_ZN13LiquidCrystal7displayEv>:
+  8ab104:	fc 01       	movw	r30, r24
+  8ab106:	60 89       	ldd	r22, Z+16	; 0x10
+  8ab108:	26 2f       	mov	r18, r22
+  8ab10a:	24 60       	ori	r18, 0x04	; 4
+  8ab10c:	20 8b       	std	Z+16, r18	; 0x10
+  8ab10e:	6c 60       	ori	r22, 0x0C	; 12
+  8ab110:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+  8ab114:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal9noDisplayEv:
+
+0115621a <_ZN13LiquidCrystal9noDisplayEv>:
+ 115621a:	fc 01       	movw	r30, r24
+ 115621c:	60 89       	ldd	r22, Z+16	; 0x10
+ 115621e:	6b 7f       	andi	r22, 0xFB	; 251
+ 1156220:	60 8b       	std	Z+16, r22	; 0x10
+ 1156222:	68 60       	ori	r22, 0x08	; 8
+ 1156224:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 1156228:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal9setCursorEhh:
+
+04558890 <_ZN13LiquidCrystal9setCursorEhh>:
+ 4558890:	a8 e0       	ldi	r26, 0x08	; 8
+ 4558892:	b0 e0       	ldi	r27, 0x00	; 0
+ 4558894:	e0 e0       	ldi	r30, 0x00	; 0
+ 4558896:	f0 e0       	ldi	r31, 0x00	; 0
+ 4558898:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+ 455889c:	28 e0       	ldi	r18, 0x08	; 8
+ 455889e:	e0 e0       	ldi	r30, 0x00	; 0
+ 45588a0:	f0 e0       	ldi	r31, 0x00	; 0
+ 45588a2:	de 01       	movw	r26, r28
+ 45588a4:	11 96       	adiw	r26, 0x01	; 1
+ 45588a6:	01 90       	ld	r0, Z+
+ 45588a8:	0d 92       	st	X+, r0
+ 45588aa:	2a 95       	dec	r18
+ 45588ac:	01 f4       	brne	.+0      	; 0x45588ae <_ZN13LiquidCrystal9setCursorEhh+0x1e>
+ 45588ae:	fc 01       	movw	r30, r24
+ 45588b0:	23 89       	ldd	r18, Z+19	; 0x13
+ 45588b2:	42 17       	cp	r20, r18
+ 45588b4:	00 f0       	brcs	.+0      	; 0x45588b6 <_ZN13LiquidCrystal9setCursorEhh+0x26>
+ 45588b6:	42 2f       	mov	r20, r18
+ 45588b8:	41 50       	subi	r20, 0x01	; 1
+ 45588ba:	fe 01       	movw	r30, r28
+ 45588bc:	31 96       	adiw	r30, 0x01	; 1
+ 45588be:	e4 0f       	add	r30, r20
+ 45588c0:	f1 1d       	adc	r31, r1
+ 45588c2:	e4 0f       	add	r30, r20
+ 45588c4:	f1 1d       	adc	r31, r1
+ 45588c6:	20 81       	ld	r18, Z
+ 45588c8:	26 0f       	add	r18, r22
+ 45588ca:	20 68       	ori	r18, 0x80	; 128
+ 45588cc:	62 2f       	mov	r22, r18
+ 45588ce:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 45588d2:	28 96       	adiw	r28, 0x08	; 8
+ 45588d4:	e2 e0       	ldi	r30, 0x02	; 2
+ 45588d6:	0c 94 00 00 	jmp	0	; 0x0 <__tmp_reg__>
+
+Disassembly of section .text._ZN13LiquidCrystal4homeEv:
+
+08ab116a <_ZN13LiquidCrystal4homeEv>:
+ 8ab116a:	62 e0       	ldi	r22, 0x02	; 2
+ 8ab116c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 8ab1170:	80 ed       	ldi	r24, 0xD0	; 208
+ 8ab1172:	97 e0       	ldi	r25, 0x07	; 7
+ 8ab1174:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+ 8ab1178:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal5clearEv:
+
+115622e4 <_ZN13LiquidCrystal5clearEv>:
+115622e4:	61 e0       	ldi	r22, 0x01	; 1
+115622e6:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+115622ea:	80 ed       	ldi	r24, 0xD0	; 208
+115622ec:	97 e0       	ldi	r25, 0x07	; 7
+115622ee:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+115622f2:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal5beginEhhh:
+
+22ac45d8 <_ZN13LiquidCrystal5beginEhhh>:
+22ac45d8:	cf 93       	push	r28
+22ac45da:	df 93       	push	r29
+22ac45dc:	ec 01       	movw	r28, r24
+22ac45de:	42 30       	cpi	r20, 0x02	; 2
+22ac45e0:	00 f0       	brcs	.+0      	; 0x22ac45e2 <_ZN13LiquidCrystal5beginEhhh+0xa>
+22ac45e2:	8f 85       	ldd	r24, Y+15	; 0x0f
+22ac45e4:	88 60       	ori	r24, 0x08	; 8
+22ac45e6:	8f 87       	std	Y+15, r24	; 0x0f
+22ac45e8:	4b 8b       	std	Y+19, r20	; 0x13
+22ac45ea:	1c 8a       	std	Y+20, r1	; 0x14
+22ac45ec:	22 23       	and	r18, r18
+22ac45ee:	01 f0       	breq	.+0      	; 0x22ac45f0 <_ZN13LiquidCrystal5beginEhhh+0x18>
+22ac45f0:	41 30       	cpi	r20, 0x01	; 1
+22ac45f2:	01 f4       	brne	.+0      	; 0x22ac45f4 <_ZN13LiquidCrystal5beginEhhh+0x1c>
+22ac45f4:	8f 85       	ldd	r24, Y+15	; 0x0f
+22ac45f6:	84 60       	ori	r24, 0x04	; 4
+22ac45f8:	8f 87       	std	Y+15, r24	; 0x0f
+22ac45fa:	80 e5       	ldi	r24, 0x50	; 80
+22ac45fc:	93 ec       	ldi	r25, 0xC3	; 195
+22ac45fe:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac4602:	60 e0       	ldi	r22, 0x00	; 0
+22ac4604:	8c 81       	ldd	r24, Y+4	; 0x04
+22ac4606:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac460a:	60 e0       	ldi	r22, 0x00	; 0
+22ac460c:	8e 81       	ldd	r24, Y+6	; 0x06
+22ac460e:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac4612:	8d 81       	ldd	r24, Y+5	; 0x05
+22ac4614:	8f 3f       	cpi	r24, 0xFF	; 255
+22ac4616:	01 f0       	breq	.+0      	; 0x22ac4618 <_ZN13LiquidCrystal5beginEhhh+0x40>
+22ac4618:	60 e0       	ldi	r22, 0x00	; 0
+22ac461a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac461e:	6f 85       	ldd	r22, Y+15	; 0x0f
+22ac4620:	64 fd       	sbrc	r22, 4
+22ac4622:	00 c0       	rjmp	.+0      	; 0x22ac4624 <_ZN13LiquidCrystal5beginEhhh+0x4c>
+22ac4624:	63 e0       	ldi	r22, 0x03	; 3
+22ac4626:	ce 01       	movw	r24, r28
+22ac4628:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac462c:	84 e9       	ldi	r24, 0x94	; 148
+22ac462e:	91 e1       	ldi	r25, 0x11	; 17
+22ac4630:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac4634:	63 e0       	ldi	r22, 0x03	; 3
+22ac4636:	ce 01       	movw	r24, r28
+22ac4638:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac463c:	84 e9       	ldi	r24, 0x94	; 148
+22ac463e:	91 e1       	ldi	r25, 0x11	; 17
+22ac4640:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac4644:	63 e0       	ldi	r22, 0x03	; 3
+22ac4646:	ce 01       	movw	r24, r28
+22ac4648:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac464c:	86 e9       	ldi	r24, 0x96	; 150
+22ac464e:	90 e0       	ldi	r25, 0x00	; 0
+22ac4650:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac4654:	62 e0       	ldi	r22, 0x02	; 2
+22ac4656:	ce 01       	movw	r24, r28
+22ac4658:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac465c:	00 c0       	rjmp	.+0      	; 0x22ac465e <_ZN13LiquidCrystal5beginEhhh+0x86>
+22ac465e:	60 62       	ori	r22, 0x20	; 32
+22ac4660:	ce 01       	movw	r24, r28
+22ac4662:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac4666:	84 e9       	ldi	r24, 0x94	; 148
+22ac4668:	91 e1       	ldi	r25, 0x11	; 17
+22ac466a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac466e:	6f 85       	ldd	r22, Y+15	; 0x0f
+22ac4670:	60 62       	ori	r22, 0x20	; 32
+22ac4672:	ce 01       	movw	r24, r28
+22ac4674:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac4678:	86 e9       	ldi	r24, 0x96	; 150
+22ac467a:	90 e0       	ldi	r25, 0x00	; 0
+22ac467c:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac4680:	6f 85       	ldd	r22, Y+15	; 0x0f
+22ac4682:	60 62       	ori	r22, 0x20	; 32
+22ac4684:	ce 01       	movw	r24, r28
+22ac4686:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac468a:	6f 85       	ldd	r22, Y+15	; 0x0f
+22ac468c:	60 62       	ori	r22, 0x20	; 32
+22ac468e:	ce 01       	movw	r24, r28
+22ac4690:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac4694:	84 e0       	ldi	r24, 0x04	; 4
+22ac4696:	88 8b       	std	Y+16, r24	; 0x10
+22ac4698:	ce 01       	movw	r24, r28
+22ac469a:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac469e:	ce 01       	movw	r24, r28
+22ac46a0:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac46a4:	82 e0       	ldi	r24, 0x02	; 2
+22ac46a6:	89 8b       	std	Y+17, r24	; 0x11
+22ac46a8:	66 e0       	ldi	r22, 0x06	; 6
+22ac46aa:	ce 01       	movw	r24, r28
+22ac46ac:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+22ac46b0:	df 91       	pop	r29
+22ac46b2:	cf 91       	pop	r28
+22ac46b4:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystal4initEhhhhhhhhhhhh:
+
+45588c8e <_ZN13LiquidCrystal4initEhhhhhhhhhhhh>:
+45588c8e:	6f 92       	push	r6
+45588c90:	7f 92       	push	r7
+45588c92:	8f 92       	push	r8
+45588c94:	af 92       	push	r10
+45588c96:	cf 92       	push	r12
+45588c98:	ef 92       	push	r14
+45588c9a:	0f 93       	push	r16
+45588c9c:	1f 93       	push	r17
+45588c9e:	cf 93       	push	r28
+45588ca0:	df 93       	push	r29
+45588ca2:	cd b7       	in	r28, 0x3d	; 61
+45588ca4:	de b7       	in	r29, 0x3e	; 62
+45588ca6:	3c 01       	movw	r6, r24
+45588ca8:	16 2f       	mov	r17, r22
+45588caa:	84 2f       	mov	r24, r20
+45588cac:	f3 01       	movw	r30, r6
+45588cae:	44 83       	std	Z+4, r20	; 0x04
+45588cb0:	25 83       	std	Z+5, r18	; 0x05
+45588cb2:	06 83       	std	Z+6, r16	; 0x06
+45588cb4:	e7 82       	std	Z+7, r14	; 0x07
+45588cb6:	c0 86       	std	Z+8, r12	; 0x08
+45588cb8:	a1 86       	std	Z+9, r10	; 0x09
+45588cba:	82 86       	std	Z+10, r8	; 0x0a
+45588cbc:	9d 85       	ldd	r25, Y+13	; 0x0d
+45588cbe:	93 87       	std	Z+11, r25	; 0x0b
+45588cc0:	9e 85       	ldd	r25, Y+14	; 0x0e
+45588cc2:	94 87       	std	Z+12, r25	; 0x0c
+45588cc4:	9f 85       	ldd	r25, Y+15	; 0x0f
+45588cc6:	95 87       	std	Z+13, r25	; 0x0d
+45588cc8:	98 89       	ldd	r25, Y+16	; 0x10
+45588cca:	96 87       	std	Z+14, r25	; 0x0e
+45588ccc:	61 e0       	ldi	r22, 0x01	; 1
+45588cce:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+45588cd2:	f3 01       	movw	r30, r6
+45588cd4:	85 81       	ldd	r24, Z+5	; 0x05
+45588cd6:	8f 3f       	cpi	r24, 0xFF	; 255
+45588cd8:	01 f0       	breq	.+0      	; 0x45588cda <_ZN13LiquidCrystal4initEhhhhhhhhhhhh+0x4c>
+45588cda:	61 e0       	ldi	r22, 0x01	; 1
+45588cdc:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+45588ce0:	61 e0       	ldi	r22, 0x01	; 1
+45588ce2:	f3 01       	movw	r30, r6
+45588ce4:	86 81       	ldd	r24, Z+6	; 0x06
+45588ce6:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+45588cea:	11 23       	and	r17, r17
+45588cec:	01 f0       	breq	.+0      	; 0x45588cee <_ZN13LiquidCrystal4initEhhhhhhhhhhhh+0x60>
+45588cee:	f3 01       	movw	r30, r6
+45588cf0:	17 86       	std	Z+15, r1	; 0x0f
+45588cf2:	00 c0       	rjmp	.+0      	; 0x45588cf4 <_ZN13LiquidCrystal4initEhhhhhhhhhhhh+0x66>
+45588cf4:	80 e1       	ldi	r24, 0x10	; 16
+45588cf6:	f3 01       	movw	r30, r6
+45588cf8:	87 87       	std	Z+15, r24	; 0x0f
+45588cfa:	20 e0       	ldi	r18, 0x00	; 0
+45588cfc:	41 e0       	ldi	r20, 0x01	; 1
+45588cfe:	60 e1       	ldi	r22, 0x10	; 16
+45588d00:	c3 01       	movw	r24, r6
+45588d02:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+45588d06:	df 91       	pop	r29
+45588d08:	cf 91       	pop	r28
+45588d0a:	1f 91       	pop	r17
+45588d0c:	0f 91       	pop	r16
+45588d0e:	ef 90       	pop	r14
+45588d10:	cf 90       	pop	r12
+45588d12:	af 90       	pop	r10
+45588d14:	8f 90       	pop	r8
+45588d16:	7f 90       	pop	r7
+45588d18:	6f 90       	pop	r6
+45588d1a:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystalC2Ehhhhhh:
+
+8ab119aa <_ZN13LiquidCrystalC1Ehhhhhh>:
+8ab119aa:	8f 92       	push	r8
+8ab119ac:	af 92       	push	r10
+8ab119ae:	cf 92       	push	r12
+8ab119b0:	ef 92       	push	r14
+8ab119b2:	0f 93       	push	r16
+8ab119b4:	dc 01       	movw	r26, r24
+8ab119b6:	13 96       	adiw	r26, 0x03	; 3
+8ab119b8:	1c 92       	st	X, r1
+8ab119ba:	1e 92       	st	-X, r1
+8ab119bc:	12 97       	sbiw	r26, 0x02	; 2
+8ab119be:	e0 e0       	ldi	r30, 0x00	; 0
+8ab119c0:	f0 e0       	ldi	r31, 0x00	; 0
+8ab119c2:	ed 93       	st	X+, r30
+8ab119c4:	fc 93       	st	X, r31
+8ab119c6:	1f 92       	push	r1
+8ab119c8:	1f 92       	push	r1
+8ab119ca:	1f 92       	push	r1
+8ab119cc:	1f 92       	push	r1
+8ab119ce:	8c 2c       	mov	r8, r12
+8ab119d0:	ae 2c       	mov	r10, r14
+8ab119d2:	c0 2e       	mov	r12, r16
+8ab119d4:	e2 2e       	mov	r14, r18
+8ab119d6:	04 2f       	mov	r16, r20
+8ab119d8:	2f ef       	ldi	r18, 0xFF	; 255
+8ab119da:	46 2f       	mov	r20, r22
+8ab119dc:	61 e0       	ldi	r22, 0x01	; 1
+8ab119de:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+8ab119e2:	0f 90       	pop	r0
+8ab119e4:	0f 90       	pop	r0
+8ab119e6:	0f 90       	pop	r0
+8ab119e8:	0f 90       	pop	r0
+8ab119ea:	0f 91       	pop	r16
+8ab119ec:	ef 90       	pop	r14
+8ab119ee:	cf 90       	pop	r12
+8ab119f0:	af 90       	pop	r10
+8ab119f2:	8f 90       	pop	r8
+8ab119f4:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystalC2Ehhhhhhh:
+
+156233a0 <_ZN13LiquidCrystalC1Ehhhhhhh>:
+156233a0:	8f 92       	push	r8
+156233a2:	af 92       	push	r10
+156233a4:	cf 92       	push	r12
+156233a6:	ef 92       	push	r14
+156233a8:	0f 93       	push	r16
+156233aa:	dc 01       	movw	r26, r24
+156233ac:	13 96       	adiw	r26, 0x03	; 3
+156233ae:	1c 92       	st	X, r1
+156233b0:	1e 92       	st	-X, r1
+156233b2:	12 97       	sbiw	r26, 0x02	; 2
+156233b4:	e0 e0       	ldi	r30, 0x00	; 0
+156233b6:	f0 e0       	ldi	r31, 0x00	; 0
+156233b8:	ed 93       	st	X+, r30
+156233ba:	fc 93       	st	X, r31
+156233bc:	1f 92       	push	r1
+156233be:	1f 92       	push	r1
+156233c0:	1f 92       	push	r1
+156233c2:	1f 92       	push	r1
+156233c4:	8a 2c       	mov	r8, r10
+156233c6:	ac 2c       	mov	r10, r12
+156233c8:	ce 2c       	mov	r12, r14
+156233ca:	e0 2e       	mov	r14, r16
+156233cc:	02 2f       	mov	r16, r18
+156233ce:	24 2f       	mov	r18, r20
+156233d0:	46 2f       	mov	r20, r22
+156233d2:	61 e0       	ldi	r22, 0x01	; 1
+156233d4:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+156233d8:	0f 90       	pop	r0
+156233da:	0f 90       	pop	r0
+156233dc:	0f 90       	pop	r0
+156233de:	0f 90       	pop	r0
+156233e0:	0f 91       	pop	r16
+156233e2:	ef 90       	pop	r14
+156233e4:	cf 90       	pop	r12
+156233e6:	af 90       	pop	r10
+156233e8:	8f 90       	pop	r8
+156233ea:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystalC2Ehhhhhhhhhh:
+
+2ac4678c <_ZN13LiquidCrystalC1Ehhhhhhhhhh>:
+2ac4678c:	8f 92       	push	r8
+2ac4678e:	af 92       	push	r10
+2ac46790:	cf 92       	push	r12
+2ac46792:	ef 92       	push	r14
+2ac46794:	0f 93       	push	r16
+2ac46796:	cf 93       	push	r28
+2ac46798:	df 93       	push	r29
+2ac4679a:	cd b7       	in	r28, 0x3d	; 61
+2ac4679c:	de b7       	in	r29, 0x3e	; 62
+2ac4679e:	dc 01       	movw	r26, r24
+2ac467a0:	13 96       	adiw	r26, 0x03	; 3
+2ac467a2:	1c 92       	st	X, r1
+2ac467a4:	1e 92       	st	-X, r1
+2ac467a6:	12 97       	sbiw	r26, 0x02	; 2
+2ac467a8:	e0 e0       	ldi	r30, 0x00	; 0
+2ac467aa:	f0 e0       	ldi	r31, 0x00	; 0
+2ac467ac:	ed 93       	st	X+, r30
+2ac467ae:	fc 93       	st	X, r31
+2ac467b0:	3b 85       	ldd	r19, Y+11	; 0x0b
+2ac467b2:	3f 93       	push	r19
+2ac467b4:	3a 85       	ldd	r19, Y+10	; 0x0a
+2ac467b6:	3f 93       	push	r19
+2ac467b8:	8f 92       	push	r8
+2ac467ba:	af 92       	push	r10
+2ac467bc:	8c 2c       	mov	r8, r12
+2ac467be:	ae 2c       	mov	r10, r14
+2ac467c0:	c0 2e       	mov	r12, r16
+2ac467c2:	e2 2e       	mov	r14, r18
+2ac467c4:	04 2f       	mov	r16, r20
+2ac467c6:	2f ef       	ldi	r18, 0xFF	; 255
+2ac467c8:	46 2f       	mov	r20, r22
+2ac467ca:	60 e0       	ldi	r22, 0x00	; 0
+2ac467cc:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+2ac467d0:	0f 90       	pop	r0
+2ac467d2:	0f 90       	pop	r0
+2ac467d4:	0f 90       	pop	r0
+2ac467d6:	0f 90       	pop	r0
+2ac467d8:	df 91       	pop	r29
+2ac467da:	cf 91       	pop	r28
+2ac467dc:	0f 91       	pop	r16
+2ac467de:	ef 90       	pop	r14
+2ac467e0:	cf 90       	pop	r12
+2ac467e2:	af 90       	pop	r10
+2ac467e4:	8f 90       	pop	r8
+2ac467e6:	08 95       	ret
+
+Disassembly of section .text._ZN13LiquidCrystalC2Ehhhhhhhhhhh:
+
+5588cf74 <_ZN13LiquidCrystalC1Ehhhhhhhhhhh>:
+5588cf74:	8f 92       	push	r8
+5588cf76:	af 92       	push	r10
+5588cf78:	cf 92       	push	r12
+5588cf7a:	ef 92       	push	r14
+5588cf7c:	0f 93       	push	r16
+5588cf7e:	cf 93       	push	r28
+5588cf80:	df 93       	push	r29
+5588cf82:	cd b7       	in	r28, 0x3d	; 61
+5588cf84:	de b7       	in	r29, 0x3e	; 62
+5588cf86:	dc 01       	movw	r26, r24
+5588cf88:	13 96       	adiw	r26, 0x03	; 3
+5588cf8a:	1c 92       	st	X, r1
+5588cf8c:	1e 92       	st	-X, r1
+5588cf8e:	12 97       	sbiw	r26, 0x02	; 2
+5588cf90:	e0 e0       	ldi	r30, 0x00	; 0
+5588cf92:	f0 e0       	ldi	r31, 0x00	; 0
+5588cf94:	ed 93       	st	X+, r30
+5588cf96:	fc 93       	st	X, r31
+5588cf98:	3c 85       	ldd	r19, Y+12	; 0x0c
+5588cf9a:	3f 93       	push	r19
+5588cf9c:	3b 85       	ldd	r19, Y+11	; 0x0b
+5588cf9e:	3f 93       	push	r19
+5588cfa0:	3a 85       	ldd	r19, Y+10	; 0x0a
+5588cfa2:	3f 93       	push	r19
+5588cfa4:	8f 92       	push	r8
+5588cfa6:	8a 2c       	mov	r8, r10
+5588cfa8:	ac 2c       	mov	r10, r12
+5588cfaa:	ce 2c       	mov	r12, r14
+5588cfac:	e0 2e       	mov	r14, r16
+5588cfae:	02 2f       	mov	r16, r18
+5588cfb0:	24 2f       	mov	r18, r20
+5588cfb2:	46 2f       	mov	r20, r22
+5588cfb4:	60 e0       	ldi	r22, 0x00	; 0
+5588cfb6:	0e 94 00 00 	call	0	; 0x0 <__tmp_reg__>
+5588cfba:	0f 90       	pop	r0
+5588cfbc:	0f 90       	pop	r0
+5588cfbe:	0f 90       	pop	r0
+5588cfc0:	0f 90       	pop	r0
+5588cfc2:	df 91       	pop	r29
+5588cfc4:	cf 91       	pop	r28
+5588cfc6:	0f 91       	pop	r16
+5588cfc8:	ef 90       	pop	r14
+5588cfca:	cf 90       	pop	r12
+5588cfcc:	af 90       	pop	r10
+5588cfce:	8f 90       	pop	r8
+5588cfd0:	08 95       	ret

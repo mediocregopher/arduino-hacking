@@ -1,0 +1,139 @@
+
+tmp//usr/share/arduino/hardware/arduino/cores/arduino/wiring_pulse.o:     file format elf32-avr
+
+
+Disassembly of section .text.pulseIn:
+
+00000000 <pulseIn>:
+   0:	a0 e0       	ldi	r26, 0x00	; 0
+   2:	b0 e0       	ldi	r27, 0x00	; 0
+   4:	e0 e0       	ldi	r30, 0x00	; 0
+   6:	f0 e0       	ldi	r31, 0x00	; 0
+   8:	0c 94 00 00 	jmp	0	; 0x0 <pulseIn>
+   c:	90 e0       	ldi	r25, 0x00	; 0
+   e:	fc 01       	movw	r30, r24
+  10:	e0 50       	subi	r30, 0x00	; 0
+  12:	f0 40       	sbci	r31, 0x00	; 0
+  14:	d4 91       	lpm	r29, Z
+  16:	fc 01       	movw	r30, r24
+  18:	e0 50       	subi	r30, 0x00	; 0
+  1a:	f0 40       	sbci	r31, 0x00	; 0
+  1c:	74 91       	lpm	r23, Z
+  1e:	61 11       	cpse	r22, r1
+  20:	00 c0       	rjmp	.+0      	; 0x22 <pulseIn+0x22>
+  22:	c0 e0       	ldi	r28, 0x00	; 0
+  24:	00 c0       	rjmp	.+0      	; 0x26 <pulseIn+0x26>
+  26:	cd 2f       	mov	r28, r29
+  28:	da 01       	movw	r26, r20
+  2a:	c9 01       	movw	r24, r18
+  2c:	bf 70       	andi	r27, 0x0F	; 15
+  2e:	67 2f       	mov	r22, r23
+  30:	70 e0       	ldi	r23, 0x00	; 0
+  32:	66 0f       	add	r22, r22
+  34:	77 1f       	adc	r23, r23
+  36:	60 50       	subi	r22, 0x00	; 0
+  38:	70 40       	sbci	r23, 0x00	; 0
+  3a:	81 2c       	mov	r8, r1
+  3c:	91 2c       	mov	r9, r1
+  3e:	54 01       	movw	r10, r8
+  40:	fb 01       	movw	r30, r22
+  42:	05 91       	lpm	r16, Z+
+  44:	14 91       	lpm	r17, Z
+  46:	00 c0       	rjmp	.+0      	; 0x48 <pulseIn+0x48>
+  48:	c1 2c       	mov	r12, r1
+  4a:	d1 2c       	mov	r13, r1
+  4c:	76 01       	movw	r14, r12
+  4e:	c3 94       	inc	r12
+  50:	c8 0c       	add	r12, r8
+  52:	d9 1c       	adc	r13, r9
+  54:	ea 1c       	adc	r14, r10
+  56:	fb 1c       	adc	r15, r11
+  58:	88 16       	cp	r8, r24
+  5a:	99 06       	cpc	r9, r25
+  5c:	aa 06       	cpc	r10, r26
+  5e:	bb 06       	cpc	r11, r27
+  60:	01 f4       	brne	.+0      	; 0x62 <pulseIn+0x62>
+  62:	00 c0       	rjmp	.+0      	; 0x64 <pulseIn+0x64>
+  64:	46 01       	movw	r8, r12
+  66:	57 01       	movw	r10, r14
+  68:	f8 01       	movw	r30, r16
+  6a:	e0 81       	ld	r30, Z
+  6c:	ed 23       	and	r30, r29
+  6e:	ec 17       	cp	r30, r28
+  70:	01 f0       	breq	.+0      	; 0x72 <pulseIn+0x72>
+  72:	00 c0       	rjmp	.+0      	; 0x74 <pulseIn+0x74>
+  74:	c1 2c       	mov	r12, r1
+  76:	d1 2c       	mov	r13, r1
+  78:	76 01       	movw	r14, r12
+  7a:	c3 94       	inc	r12
+  7c:	c8 0c       	add	r12, r8
+  7e:	d9 1c       	adc	r13, r9
+  80:	ea 1c       	adc	r14, r10
+  82:	fb 1c       	adc	r15, r11
+  84:	88 16       	cp	r8, r24
+  86:	99 06       	cpc	r9, r25
+  88:	aa 06       	cpc	r10, r26
+  8a:	bb 06       	cpc	r11, r27
+  8c:	01 f0       	breq	.+0      	; 0x8e <pulseIn+0x8e>
+  8e:	46 01       	movw	r8, r12
+  90:	57 01       	movw	r10, r14
+  92:	00 c0       	rjmp	.+0      	; 0x94 <pulseIn+0x94>
+  94:	fb 01       	movw	r30, r22
+  96:	05 91       	lpm	r16, Z+
+  98:	14 91       	lpm	r17, Z
+  9a:	f8 01       	movw	r30, r16
+  9c:	e0 81       	ld	r30, Z
+  9e:	ed 23       	and	r30, r29
+  a0:	ec 13       	cpse	r30, r28
+  a2:	00 c0       	rjmp	.+0      	; 0xa4 <pulseIn+0xa4>
+  a4:	88 19       	sub	r24, r8
+  a6:	99 09       	sbc	r25, r9
+  a8:	aa 09       	sbc	r26, r10
+  aa:	bb 09       	sbc	r27, r11
+  ac:	20 e0       	ldi	r18, 0x00	; 0
+  ae:	30 e0       	ldi	r19, 0x00	; 0
+  b0:	a9 01       	movw	r20, r18
+  b2:	fb 01       	movw	r30, r22
+  b4:	65 91       	lpm	r22, Z+
+  b6:	74 91       	lpm	r23, Z
+  b8:	00 c0       	rjmp	.+0      	; 0xba <pulseIn+0xba>
+  ba:	28 17       	cp	r18, r24
+  bc:	39 07       	cpc	r19, r25
+  be:	4a 07       	cpc	r20, r26
+  c0:	5b 07       	cpc	r21, r27
+  c2:	01 f0       	breq	.+0      	; 0xc4 <pulseIn+0xc4>
+  c4:	2f 5f       	subi	r18, 0xFF	; 255
+  c6:	3f 4f       	sbci	r19, 0xFF	; 255
+  c8:	4f 4f       	sbci	r20, 0xFF	; 255
+  ca:	5f 4f       	sbci	r21, 0xFF	; 255
+  cc:	fb 01       	movw	r30, r22
+  ce:	e0 81       	ld	r30, Z
+  d0:	ed 23       	and	r30, r29
+  d2:	ec 17       	cp	r30, r28
+  d4:	01 f0       	breq	.+0      	; 0xd6 <pulseIn+0xd6>
+  d6:	a5 e1       	ldi	r26, 0x15	; 21
+  d8:	b0 e0       	ldi	r27, 0x00	; 0
+  da:	0e 94 00 00 	call	0	; 0x0 <pulseIn>
+  de:	8b 01       	movw	r16, r22
+  e0:	9c 01       	movw	r18, r24
+  e2:	00 5f       	subi	r16, 0xF0	; 240
+  e4:	1f 4f       	sbci	r17, 0xFF	; 255
+  e6:	2f 4f       	sbci	r18, 0xFF	; 255
+  e8:	3f 4f       	sbci	r19, 0xFF	; 255
+  ea:	84 e0       	ldi	r24, 0x04	; 4
+  ec:	36 95       	lsr	r19
+  ee:	27 95       	ror	r18
+  f0:	17 95       	ror	r17
+  f2:	07 95       	ror	r16
+  f4:	8a 95       	dec	r24
+  f6:	01 f4       	brne	.+0      	; 0xf8 <pulseIn+0xf8>
+  f8:	00 c0       	rjmp	.+0      	; 0xfa <pulseIn+0xfa>
+  fa:	00 e0       	ldi	r16, 0x00	; 0
+  fc:	10 e0       	ldi	r17, 0x00	; 0
+  fe:	98 01       	movw	r18, r16
+ 100:	b8 01       	movw	r22, r16
+ 102:	c9 01       	movw	r24, r18
+ 104:	cd b7       	in	r28, 0x3d	; 61
+ 106:	de b7       	in	r29, 0x3e	; 62
+ 108:	ec e0       	ldi	r30, 0x0C	; 12
+ 10a:	0c 94 00 00 	jmp	0	; 0x0 <pulseIn>
